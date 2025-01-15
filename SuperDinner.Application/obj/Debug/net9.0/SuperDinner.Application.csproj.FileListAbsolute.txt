@@ -1,0 +1,11 @@
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\SuperDinner.Application.deps.json
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\SuperDinner.Application.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\SuperDinner.Application.pdb
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.AssemblyInfoInputs.cache
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.AssemblyInfo.cs
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\refint\SuperDinner.Application.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.pdb
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\ref\SuperDinner.Application.dll

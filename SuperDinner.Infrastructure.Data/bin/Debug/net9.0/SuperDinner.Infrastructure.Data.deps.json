@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SuperDinner.Infrastructure.Data/1.0.0": {
+        "dependencies": {
+          "SuperDinner.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SuperDinner.Infrastructure.Data.dll": {}
+        }
+      },
+      "SuperDinner.Domain/1.0.0": {
+        "runtime": {
+          "SuperDinner.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SuperDinner.Infrastructure.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SuperDinner.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

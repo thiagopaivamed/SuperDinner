@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB360012-E5F8-417B-87E4-EAAAB7FB739F}|SUperDInner.Domain\\SuperDinner.Domain.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.domain\\entities\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB360012-E5F8-417B-87E4-EAAAB7FB739F}|SUperDInner.Domain\\SuperDinner.Domain.csproj|solutionrelative:superdinner.domain\\entities\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB360012-E5F8-417B-87E4-EAAAB7FB739F}|SUperDInner.Domain\\SuperDinner.Domain.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.domain\\entities\\ibaseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB360012-E5F8-417B-87E4-EAAAB7FB739F}|SUperDInner.Domain\\SuperDinner.Domain.csproj|solutionrelative:superdinner.domain\\entities\\ibaseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B485C87-85D1-437D-8B51-57642BE128C6}|SuperDInner.WebApi\\SuperDInner.Application.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B485C87-85D1-437D-8B51-57642BE128C6}|SuperDInner.WebApi\\SuperDInner.Application.csproj|solutionrelative:superdinner.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Restaurant.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\Entities\\Restaurant.cs",
+              "RelativeDocumentMoniker": "SUperDInner.Domain\\Entities\\Restaurant.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\Entities\\Restaurant.cs",
+              "RelativeToolTip": "SUperDInner.Domain\\Entities\\Restaurant.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA3wBIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T21:26:23.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IBaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\Entities\\IBaseEntity.cs",
+              "RelativeDocumentMoniker": "SUperDInner.Domain\\Entities\\IBaseEntity.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\Entities\\IBaseEntity.cs",
+              "RelativeToolTip": "SUperDInner.Domain\\Entities\\IBaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T21:20:11.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "SuperDInner.WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\Program.cs",
+              "RelativeToolTip": "SuperDInner.WebApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T01:58:50.252Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
