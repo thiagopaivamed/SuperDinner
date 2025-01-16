@@ -17,3 +17,4 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Infrastructure.IOC\bin\Debug\net
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Infrastructure.IOC\bin\Debug\net9.0\SuperDinner.Infrastructure.Data.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Infrastructure.IOC\obj\Debug\net9.0\SuperDinner.Infrastructure.IOC.csproj.AssemblyReference.cache
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Infrastructure.IOC\obj\Debug\net9.0\SuperDin.AF8BD30C.Up2Date
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Infrastructure.IOC\obj\Debug\net9.0\SuperDinner.Infrastructure.IOC.sourcelink.json

@@ -15,3 +15,4 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Service\bin\Debug\net9.0\SuperDI
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Service\bin\Debug\net9.0\SuperDinner.Infrastructure.Data.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Service\obj\Debug\net9.0\SuperDinner.Service.csproj.AssemblyReference.cache
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Service\obj\Debug\net9.0\SuperDin.6913FC90.Up2Date
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Service\obj\Debug\net9.0\SuperDinner.Service.sourcelink.json

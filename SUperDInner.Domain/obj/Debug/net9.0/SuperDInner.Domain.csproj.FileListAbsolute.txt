@@ -9,3 +9,4 @@ C:\Users\Thiago\Desktop\SuperDinner\SUperDInner.Domain\obj\Debug\net9.0\SuperDIn
 C:\Users\Thiago\Desktop\SuperDinner\SUperDInner.Domain\obj\Debug\net9.0\refint\SuperDInner.Domain.dll
 C:\Users\Thiago\Desktop\SuperDinner\SUperDInner.Domain\obj\Debug\net9.0\SuperDInner.Domain.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SUperDInner.Domain\obj\Debug\net9.0\ref\SuperDInner.Domain.dll
+C:\Users\Thiago\Desktop\SuperDinner\SUperDInner.Domain\obj\Debug\net9.0\SuperDinner.Domain.sourcelink.json
