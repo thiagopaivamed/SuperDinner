@@ -16,6 +16,8 @@
 
         public double Longitude { get; set; }
 
+        public int ClientsLimit { get; set; }
+
         public DateTime CreatedDate { get; set; }
         public DateTime? LastModifiedDate { get; set; }
     }

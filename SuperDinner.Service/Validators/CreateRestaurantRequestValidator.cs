@@ -35,6 +35,9 @@ namespace SuperDinner.Service.Validators
                 .NotEmpty().WithMessage("{PropertyName} is required")
                  .InclusiveBetween(-180.0, 180.0).WithMessage("{PropertyName} must be between -180 and 180.");
 
+            RuleFor(x => x.ClientsLimit)
+                .GreaterThan(0).WithMessage("{PropertyName} should be greater than 0");
+
             RuleFor(d => d.CreatedDate)
                 .NotEmpty().WithMessage("{PropertyName} is required")
                 .Must(NotCreatedDateBeforeToday).WithMessage("{PropertyValue} cannot be in the past");
