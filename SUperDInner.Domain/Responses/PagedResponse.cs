@@ -13,7 +13,7 @@ namespace SuperDinner.Domain.Responses
             PageSize = pageSize;
         }
 
-        public PagedResponse(TData data, int responseStatusCode = 200, string? message = null) : base(data, responseStatusCode, message)
+        public PagedResponse(TData data, int responseStatusCode = 200, List<string?> message = null) : base(data, responseStatusCode, message)
         {
         }
 

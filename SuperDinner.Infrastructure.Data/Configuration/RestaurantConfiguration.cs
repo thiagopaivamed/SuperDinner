@@ -19,6 +19,7 @@ namespace SuperDinner.Infrastructure.Data.Configuration
             builder.Property(x => x.Country).IsRequired().HasMaxLength(30);
             builder.Property(x => x.Latitude).IsRequired();
             builder.Property(x => x.Longitude).IsRequired();
+            builder.Property(x => x.Price).IsRequired();
             builder.Property(x => x.ClientsLimit).IsRequired();
             builder.Property(x => x.CreatedDate).IsRequired();
             builder.Property(x => x.LastModifiedDate).IsRequired(false);

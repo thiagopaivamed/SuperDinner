@@ -9,15 +9,15 @@ namespace SuperDinner.Domain.Responses
         [JsonConstructor]
         public Response(int responseStatusCode, TData data) => _responseStatusCode = Configuration.DefaultStatusCode;
 
-        public Response(TData data, int responseStatusCode = Configuration.DefaultStatusCode, string? message = null)
+        public Response(TData data, int responseStatusCode = Configuration.DefaultStatusCode, List<string> messages = null)
         {
             Data = data;
             _responseStatusCode = responseStatusCode;
-            Message = message;
+            Messages = messages;
         }
 
         public TData? Data { get; protected set; }
-        public string? Message { get; protected set; }
+        public List<string> Messages { get; protected set; }
 
         [JsonIgnore]
         public bool IsSuccess => _responseStatusCode is >= 200 and <= 299;

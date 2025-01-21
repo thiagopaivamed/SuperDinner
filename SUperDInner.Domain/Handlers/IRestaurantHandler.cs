@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SuperDinner.Domain.Entities;
+using SuperDinner.Domain.Requests.Restaurant;
+using SuperDinner.Domain.Responses;
 
 namespace SuperDinner.Domain.Handlers
 {
     public interface IRestaurantHandler
     {
+        Task<Response<Restaurant>> AddRestaurantAsync(CreateRestaurantRequest request);
     }
 }

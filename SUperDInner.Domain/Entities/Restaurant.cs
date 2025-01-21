@@ -18,10 +18,14 @@
 
         public double Longitude { get; set; }
 
+        public double Price { get; set; }
+
         public int ClientsLimit { get; set; }
 
         public DateTime CreatedDate { get; set; }
         public DateTime? LastModifiedDate { get; set; }
+
+        public ICollection<Dinner> Dinners { get; set; }
 
         public Restaurant()
         {
