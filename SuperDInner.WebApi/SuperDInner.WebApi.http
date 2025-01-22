@@ -1,6 +1,6 @@
-@SuperDInner.WebApi_HostAddress = http://localhost:5148
+@SuperDinner.WebApi_HostAddress = http://localhost:5148
 
-GET {{SuperDInner.WebApi_HostAddress}}/weatherforecast/
+POST {{SuperDinner.WebApi_HostAddress}}/restaurants/
 Accept: application/json
 
 ###
