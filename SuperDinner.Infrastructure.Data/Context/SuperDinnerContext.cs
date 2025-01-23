@@ -9,11 +9,17 @@ namespace SuperDinner.Infrastructure.Data.Context
         public DbSet<Dinner> Dinners { get; set; }
         public SuperDinnerContext(DbContextOptions options) : base(options)
         {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
+        protected override void OnModelCreating(ModelBuilder modelBuilder) =>
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(SuperDinnerContext).Assembly);
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+                optionsBuilder.UseNpgsql("SuperDinnerConnection");
+
         }
     }
 }

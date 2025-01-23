@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperDinner.Domain", "SUperDInner.Domain\SuperDinner.Domain.csproj", "{BB360012-E5F8-417B-87E4-EAAAB7FB739F}"
 EndProject
@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperDinner.UnitTests", "Su
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperDinner.IntegrationTests", "SuperDinner.IntegrationTests\SuperDinner.IntegrationTests.csproj", "{A1D5E924-EB2C-4866-8953-308D17678462}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperDInner.Application", "SuperDInner.WebApi\SuperDInner.Application.csproj", "{5B485C87-85D1-437D-8B51-57642BE128C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperDinner.Application", "SuperDInner.WebApi\SuperDinner.Application.csproj", "{5B485C87-85D1-437D-8B51-57642BE128C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "dhyIagjvTPEf5ueHjtsKZuch1SZBMY2lcNmFSb6DftQ=",
-  "Source": "SuperDInner.Application",
-  "BasePath": "_content/SuperDInner.Application",
+  "Hash": "ttnwEoku4XebpJp9kuPJT6X2NdBg0rRXD0/HLpjP4r0=",
+  "Source": "SuperDinner.Application",
+  "BasePath": "_content/SuperDinner.Application",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

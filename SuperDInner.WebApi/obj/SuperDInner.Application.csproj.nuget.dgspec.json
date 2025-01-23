@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\SuperDInner.Application.csproj": {}
+    "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\SuperDinner.Application.csproj": {}
   },
   "projects": {
     "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\SuperDinner.Domain.csproj": {
@@ -121,6 +121,16 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[9.0.2, )"
@@ -298,12 +308,12 @@
         }
       }
     },
-    "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\SuperDInner.Application.csproj": {
+    "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\SuperDinner.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\SuperDInner.Application.csproj",
-        "projectName": "SuperDInner.Application",
-        "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\SuperDInner.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\SuperDinner.Application.csproj",
+        "projectName": "SuperDinner.Application",
+        "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\SuperDinner.Application.csproj",
         "packagesPath": "C:\\Users\\Thiago\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\obj\\",
         "projectStyle": "PackageReference",
@@ -327,8 +337,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\SuperDinner.Domain.csproj": {
-                "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\SuperDinner.Domain.csproj"
+              "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Domain\\SuperDinner.Domain.csproj": {
+                "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Domain\\SuperDinner.Domain.csproj"
               },
               "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Infrastructure.IOC\\SuperDinner.Infrastructure.IOC.csproj": {
                 "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Infrastructure.IOC\\SuperDinner.Infrastructure.IOC.csproj"
@@ -356,6 +366,12 @@
           "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.0, )"
             }

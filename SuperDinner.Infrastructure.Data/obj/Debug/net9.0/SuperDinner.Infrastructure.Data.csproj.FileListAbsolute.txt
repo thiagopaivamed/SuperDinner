@@ -14,3 +14,5 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Infrastructure.Data\bin\Debug\ne
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Infrastructure.Data\obj\Debug\net9.0\SuperDinner.Infrastructure.Data.csproj.AssemblyReference.cache
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Infrastructure.Data\obj\Debug\net9.0\SuperDin.8FB87A09.Up2Date
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Infrastructure.Data\obj\Debug\net9.0\SuperDinner.Infrastructure.Data.sourcelink.json
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Infrastructure.Data\bin\Debug\net9.0\SuperDinner.Infrastructure.Data.runtimeconfig.json
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Infrastructure.Data\obj\Debug\net9.0\SuperDinner.Infrastructure.Data.genruntimeconfig.cache
