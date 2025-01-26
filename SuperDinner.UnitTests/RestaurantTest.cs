@@ -5,10 +5,11 @@ using SuperDinner.Domain.Entities;
 using SuperDinner.Domain.Handlers;
 using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Domain.Responses;
+using SuperDinner.Service.Validators;
 
 namespace SuperDinner.UnitTests
 {
-    public class RestaurantTest : IAsyncDisposable
+    public class RestaurantTest : IDisposable
     {
         private readonly Faker<Restaurant> fakeRestaurant;
         private readonly Faker<CreateRestaurantRequest> fakeCreateRestaurantRequest;
@@ -55,6 +56,28 @@ namespace SuperDinner.UnitTests
         }
 
         [Fact]
+        public async Task Use_Valid_Restaurant_Should_Return_True()
+        {
+            CreateRestaurantRequest createRestaurantRequest = fakeCreateRestaurantRequest.Generate();
+            CreateRestaurantRequestValidator validator = new CreateRestaurantRequestValidator();
+
+            FluentValidation.Results.ValidationResult restaurantValidationResult = await validator.ValidateAsync(createRestaurantRequest);
+
+            restaurantValidationResult.IsValid.ShouldBeTrue();
+        }
+
+        [Fact]
+        public async Task Use_Invalid_Restaurant_Should_Return_False()
+        {
+            CreateRestaurantRequest createRestaurantRequest = new CreateRestaurantRequest();
+            CreateRestaurantRequestValidator validator = new CreateRestaurantRequestValidator();
+
+            FluentValidation.Results.ValidationResult restaurantValidationResult = await validator.ValidateAsync(createRestaurantRequest);
+
+            restaurantValidationResult.IsValid.ShouldBeFalse();
+        }
+
+        [Fact]
         public async Task Add_Valid_Dinner_Should_Return_Success()
         {
             #region Arrange
@@ -63,7 +86,7 @@ namespace SuperDinner.UnitTests
 
             Restaurant restaurant = fakeRestaurant.Generate();
             restaurant.ShouldNotBe(null);
-            
+
             Response<Restaurant> restaurantResponse = new Response<Restaurant>(restaurant, 200, null);
             restaurantResponse.ShouldNotBe(null);
             restaurantResponse.IsSuccess.ShouldBeTrue();
@@ -85,9 +108,35 @@ namespace SuperDinner.UnitTests
             #endregion
         }
 
-        public ValueTask DisposeAsync()
+        [Fact]
+        public async Task Add_Invalid_Dinner_Should_Return_Failure()
         {
-            throw new NotImplementedException();
+            #region Arrange
+            CreateRestaurantRequest createRestaurantRequest = new CreateRestaurantRequest();
+            createRestaurantRequest.ShouldNotBe(null);
+
+            Response<Restaurant> restaurantResponse = new Response<Restaurant>(null, 400, new List<string>() { "Invalid request" });
+            restaurantResponse.ShouldNotBe(null);
+            restaurantResponse.IsSuccess.ShouldBeFalse();
+            restaurantResponse.Data.ShouldBe(null);
+            restaurantResponse.Messages.ShouldNotBe(null);
+
+            mockRestaurantHandler.Setup(r => r.AddRestaurantAsync(createRestaurantRequest)).ReturnsAsync(restaurantResponse);
+            #endregion
+
+            #region Act
+            Response<Restaurant> responseAfterRestaurantAdded = await mockRestaurantHandler.Object.AddRestaurantAsync(createRestaurantRequest);
+            #endregion
+
+            #region Assert
+            responseAfterRestaurantAdded.ShouldNotBe(null);
+            responseAfterRestaurantAdded.IsSuccess.ShouldBeFalse();
+            responseAfterRestaurantAdded.Data.ShouldBe(null);
+            responseAfterRestaurantAdded.Messages.ShouldNotBe(null);
+            #endregion
         }
+
+        public void Dispose() => mockRestaurantHandler.VerifyAll();
+
     }
 }
