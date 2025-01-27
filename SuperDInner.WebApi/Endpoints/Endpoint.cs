@@ -9,6 +9,10 @@ namespace SuperDInner.Application.Endpoints
         {
             RouteGroupBuilder endpoints = app.MapGroup("");
 
+            endpoints.MapGroup("v1")
+                .WithTags("Health Check")
+                .MapGet("/", () => Results.Ok("Endpoint is up and running!"));
+
             endpoints.MapGroup("v1/restaurants")
                 .WithTags("Restaurants")
                 .MapEndpoint<CreateRestaurantEndpoint>();

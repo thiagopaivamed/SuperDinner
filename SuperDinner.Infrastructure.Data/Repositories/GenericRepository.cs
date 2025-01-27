@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SuperDinner.Domain.Handlers;
+using SuperDinner.Domain.Interfaces;
 using SuperDinner.Infrastructure.Data.Context;
 using System.Linq.Expressions;
 
 namespace SuperDinner.Infrastructure.Data.Repositories
 {
-    public sealed class GenericRepository<TEntity>(SuperDinnerContext superDinnerContext) : IGenericRepository<TEntity> where TEntity : class
+    public class GenericRepository<TEntity>(SuperDinnerContext superDinnerContext) : IGenericRepository<TEntity> where TEntity : class
     {
         public async Task DeleteAsync(Guid entityId)
         {
@@ -28,7 +28,6 @@ namespace SuperDinner.Infrastructure.Data.Repositories
 
         public async Task<TEntity> GetByIdAsync(Guid entityId)
             => await superDinnerContext.Set<TEntity>().FindAsync(entityId);
-
 
         public async Task InsertAsync(TEntity entity)
             => await superDinnerContext.Set<TEntity>().AddAsync(entity);

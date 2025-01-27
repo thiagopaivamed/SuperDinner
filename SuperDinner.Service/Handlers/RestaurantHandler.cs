@@ -1,13 +1,15 @@
 ﻿using FluentValidation.Results;
 using SuperDinner.Domain.Entities;
-using SuperDinner.Domain.Handlers;
+using SuperDinner.Domain.Interfaces;
+using SuperDinner.Domain.Interfaces.Restaurants;
+using SuperDinner.Domain.Interfaces.Restaurants.Handlers;
 using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Domain.Responses;
 using SuperDinner.Service.Validators;
 
 namespace SuperDinner.Service.Handlers
 {
-    public class RestaurantHandler(IGenericRepository<Restaurant> repository, IUnitOfWork unitOfWork) : IRestaurantHandler
+    public class RestaurantHandler(IRestaurantRepository repository, IUnitOfWork unitOfWork) : IRestaurantHandler
     {
         public async Task<Response<Restaurant>> AddRestaurantAsync(CreateRestaurantRequest request)
         {

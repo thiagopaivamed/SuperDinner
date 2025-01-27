@@ -1,1 +1,51 @@
-[]
+[
+  {
+    "ContainingType": "SuperDInner.Application.Endpoints.Endpoint\u002B\u003C\u003Ec",
+    "Method": "\u003CMapEndpoints\u003Eb__0_0",
+    "RelativePath": "v1/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Health Check"
+    ]
+  },
+  {
+    "ContainingType": "SuperDInner.Application.Endpoints.Restaurants.CreateRestaurantEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "v1/restaurants/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SuperDinner.Domain.Requests.Restaurant.CreateRestaurantRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SuperDinner.Domain.Responses.Response\u00601[[SuperDinner.Domain.Entities.Restaurant, SuperDinner.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Restaurants"
+    ],
+    "EndpointName": "Restaurants: Create",
+    "Description": "Creates a new restaurant in the system",
+    "Summary": "Create a new restaurant"
+  }
+]

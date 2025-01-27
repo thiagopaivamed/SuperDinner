@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SuperDinner.Domain.Handlers;
+using SuperDinner.Domain.Interfaces;
+using SuperDinner.Domain.Interfaces.Restaurants;
+using SuperDinner.Domain.Interfaces.Restaurants.Handlers;
 using SuperDinner.Infrastructure.Data.Context;
 using SuperDinner.Infrastructure.Data.Repositories;
 using SuperDinner.Service.Handlers;
@@ -15,6 +17,7 @@ namespace SuperDinner.Application.Common.Api
 
         public static void AddServices(this WebApplicationBuilder builder)
         {
+            builder.Services.AddTransient<IRestaurantRepository, RestaurantRepository>();
             builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
             builder.Services.AddTransient<IRestaurantHandler, RestaurantHandler>();
         }

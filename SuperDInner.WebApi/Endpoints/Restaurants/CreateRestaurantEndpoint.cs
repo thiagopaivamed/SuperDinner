@@ -1,5 +1,5 @@
 ﻿using SuperDinner.Domain.Entities;
-using SuperDinner.Domain.Handlers;
+using SuperDinner.Domain.Interfaces.Restaurants.Handlers;
 using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Domain.Responses;
 using SuperDInner.Application.Common.Api;

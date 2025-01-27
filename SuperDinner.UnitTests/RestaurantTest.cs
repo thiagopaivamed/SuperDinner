@@ -2,7 +2,7 @@
 using Moq;
 using Shouldly;
 using SuperDinner.Domain.Entities;
-using SuperDinner.Domain.Handlers;
+using SuperDinner.Domain.Interfaces.Restaurants.Handlers;
 using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Domain.Responses;
 using SuperDinner.Service.Validators;

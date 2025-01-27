@@ -1,4 +1,4 @@
-﻿using SuperDinner.Domain.Handlers;
+﻿using SuperDinner.Domain.Interfaces;
 using SuperDinner.Infrastructure.Data.Context;
 
 namespace SuperDinner.Infrastructure.Data.Repositories

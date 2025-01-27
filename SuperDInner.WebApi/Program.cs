@@ -1,6 +1,4 @@
-using Microsoft.EntityFrameworkCore;
 using SuperDinner.Application.Common.Api;
-using SuperDinner.Infrastructure.Data.Context;
 using SuperDInner.Application.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 
 builder.AddDataContext();
+
+builder.AddServices();
 
 var app = builder.Build();
 

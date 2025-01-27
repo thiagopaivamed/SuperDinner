@@ -19,8 +19,4 @@
     <ProjectReference Include="..\SUperDInner.Domain\SuperDinner.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Handlers\" />
-  </ItemGroup>
-
 </Project>
