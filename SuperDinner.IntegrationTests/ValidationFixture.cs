@@ -75,7 +75,8 @@ namespace SuperDinner.IntegrationTests
             return entityTypeBuilder;
         }
 
-        public Dictionary<string, IMutableProperty?> GetFluentEFApiConfigurationProperties<TEntity>(string[] propertiesToValidate, EntityTypeBuilder<TEntity> entityTypeBuilder) where TEntity : class
+        public Dictionary<string, IMutableProperty?> GetFluentEfApiConfigurationProperties<TEntity>(string[] propertiesToValidate, EntityTypeBuilder<TEntity> entityTypeBuilder) 
+            where TEntity : class
         {
             Dictionary<string, IMutableProperty?> fluentApiConfigurationProperties = propertiesToValidate
                 .Select(p => new
@@ -90,7 +91,8 @@ namespace SuperDinner.IntegrationTests
             return fluentApiConfigurationProperties;
         }
 
-        public Dictionary<string, IValidator> GetFluentValidationProperties<TEntity, IValidator>(string[] propertiesToValidate, IValidator<TEntity> entityValidator) where TEntity : class
+        public Dictionary<string, IValidator> GetFluentValidationProperties<TEntity, IValidator>(string[] propertiesToValidate, IValidator<TEntity> entityValidator) 
+            where TEntity : class
         {
             Dictionary<string, IValidator> fluentValidationProperties = propertiesToValidate
                .Select(p => new

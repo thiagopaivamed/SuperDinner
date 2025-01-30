@@ -29,14 +29,19 @@ namespace SuperDinner.Service.Validators
 
             RuleFor(d => d.Latitude)
                 .NotEmpty().WithMessage("{PropertyName} is required")
-                 .InclusiveBetween(-90.0, 90.0).WithMessage("{PropertyName} must be between -90 and 90.");
+                .InclusiveBetween(-90.0, 90.0).WithMessage("{PropertyName} must be between -90 and 90.");
 
             RuleFor(d => d.Longitude)
                 .NotEmpty().WithMessage("{PropertyName} is required")
-                 .InclusiveBetween(-180.0, 180.0).WithMessage("{PropertyName} must be between -180 and 180.");
+                .InclusiveBetween(-180.0, 180.0).WithMessage("{PropertyName} must be between -180 and 180.");
+
+            RuleFor(d => d.Price)
+                .NotEmpty().WithMessage("{PropertyName} is required")
+                .GreaterThan(0).WithMessage("{PropertyName} must be greater than 0 and cannot have negative values");
 
             RuleFor(x => x.ClientsLimit)
-                .GreaterThan(0).WithMessage("{PropertyName} should be greater than 0");
+                .NotEmpty().WithMessage("{PropertyName} is required")
+                .GreaterThan(0).WithMessage("{PropertyName} should be greater than 0 and cannot have negative values");
 
             RuleFor(d => d.CreatedDate)
                 .NotEmpty().WithMessage("{PropertyName} is required")
