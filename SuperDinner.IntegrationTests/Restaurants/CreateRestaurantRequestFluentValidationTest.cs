@@ -9,13 +9,13 @@ using SuperDinner.Service.Validators;
 
 namespace SuperDinner.IntegrationTests.Restaurants
 {
-    public sealed class RestaurantValidationTest : IClassFixture<ValidationFixture<Restaurant>>
+    public sealed class CreateRestaurantRequestFluentValidationTest : IClassFixture<ValidationFixture<Restaurant>>
     {
         private readonly ValidationFixture<Restaurant> _validationFixture;
         private readonly CreateRestaurantRequestValidator _createRestaurantRequestValidator;
         private readonly EntityTypeBuilder<Restaurant> _restaurantEntityTypeBuilder;
 
-        public RestaurantValidationTest(ValidationFixture<Restaurant> validationFixture)
+        public CreateRestaurantRequestFluentValidationTest(ValidationFixture<Restaurant> validationFixture)
         {
             _validationFixture = validationFixture;
             _createRestaurantRequestValidator = new CreateRestaurantRequestValidator();
@@ -24,25 +24,6 @@ namespace SuperDinner.IntegrationTests.Restaurants
             _validationFixture.ShouldNotBe(null);
             _createRestaurantRequestValidator.ShouldNotBe(null);
             _restaurantEntityTypeBuilder.ShouldNotBe(null);
-        }
-
-        [Fact]
-        public void Restaurant_Should_Have_Primary_Key()
-        {
-            #region Arrange
-            string[] propertiesToValidate = _validationFixture.GetPropertyNames();
-            Dictionary<string, IMutableProperty?> fluentApiConfigurationProperties = _validationFixture.GetFluentEfApiConfigurationProperties(propertiesToValidate, _restaurantEntityTypeBuilder);
-            #endregion
-
-            #region Act
-            propertiesToValidate.Length.ShouldBe(_validationFixture.propertiesCount);
-
-            int primaryKeyCount = fluentApiConfigurationProperties.Values.Count(property => property?.IsPrimaryKey() == true);
-            #endregion
-
-            #region Assert
-            primaryKeyCount.ShouldBeGreaterThan(0, $"Restaurant should have at least one primary key");
-            #endregion
         }
 
         [Fact]

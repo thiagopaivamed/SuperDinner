@@ -14,15 +14,6 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
@@ -168,3 +159,7 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\System.CodeDom.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\System.Management.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Bogus.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\FluentValidation.AspNetCore.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll

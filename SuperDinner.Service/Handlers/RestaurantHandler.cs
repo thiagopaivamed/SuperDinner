@@ -33,7 +33,7 @@ namespace SuperDinner.Service.Handlers
             await repository.InsertAsync(restaurant);
             await unitOfWork.CommitAsync();
 
-            return new Response<Restaurant>(restaurant, 200, []);
+            return new Response<Restaurant>(restaurant, 200);
         }
     }
 }

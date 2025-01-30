@@ -9,14 +9,14 @@ using SuperDinner.Service.Validators;
 
 namespace SuperDinner.UnitTests
 {
-    public class RestaurantTest : IDisposable
+    public sealed class CreateRestaurantTest : IDisposable
     {
         private readonly Faker<Restaurant> fakeRestaurant;
         private readonly Faker<CreateRestaurantRequest> fakeCreateRestaurantRequest;
         private readonly List<Restaurant> restaurants;
 
         private readonly Mock<IRestaurantHandler> mockRestaurantHandler;
-        public RestaurantTest()
+        public CreateRestaurantTest()
         {
             fakeRestaurant = new Faker<Restaurant>()
                 .RuleFor(r => r.Name, f => f.Company.CompanyName())
