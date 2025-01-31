@@ -4,7 +4,7 @@ using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Domain.Responses;
 using SuperDInner.Application.Common.Api;
 
-namespace SuperDInner.Application.Endpoints.Restaurants
+namespace SuperDinner.Application.Endpoints.Restaurants
 {
     public sealed class CreateRestaurantEndpoint : IEndpoint
     {

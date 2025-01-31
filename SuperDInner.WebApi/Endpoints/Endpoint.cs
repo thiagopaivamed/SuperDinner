@@ -1,5 +1,5 @@
-﻿using SuperDInner.Application.Common.Api;
-using SuperDInner.Application.Endpoints.Restaurants;
+﻿using SuperDinner.Application.Endpoints.Restaurants;
+using SuperDInner.Application.Common.Api;
 
 namespace SuperDInner.Application.Endpoints
 {
@@ -15,7 +15,8 @@ namespace SuperDInner.Application.Endpoints
 
             endpoints.MapGroup("v1/restaurants")
                 .WithTags("Restaurants")
-                .MapEndpoint<CreateRestaurantEndpoint>();
+                .MapEndpoint<CreateRestaurantEndpoint>()
+                .MapEndpoint<GetRestaurantByIdEndpoint>();
         }
 
         private static IEndpointRouteBuilder MapEndpoint<TEndpoint>(this IEndpointRouteBuilder endpointRouteBuilder) where TEndpoint : IEndpoint

@@ -2,36 +2,20 @@
 using Moq;
 using Shouldly;
 using SuperDinner.Domain.Entities;
-using SuperDinner.Domain.Interfaces.Restaurants.Handlers;
 using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Domain.Responses;
 using SuperDinner.Service.Validators;
 
-namespace SuperDinner.UnitTests
+namespace SuperDinner.UnitTests.Restaurants
 {
-    public sealed class CreateRestaurantTest : IDisposable
+    public sealed class CreateRestaurantTest : BaseRestaurantTest, IDisposable
     {
-        private readonly Faker<Restaurant> fakeRestaurant;
-        private readonly Faker<CreateRestaurantRequest> fakeCreateRestaurantRequest;
-        private readonly List<Restaurant> restaurants;
+        private readonly Faker<CreateRestaurantRequest> _fakeCreateRestaurantRequest;
+        private readonly List<Restaurant> _restaurants;
 
-        private readonly Mock<IRestaurantHandler> mockRestaurantHandler;
         public CreateRestaurantTest()
-        {
-            fakeRestaurant = new Faker<Restaurant>()
-                .RuleFor(r => r.Name, f => f.Company.CompanyName())
-                .RuleFor(r => r.Description, f => f.Lorem.Sentence())
-                .RuleFor(r => r.ContactPhone, f => f.Phone.PhoneNumber())
-                .RuleFor(r => r.Address, f => f.Address.StreetAddress())
-                .RuleFor(r => r.Country, f => f.Address.Country())
-                .RuleFor(r => r.Latitude, f => f.Address.Latitude())
-                .RuleFor(r => r.Longitude, f => f.Address.Longitude())
-                .RuleFor(r => r.Price, f => f.Random.Double(1, 100))
-                .RuleFor(r => r.ClientsLimit, f => f.Random.Int(1, 100))
-                .RuleFor(r => r.CreatedDate, f => f.Date.Past(1))
-                .RuleFor(r => r.Dinners, f => new List<Dinner>());
-
-            fakeCreateRestaurantRequest = new Faker<CreateRestaurantRequest>()
+        {            
+           _fakeCreateRestaurantRequest = new Faker<CreateRestaurantRequest>()
                 .RuleFor(r => r.Name, f => f.Company.CompanyName())
                 .RuleFor(r => r.Description, f => f.Lorem.Sentence())
                 .RuleFor(r => r.ContactPhone, f => f.Phone.PhoneNumber())
@@ -42,49 +26,56 @@ namespace SuperDinner.UnitTests
                 .RuleFor(r => r.Price, f => f.Random.Double(1, 100))
                 .RuleFor(r => r.ClientsLimit, f => f.Random.Int(1, 100))
                 .RuleFor(r => r.CreatedDate, f => DateTime.UtcNow);
+            
+            _fakeCreateRestaurantRequest.ShouldNotBe(null);
 
-            restaurants = fakeRestaurant.Generate(20);
-
-            fakeRestaurant.ShouldNotBe(null);
-
-            fakeCreateRestaurantRequest.ShouldNotBe(null);
-
-            restaurants.ShouldNotBe(null);
-            restaurants.Count.ShouldBe(20);
-
-            mockRestaurantHandler = new Mock<IRestaurantHandler>();
+            _restaurants = _fakeRestaurant.Generate(20);
+            _restaurants.ShouldNotBe(null);
+            _restaurants.Count.ShouldBeGreaterThanOrEqualTo(20);
         }
 
         [Fact]
         public async Task Use_Valid_Restaurant_Should_Return_True()
         {
-            CreateRestaurantRequest createRestaurantRequest = fakeCreateRestaurantRequest.Generate();
+            #region Arrange
+            CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
             CreateRestaurantRequestValidator validator = new CreateRestaurantRequestValidator();
+            #endregion
 
+            #region Act
             FluentValidation.Results.ValidationResult restaurantValidationResult = await validator.ValidateAsync(createRestaurantRequest);
+            #endregion
 
+            #region Assert
             restaurantValidationResult.IsValid.ShouldBeTrue();
+            #endregion
         }
 
         [Fact]
         public async Task Use_Invalid_Restaurant_Should_Return_False()
         {
+            #region Arrange
             CreateRestaurantRequest createRestaurantRequest = new CreateRestaurantRequest();
             CreateRestaurantRequestValidator validator = new CreateRestaurantRequestValidator();
+            #endregion
 
+            #region Act
             FluentValidation.Results.ValidationResult restaurantValidationResult = await validator.ValidateAsync(createRestaurantRequest);
+            #endregion
 
+            #region Assert
             restaurantValidationResult.IsValid.ShouldBeFalse();
+            #endregion
         }
 
         [Fact]
         public async Task Add_Valid_Dinner_Should_Return_Success()
         {
             #region Arrange
-            CreateRestaurantRequest createRestaurantRequest = fakeCreateRestaurantRequest.Generate();
+            CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
             createRestaurantRequest.ShouldNotBe(null);
 
-            Restaurant restaurant = fakeRestaurant.Generate();
+            Restaurant restaurant = _fakeRestaurant.Generate();
             restaurant.ShouldNotBe(null);
 
             Response<Restaurant> restaurantResponse = new Response<Restaurant>(restaurant, 200, null);
@@ -93,11 +84,11 @@ namespace SuperDinner.UnitTests
             restaurantResponse.Data.ShouldNotBe(null);
             restaurantResponse.Messages.ShouldBe(null);
 
-            mockRestaurantHandler.Setup(r => r.AddRestaurantAsync(createRestaurantRequest)).ReturnsAsync(restaurantResponse);
+            _mockRestaurantHandler.Setup(r => r.AddRestaurantAsync(createRestaurantRequest)).ReturnsAsync(restaurantResponse);
             #endregion
 
             #region Act
-            Response<Restaurant> responseAfterRestaurantAdded = await mockRestaurantHandler.Object.AddRestaurantAsync(createRestaurantRequest);
+            Response<Restaurant> responseAfterRestaurantAdded = await _mockRestaurantHandler.Object.AddRestaurantAsync(createRestaurantRequest);
             #endregion
 
             #region Assert
@@ -121,11 +112,11 @@ namespace SuperDinner.UnitTests
             restaurantResponse.Data.ShouldBe(null);
             restaurantResponse.Messages.ShouldNotBe(null);
 
-            mockRestaurantHandler.Setup(r => r.AddRestaurantAsync(createRestaurantRequest)).ReturnsAsync(restaurantResponse);
+            _mockRestaurantHandler.Setup(r => r.AddRestaurantAsync(createRestaurantRequest)).ReturnsAsync(restaurantResponse);
             #endregion
 
             #region Act
-            Response<Restaurant> responseAfterRestaurantAdded = await mockRestaurantHandler.Object.AddRestaurantAsync(createRestaurantRequest);
+            Response<Restaurant> responseAfterRestaurantAdded = await _mockRestaurantHandler.Object.AddRestaurantAsync(createRestaurantRequest);
             #endregion
 
             #region Assert
@@ -136,7 +127,6 @@ namespace SuperDinner.UnitTests
             #endregion
         }
 
-        public void Dispose() => mockRestaurantHandler.VerifyAll();
-
+        public void Dispose() => _mockRestaurantHandler.VerifyAll();
     }
 }

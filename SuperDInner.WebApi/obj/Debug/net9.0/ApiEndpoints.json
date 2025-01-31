@@ -19,7 +19,7 @@
     ]
   },
   {
-    "ContainingType": "SuperDInner.Application.Endpoints.Restaurants.CreateRestaurantEndpoint",
+    "ContainingType": "SuperDinner.Application.Endpoints.Restaurants.CreateRestaurantEndpoint",
     "Method": "HandleAsync",
     "RelativePath": "v1/restaurants/",
     "HttpMethod": "POST",
@@ -47,5 +47,35 @@
     "EndpointName": "Restaurants: Create",
     "Description": "Creates a new restaurant in the system",
     "Summary": "Create a new restaurant"
+  },
+  {
+    "ContainingType": "SuperDinner.Application.Endpoints.Restaurants.GetRestaurantByIdEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "v1/restaurants/{restaurantId}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "restaurantId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SuperDinner.Domain.Responses.Response\u00601[[SuperDinner.Domain.Entities.Restaurant, SuperDinner.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Restaurants"
+    ],
+    "EndpointName": "Restaurants: Get by Id",
+    "Description": "Get a restaurant by its Id",
+    "Summary": "Get a restaurant by its Id"
   }
 ]

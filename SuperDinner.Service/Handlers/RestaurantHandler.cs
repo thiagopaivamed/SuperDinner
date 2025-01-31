@@ -9,7 +9,7 @@ using SuperDinner.Service.Validators;
 
 namespace SuperDinner.Service.Handlers
 {
-    public class RestaurantHandler(IRestaurantRepository repository, IUnitOfWork unitOfWork) : IRestaurantHandler
+    public sealed class RestaurantHandler(IRestaurantRepository repository, IUnitOfWork unitOfWork) : IRestaurantHandler
     {
         public async Task<Response<Restaurant>> AddRestaurantAsync(CreateRestaurantRequest request)
         {
@@ -34,6 +34,15 @@ namespace SuperDinner.Service.Handlers
             await unitOfWork.CommitAsync();
 
             return new Response<Restaurant>(restaurant, 200);
+        }
+
+        public async Task<Response<Restaurant>> GetRestaurantByIdAsync(GetRestaurantByIdRequest request)
+        {
+            Restaurant restaurant = await repository.GetByIdAsync(request.RestaurantId);
+
+            return restaurant is null ?
+                new Response<Restaurant>(null, 404, ["Restaurant not found."]) :
+                new Response<Restaurant>(restaurant, 200);
         }
     }
 }

@@ -54,9 +54,7 @@ namespace SuperDinner.IntegrationTests
             services.AddFluentValidationAutoValidation();
         }
 
-        public void Dispose()
-        {
+        public void Dispose() =>
             serviceProvider.Dispose();
-        }
     }
 }

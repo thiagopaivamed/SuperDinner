@@ -16,13 +16,6 @@ namespace SuperDinner.Application.Common.Api
 
             if(!environmentValue.Equals("Testing"))
                 builder.Services.AddDbContext<SuperDinnerContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("SuperDinnerConnection")));
-            
-            //else
-            //    builder.Services.AddDbContext<SuperDinnerContext>(options => 
-            //    { 
-            //        options.UseNpgsql(builder.Configuration.GetConnectionString("SuperDinnerConnection")); 
-            //        options.UseInMemoryDatabase("SuperDinnerTestDatabase");
-            //    });
         }
 
         public static void AddServices(this WebApplicationBuilder builder)
