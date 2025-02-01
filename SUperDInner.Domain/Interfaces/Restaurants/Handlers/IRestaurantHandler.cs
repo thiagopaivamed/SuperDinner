@@ -11,5 +11,7 @@ namespace SuperDinner.Domain.Interfaces.Restaurants.Handlers
         Task<Response<Restaurant>> GetRestaurantByIdAsync(GetRestaurantByIdRequest request);
 
         Task<Response<Restaurant>> UpdateRestaurantAsync(UpdateRestaurantRequest request);
+
+        Task<Response<Restaurant>> DeleteRestaurantAsync(DeleteRestaurantRequest request);
     }
 }

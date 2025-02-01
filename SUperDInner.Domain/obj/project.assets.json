@@ -15,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\SUperDInner.Domain.csproj",
-      "projectName": "SUperDInner.Domain",
-      "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\SUperDInner.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\SuperDinner.Domain.csproj",
+      "projectName": "SuperDinner.Domain",
+      "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\SuperDinner.Domain.csproj",
       "packagesPath": "C:\\Users\\Thiago\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\obj\\",
       "projectStyle": "PackageReference",

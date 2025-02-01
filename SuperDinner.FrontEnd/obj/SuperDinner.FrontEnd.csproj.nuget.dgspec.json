@@ -206,8 +206,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\SuperDinner.Domain.csproj": {
-                "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\SuperDinner.Domain.csproj"
+              "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.Domain\\SuperDinner.Domain.csproj": {
+                "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.Domain\\SuperDinner.Domain.csproj"
               }
             }
           }
@@ -320,6 +320,10 @@
             "FluentValidation": {
               "target": "Package",
               "version": "[11.11.0, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.3.0, )"
             }
           },
           "imports": [

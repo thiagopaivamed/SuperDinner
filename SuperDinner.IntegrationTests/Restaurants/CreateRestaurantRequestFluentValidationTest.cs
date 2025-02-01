@@ -21,9 +21,9 @@ namespace SuperDinner.IntegrationTests.Restaurants
             _createRestaurantRequestValidator = new CreateRestaurantRequestValidator();
             _restaurantEntityTypeBuilder = _validationFixture.GetEntityTypeBuilder<Restaurant, RestaurantConfiguration>();
 
-            _validationFixture.ShouldNotBe(null);
-            _createRestaurantRequestValidator.ShouldNotBe(null);
-            _restaurantEntityTypeBuilder.ShouldNotBe(null);
+            _validationFixture.ShouldNotBeNull();
+            _createRestaurantRequestValidator.ShouldNotBeNull();
+            _restaurantEntityTypeBuilder.ShouldNotBeNull();
         }
 
         [Fact]

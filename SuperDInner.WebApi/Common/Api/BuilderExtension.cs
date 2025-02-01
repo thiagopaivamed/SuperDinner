@@ -12,10 +12,7 @@ namespace SuperDinner.Application.Common.Api
     {
         public static void AddDataContext(this WebApplicationBuilder builder)
         {
-            string? environmentValue = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Testing";
-
-            if(!environmentValue.Equals("Testing"))
-                builder.Services.AddDbContext<SuperDinnerContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("SuperDinnerConnection")));
+            builder.Services.AddDbContext<SuperDinnerContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("SuperDinnerConnection")));
         }
 
         public static void AddServices(this WebApplicationBuilder builder)

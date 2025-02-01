@@ -12,13 +12,13 @@ namespace SuperDinner.IntegrationTests.Restaurants
         {
             #region Arrange
             CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
-            createRestaurantRequest.ShouldNotBe(null);
+            createRestaurantRequest.ShouldNotBeNull();
 
             Response<Restaurant> responseRestaurantCreated = await _restaurantHandler.AddRestaurantAsync(createRestaurantRequest);
-            responseRestaurantCreated.ShouldNotBe(null);
+            responseRestaurantCreated.ShouldNotBeNull();
             responseRestaurantCreated.IsSuccess.ShouldBeTrue();
-            responseRestaurantCreated.Data.ShouldNotBe(null);
-            responseRestaurantCreated.Messages.ShouldBe(null);
+            responseRestaurantCreated.Data.ShouldNotBeNull();
+            responseRestaurantCreated.Messages.ShouldBeNull();
             #endregion
 
             #region Act
@@ -38,14 +38,14 @@ namespace SuperDinner.IntegrationTests.Restaurants
             #endregion
 
             #region Assert
-            responseRestaurantUpdated.ShouldNotBe(null);
+            responseRestaurantUpdated.ShouldNotBeNull();
             responseRestaurantUpdated.IsSuccess.ShouldBeTrue();
-            responseRestaurantUpdated.Data.ShouldNotBe(null);
+            responseRestaurantUpdated.Data.ShouldNotBeNull();
             responseRestaurantUpdated.Data.Name.ShouldBe(updateRestaurantRequest.Name);
             responseRestaurantUpdated.Data.Description.ShouldBe(updateRestaurantRequest.Description);
             responseRestaurantUpdated.Data.Address.ShouldBe(updateRestaurantRequest.Address);
             responseRestaurantUpdated.Data.Country.ShouldBe(updateRestaurantRequest.Country);
-            responseRestaurantUpdated.Messages.ShouldBe(null);
+            responseRestaurantUpdated.Messages.ShouldBeNull();
             #endregion
         }
 
@@ -61,10 +61,10 @@ namespace SuperDinner.IntegrationTests.Restaurants
             #endregion
 
             #region Assert
-            responseRestaurantUpdated.ShouldNotBe(null);
+            responseRestaurantUpdated.ShouldNotBeNull();
             responseRestaurantUpdated.IsSuccess.ShouldBeFalse();
-            responseRestaurantUpdated.Data.ShouldBe(null);
-            responseRestaurantUpdated.Messages.ShouldNotBe(null);
+            responseRestaurantUpdated.Data.ShouldBeNull();
+            responseRestaurantUpdated.Messages.ShouldNotBeNull();
             responseRestaurantUpdated.Messages.Count.ShouldBeGreaterThan(0);
             #endregion
         }

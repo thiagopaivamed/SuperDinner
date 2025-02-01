@@ -7,11 +7,8 @@ namespace SuperDinner.Infrastructure.Data.Repositories
 {
     public class GenericRepository<TEntity>(SuperDinnerContext superDinnerContext) : IGenericRepository<TEntity> where TEntity : class
     {
-        public async Task DeleteAsync(Guid entityId)
-        {
-            TEntity entity = await GetByIdAsync(entityId);
-            superDinnerContext.Set<TEntity>().Remove(entity);
-        }
+        public void Delete(TEntity entity) 
+            => superDinnerContext.Set<TEntity>().Remove(entity);        
 
         public async Task<IList<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> conditions = null, params Expression<Func<TEntity, object>>[] objectsToBeIncluded)
         {
@@ -32,6 +29,7 @@ namespace SuperDinner.Infrastructure.Data.Repositories
         public async Task InsertAsync(TEntity entity)
             => await superDinnerContext.Set<TEntity>().AddAsync(entity);
 
-        public void Update(TEntity entity) => superDinnerContext.Set<TEntity>().Update(entity);
+        public void Update(TEntity entity) 
+            => superDinnerContext.Set<TEntity>().Update(entity);
     }
 }

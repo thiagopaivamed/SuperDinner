@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using Microsoft.AspNetCore.Http;
+using Moq;
 using Shouldly;
 using SuperDinner.Domain.Entities;
 using SuperDinner.Domain.Requests.Restaurant;
@@ -17,7 +18,7 @@ namespace SuperDinner.UnitTests.Restaurants
 
             Restaurant restaurant = _fakeRestaurant.Generate();
 
-            Response<Restaurant> restaurantResponse = new Response<Restaurant>(restaurant, 200, null);
+            Response<Restaurant> restaurantResponse = new Response<Restaurant>(restaurant, StatusCodes.Status200OK);
             restaurantResponse.ShouldNotBe(null);
             restaurantResponse.IsSuccess.ShouldBeTrue();
             restaurantResponse.Data.ShouldNotBe(null);
@@ -45,7 +46,7 @@ namespace SuperDinner.UnitTests.Restaurants
             GetRestaurantByIdRequest getRestaurantByIdRequest = new GetRestaurantByIdRequest();
             getRestaurantByIdRequest.RestaurantId = Guid.NewGuid();
 
-            Response<Restaurant> restaurantResponse = new Response<Restaurant>(null, 404, new List<string>() { "Not found" });
+            Response<Restaurant> restaurantResponse = new Response<Restaurant>(null, StatusCodes.Status404NotFound, ["Restaurant not found"]);
             restaurantResponse.ShouldNotBe(null);
             restaurantResponse.IsSuccess.ShouldBeFalse();
             restaurantResponse.Data.ShouldBe(null);

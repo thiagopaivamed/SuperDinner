@@ -22,7 +22,7 @@
 
         public int ClientsLimit { get; set; }
 
-        public DateTime LastModifiedDate { get; set; }
+        public DateTime LastModifiedDate { get; }
 
         public UpdateRestaurantRequest() => LastModifiedDate = DateTime.UtcNow;
     }

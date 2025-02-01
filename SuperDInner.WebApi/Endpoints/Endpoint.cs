@@ -17,7 +17,8 @@ namespace SuperDInner.Application.Endpoints
                 .WithTags("Restaurants")
                 .MapEndpoint<GetRestaurantByIdEndpoint>()
                 .MapEndpoint<CreateRestaurantEndpoint>()
-                .MapEndpoint<UpdateRestaurantEndpoint>();
+                .MapEndpoint<UpdateRestaurantEndpoint>()
+                .MapEndpoint<DeleteRestaurantEndpoint>();
         }
 
         private static IEndpointRouteBuilder MapEndpoint<TEndpoint>(this IEndpointRouteBuilder endpointRouteBuilder) where TEndpoint : IEndpoint

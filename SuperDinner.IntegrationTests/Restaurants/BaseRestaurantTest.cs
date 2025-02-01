@@ -17,7 +17,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
         public BaseRestaurantTest()
         {
             _dependencyInjectionFixture = new DependencyInjectionFixture();
-            _dependencyInjectionFixture.ShouldNotBe(null);
+            _dependencyInjectionFixture.ShouldNotBeNull();
             
             _fakeCreateRestaurantRequest = new Faker<CreateRestaurantRequest>()
                .RuleFor(r => r.Name, f => f.Company.CompanyName())
@@ -27,14 +27,14 @@ namespace SuperDinner.IntegrationTests.Restaurants
                .RuleFor(r => r.Country, f => f.Address.Country())
                .RuleFor(r => r.Latitude, f => f.Address.Latitude())
                .RuleFor(r => r.Longitude, f => f.Address.Longitude())
-               .RuleFor(r => r.Price, f => f.Random.Double(1, 100))
-               .RuleFor(r => r.ClientsLimit, f => f.Random.Int(1, 100))
+               .RuleFor(r => r.Price, f => f.Random.Double(10, 100) * 100)
+               .RuleFor(r => r.ClientsLimit, f => f.Random.Int(10, 100))
                .RuleFor(r => r.CreatedDate, f => DateTime.UtcNow);
 
-            _fakeCreateRestaurantRequest.ShouldNotBe(null);
+            _fakeCreateRestaurantRequest.ShouldNotBeNull();
 
             _restaurantHandler = _dependencyInjectionFixture.serviceProvider.GetRequiredService<IRestaurantHandler>();
-            _restaurantHandler.ShouldNotBe(null);
+            _restaurantHandler.ShouldNotBeNull();
         }
     }
 }

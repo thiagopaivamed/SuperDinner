@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SuperDinner.Infrastructure.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a40a16f25be4a6d94e5fa96b72097adc6b51321")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d434f341f8c4c57c5ab3d026404f6d484a176602")]
 [assembly: System.Reflection.AssemblyProductAttribute("SuperDinner.Infrastructure.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SuperDinner.Infrastructure.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

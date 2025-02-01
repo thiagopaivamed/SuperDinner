@@ -14,7 +14,8 @@ namespace SuperDinner.Application.Endpoints.Restaurants
             .WithSummary("Create a new restaurant")
             .WithDescription("Creates a new restaurant in the system")
             .WithOrder(3)
-            .Produces<Response<Restaurant?>>();
+            .Produces<Response<Restaurant?>>()
+            .Produces(StatusCodes.Status400BadRequest);
 
         private static async Task<IResult> HandleAsync(IRestaurantHandler restaurantHandler, CreateRestaurantRequest request)
         {

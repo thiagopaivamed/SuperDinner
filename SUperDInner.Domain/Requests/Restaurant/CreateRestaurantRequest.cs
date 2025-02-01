@@ -20,7 +20,7 @@
 
         public int ClientsLimit { get; set; }
 
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; }
 
         public CreateRestaurantRequest() 
             => CreatedDate = DateTime.UtcNow;

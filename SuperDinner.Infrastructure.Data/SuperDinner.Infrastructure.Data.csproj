@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SUperDInner.Domain\SuperDinner.Domain.csproj" />
+    <ProjectReference Include="..\SuperDInner.Domain\SuperDinner.Domain.csproj" />
   </ItemGroup>
 
 </Project>

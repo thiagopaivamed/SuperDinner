@@ -1,4 +1,5 @@
 ﻿using Bogus;
+using Microsoft.AspNetCore.Http;
 using Moq;
 using Shouldly;
 using SuperDinner.Domain.Entities;
@@ -79,7 +80,7 @@ namespace SuperDinner.UnitTests.Restaurants
             Restaurant restaurant = _fakeRestaurant.Generate();
             restaurant.ShouldNotBe(null);
 
-            Response<Restaurant> restaurantResponse = new Response<Restaurant>(restaurant, 200, null);
+            Response<Restaurant> restaurantResponse = new Response<Restaurant>(restaurant, StatusCodes.Status200OK);
             restaurantResponse.ShouldNotBe(null);
             restaurantResponse.IsSuccess.ShouldBeTrue();
             restaurantResponse.Data.ShouldNotBe(null);
@@ -107,7 +108,7 @@ namespace SuperDinner.UnitTests.Restaurants
             UpdateRestaurantRequest updateRestaurantRequest = new UpdateRestaurantRequest();
             updateRestaurantRequest.ShouldNotBe(null);
 
-            Response<Restaurant> restaurantResponse = new Response<Restaurant>(null, 404, new List<string>() { "Invalid request" });
+            Response<Restaurant> restaurantResponse = new Response<Restaurant>(null, StatusCodes.Status400BadRequest, ["Invalid restaurant data"]);
             restaurantResponse.ShouldNotBe(null);
             restaurantResponse.IsSuccess.ShouldBeFalse();
             restaurantResponse.Data.ShouldBe(null);

@@ -6,7 +6,7 @@ namespace SuperDinner.Domain.Interfaces
     {
         Task InsertAsync(TEntity entity);
         void Update(TEntity entity);
-        Task DeleteAsync(Guid entityId);
+        void Delete(TEntity entity);
         Task<IList<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> conditions = null, params Expression<Func<TEntity, object>>[] objectsToBeIncluded);
         Task<TEntity> GetByIdAsync(Guid entityId);
 

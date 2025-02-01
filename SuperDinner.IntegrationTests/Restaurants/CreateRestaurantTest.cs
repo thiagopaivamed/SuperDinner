@@ -14,7 +14,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
         {
             #region Arrange
             CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
-            createRestaurantRequest.ShouldNotBe(null);
+            createRestaurantRequest.ShouldNotBeNull();
             #endregion
 
             #region Act
@@ -22,10 +22,10 @@ namespace SuperDinner.IntegrationTests.Restaurants
             #endregion
 
             #region Assert
-            responseRestaurantCreated.ShouldNotBe(null);
+            responseRestaurantCreated.ShouldNotBeNull();
             responseRestaurantCreated.IsSuccess.ShouldBeTrue();
-            responseRestaurantCreated.Data.ShouldNotBe(null);
-            responseRestaurantCreated.Messages.ShouldBe(null);
+            responseRestaurantCreated.Data.ShouldNotBeNull();
+            responseRestaurantCreated.Messages.ShouldBeNull();
             #endregion
         }
 
@@ -34,7 +34,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
         {
             #region Arrange
             CreateRestaurantRequest createRestaurantRequest = new CreateRestaurantRequest();
-            createRestaurantRequest.ShouldNotBe(null);
+            createRestaurantRequest.ShouldNotBeNull();
             #endregion
 
             #region Act
@@ -42,10 +42,10 @@ namespace SuperDinner.IntegrationTests.Restaurants
             #endregion
 
             #region Assert
-            responseRestaurantCreated.ShouldNotBe(null);
+            responseRestaurantCreated.ShouldNotBeNull();
             responseRestaurantCreated.IsSuccess.ShouldBeFalse();
-            responseRestaurantCreated.Data.ShouldBe(null);
-            responseRestaurantCreated.Messages.ShouldNotBe(null);
+            responseRestaurantCreated.Data.ShouldBeNull();
+            responseRestaurantCreated.Messages.ShouldNotBeNull();
             responseRestaurantCreated.Messages.Count.ShouldBeGreaterThan(0);
             #endregion
         }

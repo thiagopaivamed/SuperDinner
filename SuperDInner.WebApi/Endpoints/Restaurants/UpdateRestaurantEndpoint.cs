@@ -14,15 +14,21 @@ namespace SuperDinner.Application.Endpoints.Restaurants
             .WithSummary("Update a restaurant")
             .WithDescription("Update a restaurant in the system")
             .WithOrder(4)
-            .Produces<Response<Restaurant?>>();
+            .Produces<Response<Restaurant?>>()
+            .Produces(StatusCodes.Status404NotFound);
 
         private static async Task<IResult> HandleAsync(IRestaurantHandler restaurantHandler, UpdateRestaurantRequest request)
         {
             Response<Restaurant> restaurantUpdatedResponse = await restaurantHandler.UpdateRestaurantAsync(request);
 
-            return restaurantUpdatedResponse.IsSuccess
+            if (restaurantUpdatedResponse.IsSuccess)
+                Results.Ok(restaurantUpdatedResponse.Data);
+
+            return restaurantUpdatedResponse.IsSuccess 
                 ? Results.Ok(restaurantUpdatedResponse.Data)
-                : Results.BadRequest(restaurantUpdatedResponse.Data);
+                : restaurantUpdatedResponse.ResponseStatusCode == StatusCodes.Status400BadRequest
+                ? Results.BadRequest(restaurantUpdatedResponse.Data)
+                : Results.NotFound(restaurantUpdatedResponse.Data);
         }
     }
 }

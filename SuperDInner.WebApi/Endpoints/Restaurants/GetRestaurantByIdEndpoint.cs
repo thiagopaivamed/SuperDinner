@@ -14,18 +14,19 @@ namespace SuperDinner.Application.Endpoints.Restaurants
             .WithSummary("Get a restaurant by its Id")
             .WithDescription("Get a restaurant by its Id")
             .WithOrder(2)
-            .Produces<Response<Restaurant?>>();
+            .Produces<Response<Restaurant?>>()
+            .Produces(StatusCodes.Status404NotFound);
 
         private static async Task<IResult> HandleAsync(IRestaurantHandler restaurantHandler, Guid restaurantId)
         {
             GetRestaurantByIdRequest request = new();
             request.RestaurantId = restaurantId;
 
-            Response<Restaurant> restaurantResponse = await restaurantHandler.GetRestaurantByIdAsync(request);
+            Response<Restaurant> restaurantFoundResponse = await restaurantHandler.GetRestaurantByIdAsync(request);
 
-            return restaurantResponse.IsSuccess
-                ? Results.Ok(restaurantResponse.Data)
-                : Results.BadRequest(restaurantResponse.Data);
+            return restaurantFoundResponse.IsSuccess
+                ? Results.Ok(restaurantFoundResponse.Data)
+                : Results.NotFound(restaurantFoundResponse.Data);
         }
     }
 }
