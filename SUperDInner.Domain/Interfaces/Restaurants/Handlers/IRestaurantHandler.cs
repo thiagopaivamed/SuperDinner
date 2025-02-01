@@ -9,5 +9,7 @@ namespace SuperDinner.Domain.Interfaces.Restaurants.Handlers
         Task<Response<Restaurant>> AddRestaurantAsync(CreateRestaurantRequest request);
 
         Task<Response<Restaurant>> GetRestaurantByIdAsync(GetRestaurantByIdRequest request);
+
+        Task<Response<Restaurant>> UpdateRestaurantAsync(UpdateRestaurantRequest request);
     }
 }

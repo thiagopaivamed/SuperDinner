@@ -28,7 +28,6 @@ namespace SuperDinner.Service.Handlers
             restaurant.Longitude = request.Longitude;
             restaurant.ClientsLimit = request.ClientsLimit;
             restaurant.CreatedDate = request.CreatedDate;
-            restaurant.LastModifiedDate = request.LastModifiedDate;
 
             await repository.InsertAsync(restaurant);
             await unitOfWork.CommitAsync();
@@ -43,6 +42,29 @@ namespace SuperDinner.Service.Handlers
             return restaurant is null ?
                 new Response<Restaurant>(null, 404, ["Restaurant not found."]) :
                 new Response<Restaurant>(restaurant, 200);
+        }
+
+        public async Task<Response<Restaurant>> UpdateRestaurantAsync(UpdateRestaurantRequest request)
+        {
+            Restaurant restaurant = await repository.GetByIdAsync(request.RestaurantId);
+
+            if(restaurant is null)
+                return new Response<Restaurant>(null, 404, ["Restaurant not found."]);
+
+            restaurant.Name = request.Name;
+            restaurant.Description = request.Description;
+            restaurant.ContactPhone = request.ContactPhone;
+            restaurant.Address = request.Address;
+            restaurant.Country = request.Country;
+            restaurant.Latitude = request.Latitude;
+            restaurant.Longitude = request.Longitude;
+            restaurant.ClientsLimit = request.ClientsLimit;
+            restaurant.LastModifiedDate = request.LastModifiedDate;
+
+            repository.Update(restaurant);
+            await unitOfWork.CommitAsync();
+
+            return new Response<Restaurant>(restaurant, 200);
         }
     }
 }

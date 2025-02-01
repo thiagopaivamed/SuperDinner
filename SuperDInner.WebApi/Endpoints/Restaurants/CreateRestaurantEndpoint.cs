@@ -13,15 +13,15 @@ namespace SuperDinner.Application.Endpoints.Restaurants
             .WithName("Restaurants: Create")
             .WithSummary("Create a new restaurant")
             .WithDescription("Creates a new restaurant in the system")
-            .WithOrder(1)
+            .WithOrder(3)
             .Produces<Response<Restaurant?>>();
 
         private static async Task<IResult> HandleAsync(IRestaurantHandler restaurantHandler, CreateRestaurantRequest request)
         {
-            Response<Restaurant> restaurantResponse = await restaurantHandler.AddRestaurantAsync(request);
-            return restaurantResponse.IsSuccess
-                ? Results.Created($"/{restaurantResponse.Data?.RestaurantId}", restaurantResponse.Data)
-                : Results.BadRequest(restaurantResponse.Data);
+            Response<Restaurant> restaurantCreatedResponse = await restaurantHandler.AddRestaurantAsync(request);
+            return restaurantCreatedResponse.IsSuccess
+                ? Results.Created($"/{restaurantCreatedResponse.Data?.RestaurantId}", restaurantCreatedResponse.Data)
+                : Results.BadRequest(restaurantCreatedResponse.Data);
         }
     }
 }

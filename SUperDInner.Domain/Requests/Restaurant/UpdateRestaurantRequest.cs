@@ -1,7 +1,9 @@
 ﻿namespace SuperDinner.Domain.Requests.Restaurant
 {
-    public sealed class CreateRestaurantRequest : Request
+    public sealed class UpdateRestaurantRequest
     {
+        public Guid RestaurantId { get; set; }
+
         public string Name { get; set; } = string.Empty;
 
         public string Description { get; set; } = string.Empty;
@@ -20,10 +22,8 @@
 
         public int ClientsLimit { get; set; }
 
-        public DateTime CreatedDate { get; set; }
+        public DateTime LastModifiedDate { get; set; }
 
-        public CreateRestaurantRequest() 
-            => CreatedDate = DateTime.UtcNow;
-
+        public UpdateRestaurantRequest() => LastModifiedDate = DateTime.UtcNow;
     }
 }

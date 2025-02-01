@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Validators;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Shouldly;
 using SuperDinner.Domain.Entities;
 using SuperDinner.Domain.Requests.Restaurant;
@@ -9,20 +9,20 @@ using SuperDinner.Service.Validators;
 
 namespace SuperDinner.IntegrationTests.Restaurants
 {
-    public sealed class CreateRestaurantRequestFluentValidationTest : IClassFixture<ValidationFixture<Restaurant>>
+    public sealed class UpdateRestaurantRequestFluentValidationTest : IClassFixture<ValidationFixture<Restaurant>>
     {
         private readonly ValidationFixture<Restaurant> _validationFixture;
-        private readonly CreateRestaurantRequestValidator _createRestaurantRequestValidator;
+        private readonly UpdateRestaurantRequestValidator _updateRestaurantRequestValidator;
         private readonly EntityTypeBuilder<Restaurant> _restaurantEntityTypeBuilder;
 
-        public CreateRestaurantRequestFluentValidationTest(ValidationFixture<Restaurant> validationFixture)
+        public UpdateRestaurantRequestFluentValidationTest(ValidationFixture<Restaurant> validationFixture)
         {
             _validationFixture = validationFixture;
-            _createRestaurantRequestValidator = new CreateRestaurantRequestValidator();
+            _updateRestaurantRequestValidator = new UpdateRestaurantRequestValidator();
             _restaurantEntityTypeBuilder = _validationFixture.GetEntityTypeBuilder<Restaurant, RestaurantConfiguration>();
 
             _validationFixture.ShouldNotBe(null);
-            _createRestaurantRequestValidator.ShouldNotBe(null);
+            _updateRestaurantRequestValidator.ShouldNotBe(null);
             _restaurantEntityTypeBuilder.ShouldNotBe(null);
         }
 
@@ -35,7 +35,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
 
             #region Act
             Dictionary<string, ILengthValidator> propertiesWithMaxLengthValidation = _validationFixture
-                .GetFluentValidationProperties<CreateRestaurantRequest, ILengthValidator>(propertiesToValidate, _createRestaurantRequestValidator);
+                .GetFluentValidationProperties<UpdateRestaurantRequest, ILengthValidator>(propertiesToValidate, _updateRestaurantRequestValidator);
 
             Dictionary<string, IMutableProperty?> propertiesWithMaxLengthConfiguration = _validationFixture
                 .GetFluentEfApiConfigurationProperties(propertiesToValidate, _restaurantEntityTypeBuilder);
@@ -67,6 +67,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
             string[] propertiesToIgnore =
             [
                 "RestaurantId",
+                "CreatedDate",
                 "LastModifiedDate",
                 "Dinners"
             ];
@@ -77,7 +78,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
 
             #region Act
             Dictionary<string, INotEmptyValidator> propertiesWithNotEmptyValidation = _validationFixture
-                .GetFluentValidationProperties<CreateRestaurantRequest, INotEmptyValidator>(propertiesToValidate, _createRestaurantRequestValidator);
+                .GetFluentValidationProperties<UpdateRestaurantRequest, INotEmptyValidator>(propertiesToValidate, _updateRestaurantRequestValidator);
 
             Dictionary<string, IMutableProperty?> propertiesWithRequiredConfiguration = _validationFixture
                 .GetFluentEfApiConfigurationProperties(propertiesToValidate, _restaurantEntityTypeBuilder);
@@ -100,6 +101,6 @@ namespace SuperDinner.IntegrationTests.Restaurants
                 propertyToValidate.Value.Name.ShouldBe("NotEmptyValidator", $"Validator for {propertyToValidate.Key} should be NotEmptyValidator");
             }
             #endregion
-        }        
+        }
     }
 }

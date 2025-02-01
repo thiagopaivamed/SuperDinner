@@ -49,6 +49,36 @@
     "Summary": "Create a new restaurant"
   },
   {
+    "ContainingType": "SuperDinner.Application.Endpoints.Restaurants.UpdateRestaurantEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "v1/restaurants/",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "SuperDinner.Domain.Requests.Restaurant.UpdateRestaurantRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SuperDinner.Domain.Responses.Response\u00601[[SuperDinner.Domain.Entities.Restaurant, SuperDinner.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Restaurants"
+    ],
+    "EndpointName": "Restaurants: Update",
+    "Description": "Update a restaurant in the system",
+    "Summary": "Update a restaurant"
+  },
+  {
     "ContainingType": "SuperDinner.Application.Endpoints.Restaurants.GetRestaurantByIdEndpoint",
     "Method": "HandleAsync",
     "RelativePath": "v1/restaurants/{restaurantId}",

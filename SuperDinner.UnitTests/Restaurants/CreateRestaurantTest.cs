@@ -11,7 +11,6 @@ namespace SuperDinner.UnitTests.Restaurants
     public sealed class CreateRestaurantTest : BaseRestaurantTest, IDisposable
     {
         private readonly Faker<CreateRestaurantRequest> _fakeCreateRestaurantRequest;
-        private readonly List<Restaurant> _restaurants;
 
         public CreateRestaurantTest()
         {            
@@ -27,11 +26,7 @@ namespace SuperDinner.UnitTests.Restaurants
                 .RuleFor(r => r.ClientsLimit, f => f.Random.Int(1, 100))
                 .RuleFor(r => r.CreatedDate, f => DateTime.UtcNow);
             
-            _fakeCreateRestaurantRequest.ShouldNotBe(null);
-
-            _restaurants = _fakeRestaurant.Generate(20);
-            _restaurants.ShouldNotBe(null);
-            _restaurants.Count.ShouldBeGreaterThanOrEqualTo(20);
+            _fakeCreateRestaurantRequest.ShouldNotBe(null);            
         }
 
         [Fact]
