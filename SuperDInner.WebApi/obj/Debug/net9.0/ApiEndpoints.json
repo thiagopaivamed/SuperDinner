@@ -19,6 +19,41 @@
     ]
   },
   {
+    "ContainingType": "SuperDinner.Application.Endpoints.Restaurants.GetAllRestaurantsEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "v1/restaurants/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SuperDinner.Domain.Responses.PagedResponse\u00601[[System.Collections.Generic.List\u00601[[SuperDinner.Domain.Entities.Restaurant, SuperDinner.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Restaurants"
+    ],
+    "EndpointName": "Restaurants: Get All",
+    "Description": "Get all restaurants in the system",
+    "Summary": "Get all restaurants"
+  },
+  {
     "ContainingType": "SuperDinner.Application.Endpoints.Restaurants.CreateRestaurantEndpoint",
     "Method": "HandleAsync",
     "RelativePath": "v1/restaurants/",
@@ -39,6 +74,11 @@
           "application/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 400
       }
     ],
     "Tags": [
@@ -69,6 +109,11 @@
           "application/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 404
       }
     ],
     "Tags": [
@@ -99,6 +144,11 @@
           "application/json"
         ],
         "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 404
       }
     ],
     "Tags": [
@@ -107,5 +157,40 @@
     "EndpointName": "Restaurants: Get by Id",
     "Description": "Get a restaurant by its Id",
     "Summary": "Get a restaurant by its Id"
+  },
+  {
+    "ContainingType": "SuperDinner.Application.Endpoints.Restaurants.DeleteRestaurantEndpoint",
+    "Method": "HandleAsync",
+    "RelativePath": "v1/restaurants/{restaurantId}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "restaurantId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SuperDinner.Domain.Responses.Response\u00601[[SuperDinner.Domain.Entities.Restaurant, SuperDinner.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 404
+      }
+    ],
+    "Tags": [
+      "Restaurants"
+    ],
+    "EndpointName": "Restaurants: Delete a restaurant by its Id",
+    "Description": "Delete a restaurant by its Id",
+    "Summary": "Delete a restaurant by its Id"
   }
 ]

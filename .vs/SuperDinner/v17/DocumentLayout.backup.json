@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\restaurants\\deleterestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\restaurants\\deleterestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F068108C-5673-45F7-B5C7-4E8D5F935BB0}|SuperDinner.Infrastructure.Data\\SuperDinner.Infrastructure.Data.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.infrastructure.data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F068108C-5673-45F7-B5C7-4E8D5F935BB0}|SuperDinner.Infrastructure.Data\\SuperDinner.Infrastructure.Data.csproj|solutionrelative:superdinner.infrastructure.data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\restaurants\\getrestaurantbyidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\restaurants\\getrestaurantbyidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B485C87-85D1-437D-8B51-57642BE128C6}|SuperDInner.WebApi\\SuperDinner.Application.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.webapi\\endpoints\\restaurants\\updaterestaurantendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B485C87-85D1-437D-8B51-57642BE128C6}|SuperDInner.WebApi\\SuperDinner.Application.csproj|solutionrelative:superdinner.webapi\\endpoints\\restaurants\\updaterestaurantendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B485C87-85D1-437D-8B51-57642BE128C6}|SuperDInner.WebApi\\SuperDinner.Application.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.webapi\\common\\api\\iendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B485C87-85D1-437D-8B51-57642BE128C6}|SuperDInner.WebApi\\SuperDinner.Application.csproj|solutionrelative:superdinner.webapi\\common\\api\\iendpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB360012-E5F8-417B-87E4-EAAAB7FB739F}|SUperDInner.Domain\\SuperDinner.Domain.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.domain\\responses\\pagedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB360012-E5F8-417B-87E4-EAAAB7FB739F}|SUperDInner.Domain\\SuperDinner.Domain.csproj|solutionrelative:superdinner.domain\\responses\\pagedresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +42,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetRestaurantByIdTest.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\GetRestaurantByIdTest.cs",
-              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Restaurants\\GetRestaurantByIdTest.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\GetRestaurantByIdTest.cs",
-              "RelativeToolTip": "SuperDinner.IntegrationTests\\Restaurants\\GetRestaurantByIdTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABDAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Infrastructure.Data\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "SuperDinner.Infrastructure.Data\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Infrastructure.Data\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "SuperDinner.Infrastructure.Data\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T01:22:45.96Z",
+              "WhenOpened": "2025-02-05T01:02:06.657Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DeleteRestaurantTest.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\DeleteRestaurantTest.cs",
-              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Restaurants\\DeleteRestaurantTest.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\DeleteRestaurantTest.cs",
-              "RelativeToolTip": "SuperDinner.IntegrationTests\\Restaurants\\DeleteRestaurantTest.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAlwDMAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UpdateRestaurantEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.WebApi\\Endpoints\\Restaurants\\UpdateRestaurantEndpoint.cs",
+              "RelativeDocumentMoniker": "SuperDinner.WebApi\\Endpoints\\Restaurants\\UpdateRestaurantEndpoint.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.WebApi\\Endpoints\\Restaurants\\UpdateRestaurantEndpoint.cs",
+              "RelativeToolTip": "SuperDinner.WebApi\\Endpoints\\Restaurants\\UpdateRestaurantEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T23:41:14.536Z",
+              "WhenOpened": "2025-02-05T01:01:07.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IEndpoint.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.WebApi\\Common\\Api\\IEndpoint.cs",
+              "RelativeDocumentMoniker": "SuperDinner.WebApi\\Common\\Api\\IEndpoint.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.WebApi\\Common\\Api\\IEndpoint.cs",
+              "RelativeToolTip": "SuperDinner.WebApi\\Common\\Api\\IEndpoint.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T01:00:57.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PagedResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Domain\\Responses\\PagedResponse.cs",
+              "RelativeDocumentMoniker": "SuperDinner.Domain\\Responses\\PagedResponse.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Domain\\Responses\\PagedResponse.cs",
+              "RelativeToolTip": "SuperDinner.Domain\\Responses\\PagedResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T00:21:02.276Z",
               "EditorCaption": ""
             }
           ]

@@ -22,7 +22,7 @@ namespace SuperDinner.UnitTests.Restaurants
                 .RuleFor(r => r.Country, f => f.Address.Country())
                 .RuleFor(r => r.Latitude, f => f.Address.Latitude())
                 .RuleFor(r => r.Longitude, f => f.Address.Longitude())
-                .RuleFor(r => r.Price, f => f.Random.Double(10, 100) * 100)
+                .RuleFor(r => r.Price, f => f.Random.Double(10, 100))
                 .RuleFor(r => r.ClientsLimit, f => f.Random.Int(1, 100))
                 .RuleFor(r => r.CreatedDate, f => f.Date.Past(1))
                 .RuleFor(r => r.Dinners, f => new List<Dinner>());

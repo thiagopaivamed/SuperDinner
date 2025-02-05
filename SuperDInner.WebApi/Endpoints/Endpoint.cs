@@ -15,6 +15,7 @@ namespace SuperDInner.Application.Endpoints
 
             endpoints.MapGroup("v1/restaurants")
                 .WithTags("Restaurants")
+                .MapEndpoint<GetAllRestaurantsEndpoint>()
                 .MapEndpoint<GetRestaurantByIdEndpoint>()
                 .MapEndpoint<CreateRestaurantEndpoint>()
                 .MapEndpoint<UpdateRestaurantEndpoint>()

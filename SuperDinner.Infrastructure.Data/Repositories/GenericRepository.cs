@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SuperDinner.Domain.Interfaces;
+using SuperDinner.Domain.Responses;
 using SuperDinner.Infrastructure.Data.Context;
 using System.Linq.Expressions;
 
@@ -7,20 +8,26 @@ namespace SuperDinner.Infrastructure.Data.Repositories
 {
     public class GenericRepository<TEntity>(SuperDinnerContext superDinnerContext) : IGenericRepository<TEntity> where TEntity : class
     {
-        public void Delete(TEntity entity) 
-            => superDinnerContext.Set<TEntity>().Remove(entity);        
+        public void Delete(TEntity entity)
+            => superDinnerContext.Set<TEntity>().Remove(entity);
 
-        public async Task<IList<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> conditions = null, params Expression<Func<TEntity, object>>[] objectsToBeIncluded)
+        public async Task<PagedResponse<List<TEntity>>> GetAllAsync(int pageNumber, int pageSize, Expression<Func<TEntity, bool>> conditions = null, params Expression<Func<TEntity, object>>[] objectsToBeIncluded)
         {
-            IQueryable<TEntity> entities = superDinnerContext.Set<TEntity>().AsNoTracking();
+            IQueryable<TEntity> query = superDinnerContext.Set<TEntity>().AsNoTracking();
 
             if (objectsToBeIncluded is not null)
-                entities = objectsToBeIncluded.Aggregate(entities, (current, include) => current.Include(include));
+                query = objectsToBeIncluded.Aggregate(query, (current, include) => current.Include(include));
 
             if (conditions is not null)
-                entities = entities.Where(conditions);
+                query = query.Where(conditions);
 
-            return await entities.ToListAsync();
+            List<TEntity> entities = await query.Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            int dataFoundCount = await query.CountAsync();
+
+            return new PagedResponse<List<TEntity>>(entities, dataFoundCount, pageNumber, pageSize);
         }
 
         public async Task<TEntity> GetByIdAsync(Guid entityId)
@@ -29,7 +36,7 @@ namespace SuperDinner.Infrastructure.Data.Repositories
         public async Task InsertAsync(TEntity entity)
             => await superDinnerContext.Set<TEntity>().AddAsync(entity);
 
-        public void Update(TEntity entity) 
+        public void Update(TEntity entity)
             => superDinnerContext.Set<TEntity>().Update(entity);
     }
 }

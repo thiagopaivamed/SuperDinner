@@ -19,10 +19,7 @@ namespace SuperDinner.Application.Endpoints.Restaurants
 
         private static async Task<IResult> HandleAsync(IRestaurantHandler restaurantHandler, UpdateRestaurantRequest request)
         {
-            Response<Restaurant> restaurantUpdatedResponse = await restaurantHandler.UpdateRestaurantAsync(request);
-
-            if (restaurantUpdatedResponse.IsSuccess)
-                Results.Ok(restaurantUpdatedResponse.Data);
+            Response<Restaurant> restaurantUpdatedResponse = await restaurantHandler.UpdateRestaurantAsync(request);            
 
             return restaurantUpdatedResponse.IsSuccess 
                 ? Results.Ok(restaurantUpdatedResponse.Data)

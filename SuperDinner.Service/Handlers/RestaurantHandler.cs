@@ -18,9 +18,9 @@ namespace SuperDinner.Service.Handlers
         {
             CreateRestaurantRequestValidator createRestaurantRequestValidator = new CreateRestaurantRequestValidator();
             ValidationResult createRestaurantRequestValidationResult = await createRestaurantRequestValidator.ValidateAsync(request);
-            
+
             if (!createRestaurantRequestValidationResult.IsValid)
-                return new Response<Restaurant>(null, StatusCodes.Status400BadRequest, 
+                return new Response<Restaurant>(null, StatusCodes.Status400BadRequest,
                     createRestaurantRequestValidationResult.Errors.Select(x => x.ErrorMessage).ToList());
 
             Restaurant restaurant = new Restaurant();
@@ -53,6 +53,9 @@ namespace SuperDinner.Service.Handlers
             return new Response<Restaurant>(restaurant, StatusCodes.Status204NoContent);
         }
 
+        public async Task<PagedResponse<List<Restaurant>>> GetAllRestaurantsAsync(GetAllRestaurantsRequest request)
+            => await repository.GetAllAsync(request.PageNumber, request.PageSize);
+
         public async Task<Response<Restaurant>> GetRestaurantByIdAsync(GetRestaurantByIdRequest request)
         {
             Restaurant restaurant = await repository.GetByIdAsync(request.RestaurantId);
@@ -67,7 +70,7 @@ namespace SuperDinner.Service.Handlers
             UpdateRestaurantRequestValidator updateRestaurantRequestValidator = new UpdateRestaurantRequestValidator();
             ValidationResult updateRestaurantRequestValidationResult = await updateRestaurantRequestValidator.ValidateAsync(request);
             if (!updateRestaurantRequestValidationResult.IsValid)
-                return new Response<Restaurant>(null, StatusCodes.Status400BadRequest, 
+                return new Response<Restaurant>(null, StatusCodes.Status400BadRequest,
                     updateRestaurantRequestValidationResult.Errors.Select(x => x.ErrorMessage).ToList());
 
             Restaurant restaurant = await repository.GetByIdAsync(request.RestaurantId);
@@ -83,7 +86,7 @@ namespace SuperDinner.Service.Handlers
             restaurant.Latitude = request.Latitude;
             restaurant.Longitude = request.Longitude;
             restaurant.ClientsLimit = request.ClientsLimit;
-            restaurant.LastModifiedDate = request.LastModifiedDate;            
+            restaurant.LastModifiedDate = request.LastModifiedDate;
 
             repository.Update(restaurant);
             await unitOfWork.CommitAsync();

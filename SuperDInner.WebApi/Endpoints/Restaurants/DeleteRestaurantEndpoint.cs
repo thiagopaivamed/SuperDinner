@@ -10,7 +10,7 @@ namespace SuperDinner.Application.Endpoints.Restaurants
     {
         public static void Map(IEndpointRouteBuilder endpointRouteBuilder)
          => endpointRouteBuilder.MapDelete("/{restaurantId}", HandleAsync)
-            .WithName("Restaurants: Get by Id")
+            .WithName("Restaurants: Delete a restaurant by its Id")
             .WithSummary("Delete a restaurant by its Id")
             .WithDescription("Delete a restaurant by its Id")
             .WithOrder(5)
