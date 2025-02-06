@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SuperDinner.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad182294f1f38a9aaf30baed0fd64e6ded3837c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b095a106d9e9481a06a45e396c06c504ad743dc6")]
 [assembly: System.Reflection.AssemblyProductAttribute("SuperDinner.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SuperDinner.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

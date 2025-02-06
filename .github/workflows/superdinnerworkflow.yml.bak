@@ -1,0 +1,36 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'  # Atualize para a versão correta do .NET
+
+      - name: Restaurar dependências
+        run: dotnet restore
+
+      - name: Compilar o projeto
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Executar testes de unidade
+        run: dotnet test SuperDinner.UnitTests --no-build --configuration Release --verbosity normal
+
+      - name: Executar testes de integração
+        run: dotnet test SuperDinner.IntegrationTests --no-build --configuration Release --verbosity normal

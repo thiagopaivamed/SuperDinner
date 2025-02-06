@@ -32,6 +32,7 @@ namespace SuperDinner.Service.Handlers
             restaurant.Country = request.Country;
             restaurant.Latitude = request.Latitude;
             restaurant.Longitude = request.Longitude;
+            restaurant.Price = request.Price;
             restaurant.ClientsLimit = request.ClientsLimit;
             restaurant.CreatedDate = request.CreatedDate;
 
@@ -86,6 +87,7 @@ namespace SuperDinner.Service.Handlers
             restaurant.Country = request.Country;
             restaurant.Latitude = request.Latitude;
             restaurant.Longitude = request.Longitude;
+            restaurant.Price = request.Price;
             restaurant.ClientsLimit = request.ClientsLimit;
             restaurant.LastModifiedDate = request.LastModifiedDate;
 
