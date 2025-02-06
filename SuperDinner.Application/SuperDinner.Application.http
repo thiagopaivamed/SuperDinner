@@ -1,0 +1,6 @@
+@SuperDinner.Application_HostAddress = http://localhost:5157
+
+GET {{SuperDinner.Application_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

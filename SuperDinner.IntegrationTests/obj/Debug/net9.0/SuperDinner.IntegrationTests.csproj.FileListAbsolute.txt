@@ -463,13 +463,11 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SuperDinner.Application.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SuperDinner.Domain.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SuperDinner.Infrastructure.Data.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SuperDinner.Infrastructure.IOC.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SuperDinner.Service.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SuperDinner.Domain.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SuperDinner.Infrastructure.Data.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SuperDinner.Service.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SuperDinner.Application.pdb
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SuperDinner.Infrastructure.IOC.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\obj\Debug\net9.0\SuperDinner.IntegrationTests.csproj.AssemblyReference.cache
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\obj\Debug\net9.0\MvcTestingAppManifest.json
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\obj\Debug\net9.0\SuperDinner.IntegrationTests.GeneratedMSBuildEditorConfig.editorconfig

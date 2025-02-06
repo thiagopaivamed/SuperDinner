@@ -1482,9 +1482,9 @@
       "SuperDinner.Application/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "9.0.0",
-          "Microsoft.EntityFrameworkCore.InMemory": "9.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.0",
           "SuperDinner.Domain": "1.0.0",
-          "SuperDinner.Infrastructure.IOC": "1.0.0",
+          "SuperDinner.Infrastructure.Data": "1.0.0",
           "SuperDinner.Service": "1.0.0"
         },
         "runtime": {
@@ -1522,21 +1522,6 @@
         },
         "compile": {
           "SuperDinner.Infrastructure.Data.dll": {}
-        }
-      },
-      "SuperDinner.Infrastructure.IOC/1.0.0": {
-        "dependencies": {
-          "SuperDinner.Domain": "1.0.0",
-          "SuperDinner.Service": "1.0.0"
-        },
-        "runtime": {
-          "SuperDinner.Infrastructure.IOC.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        },
-        "compile": {
-          "SuperDinner.Infrastructure.IOC.dll": {}
         }
       },
       "SuperDinner.Service/1.0.0": {
@@ -3737,11 +3722,6 @@
       "sha512": ""
     },
     "SuperDinner.Infrastructure.Data/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SuperDinner.Infrastructure.IOC/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

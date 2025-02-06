@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperDinner.UnitTests", "Su
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperDinner.IntegrationTests", "SuperDinner.IntegrationTests\SuperDinner.IntegrationTests.csproj", "{A1D5E924-EB2C-4866-8953-308D17678462}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperDinner.Application", "SuperDInner.WebApi\SuperDinner.Application.csproj", "{5B485C87-85D1-437D-8B51-57642BE128C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperDinner.Application", "SuperDinner.Application\SuperDinner.Application.csproj", "{5BC93D97-CF7F-469A-A986-D6735EDF4C39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +53,10 @@ Global
 		{A1D5E924-EB2C-4866-8953-308D17678462}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1D5E924-EB2C-4866-8953-308D17678462}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1D5E924-EB2C-4866-8953-308D17678462}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B485C87-85D1-437D-8B51-57642BE128C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B485C87-85D1-437D-8B51-57642BE128C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B485C87-85D1-437D-8B51-57642BE128C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B485C87-85D1-437D-8B51-57642BE128C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BC93D97-CF7F-469A-A986-D6735EDF4C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC93D97-CF7F-469A-A986-D6735EDF4C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC93D97-CF7F-469A-A986-D6735EDF4C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC93D97-CF7F-469A-A986-D6735EDF4C39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

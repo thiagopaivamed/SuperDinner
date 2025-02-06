@@ -1546,9 +1546,9 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "9.0.0",
-          "Microsoft.EntityFrameworkCore.InMemory": "9.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.0",
           "SuperDinner.Domain": "1.0.0",
-          "SuperDinner.Infrastructure.IOC": "1.0.0",
+          "SuperDinner.Infrastructure.Data": "1.0.0",
           "SuperDinner.Service": "1.0.0"
         },
         "compile": {
@@ -1584,20 +1584,6 @@
         },
         "runtime": {
           "bin/placeholder/SuperDinner.Infrastructure.Data.dll": {}
-        }
-      },
-      "SuperDinner.Infrastructure.IOC/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "SuperDinner.Domain": "1.0.0",
-          "SuperDinner.Service": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SuperDinner.Infrastructure.IOC.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SuperDinner.Infrastructure.IOC.dll": {}
         }
       },
       "SuperDinner.Service/1.0.0": {
@@ -3657,8 +3643,8 @@
     },
     "SuperDinner.Application/1.0.0": {
       "type": "project",
-      "path": "../SuperDInner.WebApi/SuperDinner.Application.csproj",
-      "msbuildProject": "../SuperDInner.WebApi/SuperDinner.Application.csproj"
+      "path": "../SuperDinner.Application/SuperDinner.Application.csproj",
+      "msbuildProject": "../SuperDinner.Application/SuperDinner.Application.csproj"
     },
     "SuperDinner.Domain/1.0.0": {
       "type": "project",
@@ -3669,11 +3655,6 @@
       "type": "project",
       "path": "../SuperDinner.Infrastructure.Data/SuperDinner.Infrastructure.Data.csproj",
       "msbuildProject": "../SuperDinner.Infrastructure.Data/SuperDinner.Infrastructure.Data.csproj"
-    },
-    "SuperDinner.Infrastructure.IOC/1.0.0": {
-      "type": "project",
-      "path": "../SuperDinner.Infrastructure.IOC/SuperDinner.Infrastructure.IOC.csproj",
-      "msbuildProject": "../SuperDinner.Infrastructure.IOC/SuperDinner.Infrastructure.IOC.csproj"
     },
     "SuperDinner.Service/1.0.0": {
       "type": "project",
@@ -3734,6 +3715,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Application\\SuperDinner.Application.csproj": {
+              "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Application\\SuperDinner.Application.csproj"
+            },
             "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\SuperDinner.Domain.csproj": {
               "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SUperDInner.Domain\\SuperDinner.Domain.csproj"
             },
@@ -3742,9 +3726,6 @@
             },
             "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\SuperDinner.Service.csproj": {
               "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\SuperDinner.Service.csproj"
-            },
-            "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\SuperDinner.Application.csproj": {
-              "projectPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDInner.WebApi\\SuperDinner.Application.csproj"
             }
           }
         }

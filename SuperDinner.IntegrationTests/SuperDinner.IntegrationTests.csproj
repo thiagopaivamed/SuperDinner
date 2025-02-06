@@ -23,10 +23,10 @@
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\SuperDinner.Application\SuperDinner.Application.csproj" />
         <ProjectReference Include="..\SUperDInner.Domain\SuperDinner.Domain.csproj" />
         <ProjectReference Include="..\SuperDinner.Infrastructure.Data\SuperDinner.Infrastructure.Data.csproj" />
         <ProjectReference Include="..\SuperDinner.Service\SuperDinner.Service.csproj" />
-        <ProjectReference Include="..\SuperDInner.WebApi\SuperDinner.Application.csproj" />
     </ItemGroup>
 
     <ItemGroup>

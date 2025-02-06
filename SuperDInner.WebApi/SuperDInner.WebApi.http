@@ -1,6 +1,0 @@
-@SuperDinner.WebApi_HostAddress = http://localhost:5148
-
-POST {{SuperDinner.WebApi_HostAddress}}/restaurants/
-Accept: application/json
-
-###
