@@ -24,6 +24,7 @@ namespace SuperDinner.Service.Handlers
                     createRestaurantRequestValidationResult.Errors.Select(x => x.ErrorMessage).ToList());
 
             Restaurant restaurant = new Restaurant();
+            restaurant.RestaurantId = Guid.NewGuid();
             restaurant.Name = request.Name;
             restaurant.Description = request.Description;
             restaurant.ContactPhone = request.ContactPhone;

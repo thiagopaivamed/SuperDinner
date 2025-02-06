@@ -2,7 +2,7 @@
 {
     public sealed class Restaurant : IBaseEntity
     {
-        public Guid RestaurantId { get; private set; }
+        public Guid RestaurantId { get; set; }
 
         public string Name { get; set; } = string.Empty;
 
@@ -26,11 +26,5 @@
         public DateTime? LastModifiedDate { get; set; }
 
         public ICollection<Dinner> Dinners { get; set; }
-
-        public Restaurant()
-        {
-            RestaurantId = Guid.NewGuid();
-            CreatedDate = DateTime.UtcNow;
-        }
     }
 }

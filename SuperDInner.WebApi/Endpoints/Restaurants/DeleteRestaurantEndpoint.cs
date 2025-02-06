@@ -14,7 +14,7 @@ namespace SuperDinner.Application.Endpoints.Restaurants
             .WithSummary("Delete a restaurant by its Id")
             .WithDescription("Delete a restaurant by its Id")
             .WithOrder(5)
-            .Produces<Response<Restaurant?>>()
+            .Produces(StatusCodes.Status204NoContent)
             .Produces(StatusCodes.Status404NotFound);
 
         public static async Task<IResult> HandleAsync(IRestaurantHandler restaurantHandler, Guid restaurantId)
@@ -25,7 +25,7 @@ namespace SuperDinner.Application.Endpoints.Restaurants
             Response<Restaurant> restaurantResponse = await restaurantHandler.DeleteRestaurantAsync(resquest);
 
             return restaurantResponse.IsSuccess
-                ? Results.Ok(restaurantResponse.Data)
+                ? Results.NoContent()
                 : Results.NotFound(restaurantResponse.Data);
         }
     }

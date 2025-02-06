@@ -20,6 +20,7 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\bin\Debug\net9.0\Microsof
 C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\bin\Debug\net9.0\Microsoft.OpenApi.dll
@@ -130,4 +131,3 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\obj\Debug\net9.0\refint\S
 C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\obj\Debug\net9.0\SuperDinner.Application.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\obj\Debug\net9.0\SuperDinner.Application.genruntimeconfig.cache
 C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\obj\Debug\net9.0\ref\SuperDinner.Application.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDInner.WebApi\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll

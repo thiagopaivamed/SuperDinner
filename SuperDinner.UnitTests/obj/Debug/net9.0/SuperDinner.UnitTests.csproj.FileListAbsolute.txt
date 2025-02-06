@@ -57,6 +57,10 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\DiffE
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\EmptyFiles.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Faker.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.AspNetCore.Http.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.AspNetCore.WebUtilities.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -68,8 +72,10 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Micro
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.Extensions.ObjectPool.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.Net.Http.Headers.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
@@ -175,9 +181,3 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\obj\Debug\net9.0\refin
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\obj\Debug\net9.0\SuperDinner.UnitTests.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\obj\Debug\net9.0\SuperDinner.UnitTests.genruntimeconfig.cache
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\obj\Debug\net9.0\ref\SuperDinner.UnitTests.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.AspNetCore.Http.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.AspNetCore.Http.Abstractions.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.AspNetCore.Http.Features.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.AspNetCore.WebUtilities.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.Extensions.ObjectPool.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.UnitTests\bin\Debug\net9.0\Microsoft.Net.Http.Headers.dll

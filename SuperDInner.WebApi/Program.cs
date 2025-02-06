@@ -1,21 +1,27 @@
 using SuperDinner.Application.Common.Api;
 using SuperDInner.Application.Endpoints;
 
-var builder = WebApplication.CreateBuilder(args);
+public partial class Program
+{
+    private static async Task Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi();
+        builder.Services.AddOpenApi();
 
-builder.AddDataContext();
+        builder.AddDataContext();
 
-builder.AddServices();
+        builder.AddServices();
 
-var app = builder.Build();
+        var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-    app.MapOpenApi();
+        if (app.Environment.IsDevelopment())
+            app.MapOpenApi();
 
-app.UseHttpsRedirection();
+        app.UseHttpsRedirection();
 
-app.MapEndpoints();
+        app.MapEndpoints();
 
-await app.RunAsync();
+        await app.RunAsync();
+    }
+}

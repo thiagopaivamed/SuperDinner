@@ -1,5 +1,7 @@
-﻿using Shouldly;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Shouldly;
 using SuperDinner.Domain.Entities;
+using SuperDinner.Domain.Interfaces.Restaurants.Handlers;
 using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Domain.Responses;
 
@@ -7,6 +9,11 @@ namespace SuperDinner.IntegrationTests.Restaurants
 {
     public sealed class UpdateRestaurantTest : BaseRestaurantTest, IClassFixture<DependencyInjectionFixture>
     {
+        private readonly IRestaurantHandler _restaurantHandler;
+
+        public UpdateRestaurantTest(DependencyInjectionFixture dependencyInjectionFixture)
+            => _restaurantHandler = dependencyInjectionFixture.serviceProvider.GetRequiredService<IRestaurantHandler>();
+
         [Fact]
         public async Task Given_Valid_Restaurant_Should_Return_Success()
         {

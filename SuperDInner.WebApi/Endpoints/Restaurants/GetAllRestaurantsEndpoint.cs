@@ -30,7 +30,7 @@ namespace SuperDinner.Application.Endpoints.Restaurants
 
             return response.IsSuccess
                 ? Results.Ok(response)
-                : Results.NotFound(response);
+                : Results.BadRequest(response);
         }
     }
 }
