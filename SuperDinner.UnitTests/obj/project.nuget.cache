@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Brbn1yOqnrY=",
+  "dgSpecHash": "T1HY7Ul653I=",
   "success": true,
   "projectFilePath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj",
   "expectedPackageFiles": [
@@ -54,16 +54,5 @@
     "C:\\Users\\Thiago\\.nuget\\packages\\xunit.extensibility.execution\\2.9.2\\xunit.extensibility.execution.2.9.2.nupkg.sha512",
     "C:\\Users\\Thiago\\.nuget\\packages\\xunit.runner.visualstudio\\2.8.2\\xunit.runner.visualstudio.2.8.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Faker 1.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net9.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Faker",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

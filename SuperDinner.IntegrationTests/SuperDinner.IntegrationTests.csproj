@@ -5,7 +5,15 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsPackable>false</IsPackable>
-        <PreserveCompilationContext>true</PreserveCompilationContext>
+        <PreserveCompilationContext>true</PreserveCompilationContext>        
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <NoWarn>1701;1702;CS8602;CS6825;CS8600;CS0693</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+      <NoWarn>1701;1702;CS8602;CS6825;CS8600;CS0693</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
