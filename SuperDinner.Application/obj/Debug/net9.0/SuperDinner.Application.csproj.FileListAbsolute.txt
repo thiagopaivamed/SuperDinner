@@ -1,11 +1,3 @@
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.csproj.AssemblyReference.cache
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.AssemblyInfoInputs.cache
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.AssemblyInfo.cs
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.csproj.CoreCompileInputs.cache
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.sourcelink.json
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\appsettings.json
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\SuperDinner.Application.staticwebassets.endpoints.json
@@ -111,6 +103,14 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Sup
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\SuperDinner.Domain.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\SuperDinner.Infrastructure.Data.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\SuperDinner.Service.pdb
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.csproj.AssemblyReference.cache
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.AssemblyInfoInputs.cache
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.AssemblyInfo.cs
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.sourcelink.json
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\scopedcss\bundle\SuperDinner.Application.styles.css
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\staticwebassets.development.json
