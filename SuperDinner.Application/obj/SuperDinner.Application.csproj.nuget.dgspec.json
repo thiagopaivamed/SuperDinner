@@ -80,6 +80,34 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Enrichers.Environment": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Enrichers.Process": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Serilog.Enrichers.Thread": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "SerilogTracing": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "SerilogTracing.Expressions": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "SerilogTracing.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[2.3.1, )"
             }
           },
           "imports": [

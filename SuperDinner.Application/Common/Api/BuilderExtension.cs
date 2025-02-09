@@ -1,4 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Serilog.Core;
+using Serilog.Templates.Themes;
+using SerilogTracing;
+using SerilogTracing.Expressions;
 using SuperDinner.Domain.Interfaces;
 using SuperDinner.Domain.Interfaces.Restaurants;
 using SuperDinner.Domain.Interfaces.Restaurants.Handlers;
@@ -20,6 +25,23 @@ namespace SuperDinner.Application.Common.Api
             builder.Services.AddTransient<IRestaurantRepository, RestaurantRepository>();
             builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
             builder.Services.AddTransient<IRestaurantHandler, RestaurantHandler>();
+        }
+
+        public static void AddLogging(this WebApplicationBuilder builder)
+        {
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console()
+                .CreateLogger();
+
+            builder.Host.UseSerilog((context, loggerConfiguration) =>
+            {
+                loggerConfiguration.WriteTo.Console(Formatters.CreateConsoleTextFormatter(TemplateTheme.Code));
+                loggerConfiguration.ReadFrom.Configuration(context.Configuration);
+            });
+
+            using IDisposable? listener = new ActivityListenerConfiguration()
+                .Instrument.AspNetCoreRequests()
+                .TraceToSharedLogger();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
         public GetAllRestaurantsTest(DependencyInjectionFixture dependencyInjectionFixture)
             => _restaurantHandler = dependencyInjectionFixture.serviceProvider.GetRequiredService<IRestaurantHandler>();
 
-        [Fact]
+        [Fact]        
         public async Task Get_All_Restaurants_Should_Return_Success()
         {
             List<CreateRestaurantRequest> createRestaurantRequests = _fakeCreateRestaurantRequest.Generate(20).ToList();
