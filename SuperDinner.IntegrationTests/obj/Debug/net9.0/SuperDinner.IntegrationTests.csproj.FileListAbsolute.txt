@@ -497,3 +497,4 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SerilogTracing.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SerilogTracing.Expressions.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\SerilogTracing.Instrumentation.AspNetCore.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Scalar.AspNetCore.dll

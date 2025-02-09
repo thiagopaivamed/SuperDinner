@@ -1314,6 +1314,22 @@
           }
         }
       },
+      "Scalar.AspNetCore/2.0.12": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Serilog/4.2.0": {
         "type": "package",
         "compile": {
@@ -1816,6 +1832,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "9.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.0",
+          "Scalar.AspNetCore": "2.0.12",
           "Serilog.AspNetCore": "9.0.0",
           "Serilog.Enrichers.Environment": "3.0.1",
           "Serilog.Enrichers.Process": "3.0.0",
@@ -3591,6 +3608,23 @@
         "npgsql.entityframeworkcore.postgresql.9.0.2.nupkg.sha512",
         "npgsql.entityframeworkcore.postgresql.nuspec",
         "postgresql.png"
+      ]
+    },
+    "Scalar.AspNetCore/2.0.12": {
+      "sha512": "kMunSAka+sqUakPLVxpXN/3FtvbAbm4zAbAAlC/8ODZpB6eZQaIl0G4Ynsx6HLn47lfiVIqP1ne69Dn/LdjQ0g==",
+      "type": "package",
+      "path": "scalar.aspnetcore/2.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net8.0/Scalar.AspNetCore.dll",
+        "lib/net8.0/Scalar.AspNetCore.xml",
+        "lib/net9.0/Scalar.AspNetCore.dll",
+        "lib/net9.0/Scalar.AspNetCore.xml",
+        "scalar.aspnetcore.2.0.12.nupkg.sha512",
+        "scalar.aspnetcore.nuspec"
       ]
     },
     "Serilog/4.2.0": {

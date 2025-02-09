@@ -144,3 +144,4 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Ser
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\SerilogTracing.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\SerilogTracing.Expressions.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\SerilogTracing.Instrumentation.AspNetCore.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Scalar.AspNetCore.dll

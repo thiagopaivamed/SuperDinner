@@ -1,6 +1,6 @@
 ﻿namespace SuperDinner.Domain.Requests.Restaurant
 {
-    public sealed class UpdateRestaurantRequest
+    public sealed class UpdateRestaurantRequest : Request
     {
         public Guid RestaurantId { get; set; }
 

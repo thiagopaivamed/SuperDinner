@@ -1344,6 +1344,17 @@
           "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
         }
       },
+      "Scalar.AspNetCore/2.0.12": {
+        "runtime": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {
+            "assemblyVersion": "2.0.12.0",
+            "fileVersion": "2.0.12.0"
+          }
+        },
+        "compile": {
+          "lib/net9.0/Scalar.AspNetCore.dll": {}
+        }
+      },
       "Serilog/4.2.0": {
         "runtime": {
           "lib/net9.0/Serilog.dll": {
@@ -1718,6 +1729,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "9.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.0",
+          "Scalar.AspNetCore": "2.0.12",
           "Serilog.AspNetCore": "9.0.0",
           "Serilog.Enrichers.Environment": "3.0.1",
           "Serilog.Enrichers.Process": "3.0.0",
@@ -3847,6 +3859,13 @@
       "sha512": "sha512-cYdOGplIvr9KgsG8nJ8xnzBTImeircbgetlzS1OmepS5dAQW6PuGpVrLOKBNEwEvGYZPsV8037X5vZ/Dmpwz7Q==",
       "path": "npgsql.entityframeworkcore.postgresql/9.0.2",
       "hashPath": "npgsql.entityframeworkcore.postgresql.9.0.2.nupkg.sha512"
+    },
+    "Scalar.AspNetCore/2.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kMunSAka+sqUakPLVxpXN/3FtvbAbm4zAbAAlC/8ODZpB6eZQaIl0G4Ynsx6HLn47lfiVIqP1ne69Dn/LdjQ0g==",
+      "path": "scalar.aspnetcore/2.0.12",
+      "hashPath": "scalar.aspnetcore.2.0.12.nupkg.sha512"
     },
     "Serilog/4.2.0": {
       "type": "package",

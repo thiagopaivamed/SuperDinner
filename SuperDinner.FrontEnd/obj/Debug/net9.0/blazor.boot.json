@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SuperDinner.FrontEnd",
   "resources": {
-    "hash": "sha256-d9bxeUMNv8LQ8+o9mOciNCJZ+Ao02LASVT+O/aDIpM0=",
+    "hash": "sha256-fWzO/rbkGwXyr6rKbtqfYSv5LAZKOCX3BpzC9d35xUc=",
     "fingerprinting": {
       "FluentValidation.fvee6lf8f0.wasm": "FluentValidation.wasm",
       "Microsoft.AspNetCore.Authorization.qe23mgxr71.wasm": "Microsoft.AspNetCore.Authorization.wasm",
@@ -215,14 +215,14 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "SuperDinner.Domain.5dl0dj0wvg.wasm": "SuperDinner.Domain.wasm",
-      "SuperDinner.Infrastructure.Data.edz4qpwycm.wasm": "SuperDinner.Infrastructure.Data.wasm",
-      "SuperDinner.Service.ukp4x6um07.wasm": "SuperDinner.Service.wasm",
-      "SuperDinner.Domain.q8dlalb3ku.pdb": "SuperDinner.Domain.pdb",
-      "SuperDinner.Service.f4wgpwhajs.pdb": "SuperDinner.Service.pdb",
-      "SuperDinner.Infrastructure.Data.14zffa02kr.pdb": "SuperDinner.Infrastructure.Data.pdb",
-      "SuperDinner.FrontEnd.cgymlacgb4.wasm": "SuperDinner.FrontEnd.wasm",
-      "SuperDinner.FrontEnd.66g3p8dczp.pdb": "SuperDinner.FrontEnd.pdb"
+      "SuperDinner.Domain.0lvhckfcrd.wasm": "SuperDinner.Domain.wasm",
+      "SuperDinner.Infrastructure.Data.0szfm77ivh.wasm": "SuperDinner.Infrastructure.Data.wasm",
+      "SuperDinner.Service.3a7p8kbbkj.wasm": "SuperDinner.Service.wasm",
+      "SuperDinner.Domain.mwmo71ri54.pdb": "SuperDinner.Domain.pdb",
+      "SuperDinner.Service.7zjh86vdsi.pdb": "SuperDinner.Service.pdb",
+      "SuperDinner.Infrastructure.Data.eng2zbv6jw.pdb": "SuperDinner.Infrastructure.Data.pdb",
+      "SuperDinner.FrontEnd.11vzj6gk52.wasm": "SuperDinner.FrontEnd.wasm",
+      "SuperDinner.FrontEnd.8ub80o55mk.pdb": "SuperDinner.FrontEnd.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.hmanx9razn.js": "sha256-d7UNSArplVrX3arY2Kmhxp1wN79ng8hLqIBrkiQ9Gbo="
@@ -446,16 +446,16 @@
       "WindowsBase.377bly7twj.wasm": "sha256-0VmBdMjdc0nZGHDSfaGirT6y3mJTM0qx8eqCUC/rpiE=",
       "mscorlib.o0184ey5ia.wasm": "sha256-2GxNKZQJVJvYMUxSTuXa5V2qxawSMMHZtwG33SKVCZU=",
       "netstandard.hb3h2rr8mk.wasm": "sha256-DWn9+RH/ElZQ6imlYqVwZvir1KTzNwY18AzGmnyiymU=",
-      "SuperDinner.Domain.5dl0dj0wvg.wasm": "sha256-KcV+bFUeaShxlrwWY8FiwlKtlqAGoO5aHzQmob8njGw=",
-      "SuperDinner.Infrastructure.Data.edz4qpwycm.wasm": "sha256-Emqip+oypG1mmTw4/7X6VhG43Tpr1IaArFb80azARvg=",
-      "SuperDinner.Service.ukp4x6um07.wasm": "sha256-flM64ZGtU2ViBQJ6vutFl2TPcqZpv16K18zcLLYAQgo=",
-      "SuperDinner.FrontEnd.cgymlacgb4.wasm": "sha256-7LTYcD/fGeMLhdR5FDkegaAToytATh5bl00/rwpwK2k="
+      "SuperDinner.Domain.0lvhckfcrd.wasm": "sha256-JAYxSIbyb65tIJqoQO+udrQpyMJ75n3l3X8E7qWBF4Y=",
+      "SuperDinner.Infrastructure.Data.0szfm77ivh.wasm": "sha256-4KQmWpnhRvwy2D0hbh0V51FtC92ZILx8hkI4duMMrlE=",
+      "SuperDinner.Service.3a7p8kbbkj.wasm": "sha256-Gzl2oKPnRaNHPjkIp4M8P5jAhiULLcoSPRiAvRQSFfI=",
+      "SuperDinner.FrontEnd.11vzj6gk52.wasm": "sha256-K61E3/RA1s3a06CjQ2cDl7eEXE1GU/gJJnMI3IIoDko="
     },
     "pdb": {
-      "SuperDinner.Domain.q8dlalb3ku.pdb": "sha256-tps0eX/zZxuK55/9m0uv4wmkOuQLq2YgxmISEpt71EI=",
-      "SuperDinner.Service.f4wgpwhajs.pdb": "sha256-n8/SBfmFRTcg/PEeoyMBwgxdNhpo058FUVSF1zd82bM=",
-      "SuperDinner.Infrastructure.Data.14zffa02kr.pdb": "sha256-gbZi0i8Uehk137lnYtN6STsycgK/BApDxdIR3jHMYIg=",
-      "SuperDinner.FrontEnd.66g3p8dczp.pdb": "sha256-nh0uEPIHELc4ML41v/yH1o/lsiR7A+jQ2tq2T+C8sfw="
+      "SuperDinner.Domain.mwmo71ri54.pdb": "sha256-9sRLOCD0ELkHh/EG8IAoxpd9Ji/Av2Osz/WzvQfJVzo=",
+      "SuperDinner.Service.7zjh86vdsi.pdb": "sha256-Y4/p8U50YO0DDZawsZz706+fzeCAVJLLkdg0K0MaHGM=",
+      "SuperDinner.Infrastructure.Data.eng2zbv6jw.pdb": "sha256-NsDct1ZZdv+V3MxY9VPyCvUWfx2sab3f7HIrCKzZOcY=",
+      "SuperDinner.FrontEnd.8ub80o55mk.pdb": "sha256-8N1dIpRs59kA0sdc9Mwjwm12jl+VUiWPCKtQC1hJVPY="
     }
   },
   "cacheBootResources": true,

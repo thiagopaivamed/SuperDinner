@@ -1,3 +1,4 @@
+using Scalar.AspNetCore;
 using Serilog;
 using SuperDinner.Application.Common.Api;
 using SuperDinner.Application.Endpoints;
@@ -19,7 +20,18 @@ public partial class Program
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())
+        {
             app.MapOpenApi();
+
+            app.MapScalarApiReference(options =>
+            {
+                options
+                .WithTitle("SuperDinner API")
+                .AddMetadata("Version", "1.0.0")
+                .WithDarkMode(true)
+                .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient);
+            });
+        }
 
         app.UseSerilogRequestLogging();
 

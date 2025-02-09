@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SuperDinner.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c545852af84f67e6a33591d7cd479a49df859212")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adb4876cc30eb339acd79942cc67afbc66281843")]
 [assembly: System.Reflection.AssemblyProductAttribute("SuperDinner.IntegrationTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SuperDinner.IntegrationTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
