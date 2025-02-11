@@ -55,7 +55,7 @@ namespace SuperDinner.Service.Handlers
             return new Response<Restaurant>(restaurant, StatusCodes.Status204NoContent);
         }
 
-        public async Task<PagedResponse<List<Restaurant>>> GetAllRestaurantsAsync(GetAllRestaurantsRequest request)
+        public async Task<PagedResponse<IReadOnlyList<Restaurant>>> GetAllRestaurantsAsync(GetAllRestaurantsRequest request)
             => await repository.GetAllAsync(request.PageNumber, request.PageSize);
 
         public async Task<Response<Restaurant>> GetRestaurantByIdAsync(GetRestaurantByIdRequest request)

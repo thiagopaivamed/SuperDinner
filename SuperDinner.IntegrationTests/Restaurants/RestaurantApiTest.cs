@@ -17,6 +17,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
         [Fact]
         public async Task Get_All_Restaurants_Should_Return_Paged_Restaurants()
         {
+            #region Arrange
             List<CreateRestaurantRequest> createRestaurantRequests = _fakeCreateRestaurantRequest.Generate(5).ToList();
             createRestaurantRequests.ShouldNotBeNull();
             createRestaurantRequests.Count.ShouldBeGreaterThanOrEqualTo(5);
@@ -31,29 +32,39 @@ namespace SuperDinner.IntegrationTests.Restaurants
             const int pageNumber = 1;
             const int pageSize = 10;
             string getAllRestaurantsUrl = $"{baseUrlRestaurants}?pageNumber={pageNumber}&pageSize={pageSize}";
+            #endregion
 
+            #region Act
             HttpResponseMessage response = await _httpClient.GetAsync(getAllRestaurantsUrl);
             response.IsSuccessStatusCode.ShouldBeTrue();
             response.StatusCode.ShouldBe(HttpStatusCode.OK);
+            #endregion
 
-            PagedResponse<List<Restaurant>> pagedRestaurants = await response.Content.ReadFromJsonAsync<PagedResponse<List<Restaurant>>>();
+            #region Assert
+            PagedResponse<IReadOnlyList<Restaurant>> pagedRestaurants = await response.Content.ReadFromJsonAsync<PagedResponse<IReadOnlyList<Restaurant>>>();
             pagedRestaurants.ShouldNotBeNull();
             pagedRestaurants.IsSuccess.ShouldBeTrue();
             pagedRestaurants.CurrentPage.ShouldBe(pageNumber);
             pagedRestaurants.PageSize.ShouldBe(pageSize);
             pagedRestaurants.Data.ShouldNotBeNull();
             pagedRestaurants.Messages.ShouldBeNull();
+            #endregion
         }
 
         [Fact]
         public async Task Create_Restaurant_Should_Return_Created_Given_Valid_Restaurant()
         {
+            #region Arrange
             CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
+            #endregion
 
+            #region Act
             HttpResponseMessage response = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
             response.IsSuccessStatusCode.ShouldBeTrue();
             response.StatusCode.ShouldBe(HttpStatusCode.Created);
+            #endregion
 
+            #region Assert
             Restaurant restaurantCreated = await response.Content.ReadFromJsonAsync<Restaurant>();
             restaurantCreated.ShouldNotBeNull();
             restaurantCreated.RestaurantId.ShouldNotBe(Guid.Empty);
@@ -66,23 +77,32 @@ namespace SuperDinner.IntegrationTests.Restaurants
             restaurantCreated.Longitude.ShouldBeInRange(-180, 180);
             restaurantCreated.Price.ShouldBeGreaterThanOrEqualTo(0);
             restaurantCreated.ClientsLimit.ShouldBeGreaterThan(0);
-            restaurantCreated.CreatedDate.ShouldNotBe(new DateTime());
+            restaurantCreated.CreatedDate.ShouldNotBe(DateTime.MinValue);
             restaurantCreated.LastModifiedDate.ShouldBeNull();
+            #endregion
         }
 
         [Fact]
         public async Task Create_Restaurant_Should_Return_Bad_Request_Given_Invalid_Restaurant()
         {
+            #region Arrange
             CreateRestaurantRequest createRestaurantRequest = new CreateRestaurantRequest();
+            #endregion
 
+            #region Act
             HttpResponseMessage response = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
+            #endregion
+
+            #region Assert
             response.IsSuccessStatusCode.ShouldBeFalse();
             response.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            #endregion
         }
 
         [Fact]
         public async Task Get_Restaurant_By_Id_Should_Return_Ok_Given_Valid_Guid()
         {
+            #region Arrange
             CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
 
             HttpResponseMessage response = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
@@ -93,13 +113,17 @@ namespace SuperDinner.IntegrationTests.Restaurants
             restaurantCreated.ShouldNotBeNull();
 
             string getRestaurantByIdUrl = $"{baseUrlRestaurants}{restaurantCreated.RestaurantId}";
+            #endregion
 
+            #region Act
             HttpResponseMessage responseAfterGetRestaurant = await _httpClient.GetAsync(getRestaurantByIdUrl);
             responseAfterGetRestaurant.IsSuccessStatusCode.ShouldBeTrue();
             responseAfterGetRestaurant.StatusCode.ShouldBe(HttpStatusCode.OK);
 
             Restaurant restaurantAfterGetById = await responseAfterGetRestaurant.Content.ReadFromJsonAsync<Restaurant>();
+            #endregion
 
+            #region Assert
             restaurantAfterGetById.ShouldNotBeNull();
             restaurantAfterGetById.RestaurantId.ShouldNotBe(Guid.Empty);
             restaurantAfterGetById.Name.ShouldNotBeNull();
@@ -111,26 +135,35 @@ namespace SuperDinner.IntegrationTests.Restaurants
             restaurantAfterGetById.Longitude.ShouldBeInRange(-180, 180);
             restaurantAfterGetById.Price.ShouldBeGreaterThanOrEqualTo(0);
             restaurantAfterGetById.ClientsLimit.ShouldBeGreaterThan(0);
-            restaurantAfterGetById.CreatedDate.ShouldNotBe(new DateTime());
+            restaurantAfterGetById.CreatedDate.ShouldNotBe(DateTime.MinValue);
             restaurantAfterGetById.LastModifiedDate.ShouldBeNull();
+            #endregion
         }
 
         [Fact]
         public async Task Get_Restaurant_By_Id_Should_Return_Not_Found_Given_Invalid_Guid()
         {
+            #region Arrange
             Guid restaurantId = Guid.NewGuid();
 
             string getRestaurantByIdUrl = $"{baseUrlRestaurants}{restaurantId}";
+            #endregion
 
+            #region Act
             HttpResponseMessage responseAfterGetRestaurant = await _httpClient.GetAsync(getRestaurantByIdUrl);
+            #endregion
+
+            #region Assert
             responseAfterGetRestaurant.IsSuccessStatusCode.ShouldBeFalse();
             responseAfterGetRestaurant.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            #endregion
         }
 
 
         [Fact]
         public async Task Update_Restaurant_Should_Return_Ok_Given_Valid_Restaurant()
         {
+            #region Arrange
             CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
 
             HttpResponseMessage response = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
@@ -138,7 +171,6 @@ namespace SuperDinner.IntegrationTests.Restaurants
             response.StatusCode.ShouldBe(HttpStatusCode.Created);
 
             Restaurant restaurantCreated = await response.Content.ReadFromJsonAsync<Restaurant>();
-            restaurantCreated.Price = 10;
 
             UpdateRestaurantRequest updateRestaurantRequest = new UpdateRestaurantRequest();
             updateRestaurantRequest.RestaurantId = restaurantCreated.RestaurantId;
@@ -151,31 +183,44 @@ namespace SuperDinner.IntegrationTests.Restaurants
             updateRestaurantRequest.Longitude = restaurantCreated.Longitude;
             updateRestaurantRequest.Price = restaurantCreated.Price;
             updateRestaurantRequest.ClientsLimit = restaurantCreated.ClientsLimit;
+            #endregion
 
+            #region Act
             HttpResponseMessage responseAfterUpdate = await _httpClient.PutAsJsonAsync(baseUrlRestaurants, updateRestaurantRequest);
             responseAfterUpdate.IsSuccessStatusCode.ShouldBeTrue();
             responseAfterUpdate.StatusCode.ShouldBe(HttpStatusCode.OK);
+            #endregion
 
+            #region Assert
             Restaurant restaurantAfterUpdate = await responseAfterUpdate.Content.ReadFromJsonAsync<Restaurant>();
             restaurantAfterUpdate.ShouldNotBeNull();
             restaurantAfterUpdate.Description.ShouldNotBe(restaurantCreated.Description);
             restaurantAfterUpdate.Address.ShouldNotBe(restaurantCreated.Address);
             restaurantAfterUpdate.Country.ShouldNotBe(restaurantCreated.Country);
+            #endregion
         }
 
         [Fact]
         public async Task Update_Restaurant_Should_Return_Bad_Request_Given_Invalid_Restaurant()
         {
+            #region Arrange
             UpdateRestaurantRequest updateRestaurantRequest = new UpdateRestaurantRequest();
+            #endregion
 
+            #region Act
             HttpResponseMessage responseAfterUpdate = await _httpClient.PutAsJsonAsync(baseUrlRestaurants, updateRestaurantRequest);
+            #endregion
+
+            #region Assert
             responseAfterUpdate.IsSuccessStatusCode.ShouldBeFalse();
             responseAfterUpdate.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
+            #endregion
         }
 
         [Fact]
         public async Task Delete_Restaurant_Should_Return_No_Content_Given_Valid_Guid()
         {
+            #region Arrange
             CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
 
             HttpResponseMessage response = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
@@ -186,21 +231,35 @@ namespace SuperDinner.IntegrationTests.Restaurants
             restaurantCreated.ShouldNotBeNull();
 
             string deleteRestaurantByIdUrl = $"{baseUrlRestaurants}{restaurantCreated.RestaurantId}";
+            #endregion
+
+            #region Act
             HttpResponseMessage responseAfterDelete = await _httpClient.DeleteAsync(deleteRestaurantByIdUrl);
+            #endregion
+
+            #region Assert
             responseAfterDelete.IsSuccessStatusCode.ShouldBeTrue();
             responseAfterDelete.StatusCode.ShouldBe(HttpStatusCode.NoContent);
+            #endregion
         }
 
         [Fact]
         public async Task Delete_Restaurant_Should_Return_Not_Found_Given_Invalid_Guid()
         {
+            #region Arrange
             Guid restaurantId = Guid.NewGuid();
 
             string deleteRestaurantByIdUrl = $"{baseUrlRestaurants}{restaurantId}";
+            #endregion
 
+            #region Act
             HttpResponseMessage responseAfterDelete = await _httpClient.DeleteAsync(deleteRestaurantByIdUrl);
+            #endregion
+
+            #region Assert
             responseAfterDelete.IsSuccessStatusCode.ShouldBeFalse();
             responseAfterDelete.StatusCode.ShouldBe(HttpStatusCode.NotFound);
+            #endregion
         }
     }
 }

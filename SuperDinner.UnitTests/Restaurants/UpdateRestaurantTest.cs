@@ -12,7 +12,6 @@ namespace SuperDinner.UnitTests.Restaurants
     public sealed class UpdateRestaurantTest : BaseRestaurantTest, IDisposable
     {
         private readonly Faker<UpdateRestaurantRequest> _fakeUpdateRestaurantRequest;
-        private readonly List<Restaurant> _restaurants;
 
         public UpdateRestaurantTest()
         {
@@ -25,15 +24,11 @@ namespace SuperDinner.UnitTests.Restaurants
                  .RuleFor(r => r.Country, f => f.Address.Country())
                  .RuleFor(r => r.Latitude, f => f.Address.Latitude())
                  .RuleFor(r => r.Longitude, f => f.Address.Longitude())
-                 .RuleFor(r => r.Price, f => f.Random.Double(1, 100))
+                 .RuleFor(r => r.Price, f => Math.Round(f.Random.Double(10, 100) * 10, 2))
                  .RuleFor(r => r.ClientsLimit, f => f.Random.Int(1, 100))
                  .RuleFor(r => r.LastModifiedDate, f => DateTime.UtcNow);
 
             _fakeUpdateRestaurantRequest.ShouldNotBe(null);
-
-            _restaurants = _fakeRestaurant.Generate(20);
-            _restaurants.ShouldNotBe(null);
-            _restaurants.Count.ShouldBeGreaterThanOrEqualTo(20);
         }
 
         [Fact]

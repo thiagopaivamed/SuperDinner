@@ -1,6 +1,6 @@
 ﻿namespace SuperDinner.Domain.Requests.Restaurant
 {
-    public sealed class CreateRestaurantRequest : Request
+    public sealed record CreateRestaurantRequest : Request
     {
         public string Name { get; set; } = string.Empty;
 

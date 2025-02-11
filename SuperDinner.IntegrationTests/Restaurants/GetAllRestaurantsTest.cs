@@ -25,11 +25,11 @@ namespace SuperDinner.IntegrationTests.Restaurants
             getAllRestaurantsRequest.PageNumber = 1;
             getAllRestaurantsRequest.PageSize = 10;
 
-            PagedResponse<List<Restaurant>> responseRestaurantsPageOne = await _restaurantHandler.GetAllRestaurantsAsync(getAllRestaurantsRequest);
+            PagedResponse<IReadOnlyList<Restaurant>> responseRestaurantsPageOne = await _restaurantHandler.GetAllRestaurantsAsync(getAllRestaurantsRequest);
 
             getAllRestaurantsRequest.PageNumber = 2;
 
-            PagedResponse<List<Restaurant>> responseRestaurantsPageTwo = await _restaurantHandler.GetAllRestaurantsAsync(getAllRestaurantsRequest);
+            PagedResponse<IReadOnlyList<Restaurant>> responseRestaurantsPageTwo = await _restaurantHandler.GetAllRestaurantsAsync(getAllRestaurantsRequest);
 
             responseRestaurantsPageOne.ShouldNotBeNull();
             responseRestaurantsPageOne.IsSuccess.ShouldBeTrue();

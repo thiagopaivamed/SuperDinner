@@ -43,5 +43,9 @@ namespace SuperDinner.Application.Common.Api
                 .Instrument.AspNetCoreRequests()
                 .TraceToSharedLogger();
         }
+
+        public static void AddMemoryCache(this WebApplicationBuilder builder)
+            => builder.Services.AddMemoryCache();
+
     }
 }

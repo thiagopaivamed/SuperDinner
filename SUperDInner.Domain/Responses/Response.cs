@@ -2,7 +2,7 @@
 
 namespace SuperDinner.Domain.Responses
 {
-    public class Response<TData>
+    public record Response<TData>
     {
         [JsonIgnore]
         public readonly int ResponseStatusCode;

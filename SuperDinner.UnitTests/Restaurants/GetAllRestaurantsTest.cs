@@ -15,16 +15,16 @@ namespace SuperDinner.UnitTests.Restaurants
             getAllRestaurantsRequest.PageNumber = 1;
             getAllRestaurantsRequest.PageSize = 10;
 
-            List<Restaurant> restaurants = _fakeRestaurant.Generate(10);
+            IReadOnlyList<Restaurant> restaurants = _fakeRestaurant.Generate(10);
 
-            PagedResponse<List<Restaurant>> pagedRestaurants = new PagedResponse<List<Restaurant>>(data: restaurants, 
+            PagedResponse<IReadOnlyList<Restaurant>> pagedRestaurants = new PagedResponse<IReadOnlyList<Restaurant>>(data: restaurants, 
                 totalCount: restaurants.Count, 
                 currentPage: 1, 
                 pageSize: 10);
 
             _mockRestaurantHandler.Setup(r => r.GetAllRestaurantsAsync(getAllRestaurantsRequest)).ReturnsAsync(pagedRestaurants);
 
-            PagedResponse<List<Restaurant>> responseAfterGetAll = await _mockRestaurantHandler.Object.GetAllRestaurantsAsync(getAllRestaurantsRequest);
+            PagedResponse<IReadOnlyList<Restaurant>> responseAfterGetAll = await _mockRestaurantHandler.Object.GetAllRestaurantsAsync(getAllRestaurantsRequest);
 
             responseAfterGetAll.ShouldNotBeNull();
             responseAfterGetAll.IsSuccess.ShouldBeTrue();

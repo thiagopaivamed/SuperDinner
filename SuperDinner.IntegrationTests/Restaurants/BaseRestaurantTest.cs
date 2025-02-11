@@ -20,7 +20,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
                .RuleFor(r => r.Country, f => f.Address.Country())
                .RuleFor(r => r.Latitude, f => f.Address.Latitude())
                .RuleFor(r => r.Longitude, f => f.Address.Longitude())
-               .RuleFor(r => r.Price, f => Math.Round(f.Random.Double(10, 100), 2))
+               .RuleFor(r => r.Price, f => Math.Round(f.Random.Double(10, 100) * 10, 2))
                .RuleFor(r => r.ClientsLimit, f => f.Random.Int(10, 100))
                .RuleFor(r => r.CreatedDate, f => DateTime.UtcNow);
 

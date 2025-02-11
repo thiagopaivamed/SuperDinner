@@ -17,6 +17,8 @@ public partial class Program
 
         builder.AddServices();
 
+        builder.AddMemoryCache();
+
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())

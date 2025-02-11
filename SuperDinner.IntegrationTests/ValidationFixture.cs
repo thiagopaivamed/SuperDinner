@@ -11,7 +11,7 @@ using SuperDinner.Infrastructure.Data.Context;
 
 namespace SuperDinner.IntegrationTests
 {
-    public class ValidationFixture<TEntity> : IDisposable where TEntity : class
+    public sealed class ValidationFixture<TEntity> : IDisposable where TEntity : class
     {
         private const string npgSqlConnectionString = "Host=localhost; Database=SuperDinner; User Id = postgres; Password=admin;";
         

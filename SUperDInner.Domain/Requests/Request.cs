@@ -1,6 +1,6 @@
 ﻿namespace SuperDinner.Domain.Requests
 {
-    public abstract class Request
+    public abstract record Request
     {
         public string UserId { get; set; } = string.Empty;
     }

@@ -11,7 +11,7 @@ namespace SuperDinner.Infrastructure.Data.Repositories
         public void Delete(TEntity entity)
             => superDinnerContext.Set<TEntity>().Remove(entity);
 
-        public async Task<PagedResponse<List<TEntity>>> GetAllAsync(int pageNumber, int pageSize, Expression<Func<TEntity, bool>> conditions = null, params Expression<Func<TEntity, object>>[] objectsToBeIncluded)
+        public async Task<PagedResponse<IReadOnlyList<TEntity>>> GetAllAsync(int pageNumber, int pageSize, Expression<Func<TEntity, bool>> conditions = null, params Expression<Func<TEntity, object>>[] objectsToBeIncluded)
         {
             IQueryable<TEntity> query = superDinnerContext.Set<TEntity>().AsNoTracking();
 
@@ -27,7 +27,7 @@ namespace SuperDinner.Infrastructure.Data.Repositories
 
             int dataFoundCount = await query.CountAsync();
 
-            return new PagedResponse<List<TEntity>>(entities, dataFoundCount, pageNumber, pageSize);
+            return new PagedResponse<IReadOnlyList<TEntity>>(entities, dataFoundCount, pageNumber, pageSize);
         }
 
         public async Task<TEntity> GetByIdAsync(Guid entityId)

@@ -3,6 +3,7 @@ using SuperDinner.Domain.Interfaces.Restaurants.Handlers;
 using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Domain.Responses;
 using SuperDinner.Application.Common.Api;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace SuperDinner.Application.Endpoints.Restaurants
 {
@@ -17,14 +18,25 @@ namespace SuperDinner.Application.Endpoints.Restaurants
             .Produces<Response<Restaurant?>>()
             .Produces(StatusCodes.Status404NotFound);
 
-        private static async Task<IResult> HandleAsync(IRestaurantHandler restaurantHandler, Guid restaurantId)
+        private static async Task<IResult> HandleAsync(IRestaurantHandler restaurantHandler, IMemoryCache memoryCache, Guid restaurantId)
         {
-            GetRestaurantByIdRequest request = new();
-            request.RestaurantId = restaurantId;
+            string cacheKey = $"restaurant-{restaurantId}";
 
-            Response<Restaurant> restaurantFoundResponse = await restaurantHandler.GetRestaurantByIdAsync(request);
+            if(!memoryCache.TryGetValue(cacheKey, out Response<Restaurant>? restaurantFoundResponse))
+            {
+                GetRestaurantByIdRequest request = new();
+                request.RestaurantId = restaurantId;
 
-            return restaurantFoundResponse.IsSuccess
+                restaurantFoundResponse = await restaurantHandler.GetRestaurantByIdAsync(request);
+
+                MemoryCacheEntryOptions memoryCacheEntryOptions = new MemoryCacheEntryOptions()
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(5))
+                    .SetAbsoluteExpiration(TimeSpan.FromMinutes(10));
+
+                memoryCache.Set(restaurantId, restaurantFoundResponse, memoryCacheEntryOptions);
+            }
+
+            return restaurantFoundResponse!.IsSuccess
                 ? Results.Ok(restaurantFoundResponse.Data)
                 : Results.NotFound(restaurantFoundResponse.Data);
         }

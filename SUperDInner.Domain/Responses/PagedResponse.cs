@@ -2,7 +2,7 @@
 
 namespace SuperDinner.Domain.Responses
 {
-    public sealed class PagedResponse<TData> : Response<TData>
+    public sealed record PagedResponse<TData> : Response<TData>
     {
         [JsonConstructor]
         public PagedResponse(TData data, int totalCount, int currentPage = 1, int pageSize = Configuration.DefaultPageSize) : base(data)
