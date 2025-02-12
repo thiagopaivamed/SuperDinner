@@ -11,7 +11,7 @@ namespace SuperDinner.Infrastructure.Data.Configuration
             builder.ToTable("Dinners");
 
             builder.HasKey(d => d.DinnerId);
-            builder.Property(d => d.DinnerDate).IsRequired();
+            builder.Property(d => d.DinnerDate).IsRequired();            
             builder.Property(d => d.DinnerStatus).IsRequired();
             builder.Property(d => d.CreatedDate).IsRequired();
             builder.Property(d => d.LastModifiedDate).IsRequired(false);

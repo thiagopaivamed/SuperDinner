@@ -6,11 +6,11 @@ using SuperDinner.Domain.Interfaces;
 using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Infrastructure.Data.Repositories;
 using SuperDinner.Service.Handlers;
-using SuperDinner.Service.Validators;
 using System.Reflection;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using SuperDinner.Infrastructure.Data.Context;
+using SuperDinner.Service.Validators.Restaurant;
 
 namespace SuperDinner.IntegrationTests
 {

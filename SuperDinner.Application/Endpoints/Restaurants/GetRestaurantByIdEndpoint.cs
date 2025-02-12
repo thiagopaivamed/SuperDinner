@@ -22,10 +22,9 @@ namespace SuperDinner.Application.Endpoints.Restaurants
         {
             string cacheKey = $"restaurant-{restaurantId}";
 
-            if(!memoryCache.TryGetValue(cacheKey, out Response<Restaurant>? restaurantFoundResponse))
+            if (!memoryCache.TryGetValue(cacheKey, out Response<Restaurant>? restaurantFoundResponse))
             {
-                GetRestaurantByIdRequest request = new();
-                request.RestaurantId = restaurantId;
+                GetRestaurantByIdRequest request = new GetRestaurantByIdRequest(restaurantId);
 
                 restaurantFoundResponse = await restaurantHandler.GetRestaurantByIdAsync(request);
 

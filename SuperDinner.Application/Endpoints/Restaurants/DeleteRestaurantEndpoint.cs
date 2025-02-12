@@ -19,8 +19,7 @@ namespace SuperDinner.Application.Endpoints.Restaurants
 
         public static async Task<IResult> HandleAsync(IRestaurantHandler restaurantHandler, Guid restaurantId)
         {
-            DeleteRestaurantRequest resquest = new();
-            resquest.RestaurantId = restaurantId;
+            DeleteRestaurantRequest resquest = new DeleteRestaurantRequest(restaurantId);
 
             Response<Restaurant> restaurantResponse = await restaurantHandler.DeleteRestaurantAsync(resquest);
 

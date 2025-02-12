@@ -6,7 +6,7 @@ using SuperDinner.Domain.Interfaces.Restaurants;
 using SuperDinner.Domain.Interfaces.Restaurants.Handlers;
 using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Domain.Responses;
-using SuperDinner.Service.Validators;
+using SuperDinner.Service.Validators.Restaurant;
 
 namespace SuperDinner.Service.Handlers
 {

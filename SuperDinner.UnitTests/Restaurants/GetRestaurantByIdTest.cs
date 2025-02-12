@@ -13,8 +13,7 @@ namespace SuperDinner.UnitTests.Restaurants
         public async Task Given_Existing_Guid_Should_Return_Success()
         {
             #region Arrange
-            GetRestaurantByIdRequest getRestaurantByIdRequest = new GetRestaurantByIdRequest();
-            getRestaurantByIdRequest.RestaurantId = Guid.NewGuid();           
+            GetRestaurantByIdRequest getRestaurantByIdRequest = new GetRestaurantByIdRequest(Guid.NewGuid());
 
             Restaurant restaurant = _fakeRestaurant.Generate();
 
@@ -43,8 +42,7 @@ namespace SuperDinner.UnitTests.Restaurants
         public async Task Given_Non_Existing_Guid_Should_Return_NotFound()
         {
             #region Arrange
-            GetRestaurantByIdRequest getRestaurantByIdRequest = new GetRestaurantByIdRequest();
-            getRestaurantByIdRequest.RestaurantId = Guid.NewGuid();
+            GetRestaurantByIdRequest getRestaurantByIdRequest = new GetRestaurantByIdRequest(Guid.NewGuid());
 
             Response<Restaurant> restaurantResponse = new Response<Restaurant>(null, StatusCodes.Status404NotFound, ["Restaurant not found"]);
             restaurantResponse.ShouldNotBe(null);

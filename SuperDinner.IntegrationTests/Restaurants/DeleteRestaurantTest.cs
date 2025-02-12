@@ -29,8 +29,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
             responseRestaurantCreated.Data.ShouldNotBeNull();
             responseRestaurantCreated.Messages.ShouldBeNull();
 
-            DeleteRestaurantRequest deleteRestaurantRequest = new DeleteRestaurantRequest();
-            deleteRestaurantRequest.RestaurantId = responseRestaurantCreated.Data.RestaurantId;
+            DeleteRestaurantRequest deleteRestaurantRequest = new DeleteRestaurantRequest(responseRestaurantCreated.Data.RestaurantId);
 
             Response<Restaurant> responseRestaurantDeleted = await _restaurantHandler.DeleteRestaurantAsync(deleteRestaurantRequest);
             #endregion
@@ -47,7 +46,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
         public async Task Given_Invalid_Guid_Should_Return_Failure()
         {
             #region Arrange
-            DeleteRestaurantRequest deleteRestaurantRequest = new DeleteRestaurantRequest();
+            DeleteRestaurantRequest deleteRestaurantRequest = new DeleteRestaurantRequest(Guid.Empty);
             #endregion
 
             #region Act

@@ -29,8 +29,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
             responseRestaurantCreated.Data.ShouldNotBeNull();
             responseRestaurantCreated.Messages.ShouldBeNull();
 
-            GetRestaurantByIdRequest getRestaurantByIdRequest = new GetRestaurantByIdRequest();
-            getRestaurantByIdRequest.RestaurantId = responseRestaurantCreated.Data.RestaurantId;
+            GetRestaurantByIdRequest getRestaurantByIdRequest = new GetRestaurantByIdRequest(responseRestaurantCreated.Data.RestaurantId);
 
             Response<Restaurant> responseRestaurantRetrieved = await _restaurantHandler.GetRestaurantByIdAsync(getRestaurantByIdRequest);
             #endregion
@@ -48,8 +47,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
         public async Task Given_Non_Existing_Guid_Should_Return_NotFound()
         {
             #region Arrange
-            GetRestaurantByIdRequest getRestaurantByIdRequest = new GetRestaurantByIdRequest();
-            getRestaurantByIdRequest.RestaurantId = Guid.NewGuid();
+            GetRestaurantByIdRequest getRestaurantByIdRequest = new GetRestaurantByIdRequest(Guid.NewGuid());
             #endregion
 
             #region Act

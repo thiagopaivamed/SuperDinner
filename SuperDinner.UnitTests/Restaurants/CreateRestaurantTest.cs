@@ -5,7 +5,7 @@ using Shouldly;
 using SuperDinner.Domain.Entities;
 using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Domain.Responses;
-using SuperDinner.Service.Validators;
+using SuperDinner.Service.Validators.Restaurant;
 
 namespace SuperDinner.UnitTests.Restaurants
 {

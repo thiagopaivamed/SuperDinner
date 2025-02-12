@@ -1,7 +1,4 @@
 ﻿namespace SuperDinner.Domain.Requests.Restaurant
 {
-    public sealed record DeleteRestaurantRequest : Request
-    {
-        public Guid RestaurantId { get; set; }
-    }
+    public sealed record DeleteRestaurantRequest(Guid RestaurantId) : Request;
 }

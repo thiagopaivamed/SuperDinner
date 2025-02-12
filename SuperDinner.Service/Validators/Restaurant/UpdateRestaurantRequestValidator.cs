@@ -1,12 +1,15 @@
 ﻿using FluentValidation;
 using SuperDinner.Domain.Requests.Restaurant;
 
-namespace SuperDinner.Service.Validators
+namespace SuperDinner.Service.Validators.Restaurant
 {
-    public sealed class CreateRestaurantRequestValidator : AbstractValidator<CreateRestaurantRequest>
+    public class UpdateRestaurantRequestValidator : AbstractValidator<UpdateRestaurantRequest>
     {
-        public CreateRestaurantRequestValidator()
+        public UpdateRestaurantRequestValidator()
         {
+            RuleFor(x => x.RestaurantId)
+                .NotEmpty().WithMessage("{PropertyName} is required");
+
             RuleFor(x => x.Name)
                 .NotEmpty().WithMessage("{PropertyName} is required")
                 .MaximumLength(50).WithMessage("{PropertyName} must not exceed 50 characters");
@@ -43,15 +46,12 @@ namespace SuperDinner.Service.Validators
                 .NotEmpty().WithMessage("{PropertyName} is required")
                 .GreaterThan(0).WithMessage("{PropertyName} should be greater than 0 and cannot have negative values");
 
-            RuleFor(d => d.CreatedDate)
+            RuleFor(d => d.LastModifiedDate)
                 .NotEmpty().WithMessage("{PropertyName} is required")
-                .Must(NotCreatedDateBeforeToday).WithMessage("{PropertyValue} cannot be in the past");           
+                .Must(NotBeforeToday).WithMessage("{PropertyValue} cannot be in the past");
         }
 
         private bool NotBeforeToday(DateTime eventDate) =>
         eventDate >= DateTime.Today.Date;
-
-        private bool NotCreatedDateBeforeToday(DateTime createdDate) =>
-            createdDate == default || NotBeforeToday(createdDate);        
     }
 }

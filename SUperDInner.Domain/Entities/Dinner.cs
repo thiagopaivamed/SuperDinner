@@ -20,7 +20,6 @@
 
         public Dinner()
         {
-            DinnerId = Guid.NewGuid();
             DinnerStatus = DinnerStatus.WaitingForPayment;
             CreatedDate = DateTime.UtcNow;
         }

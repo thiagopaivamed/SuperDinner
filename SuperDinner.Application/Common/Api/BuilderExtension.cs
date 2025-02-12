@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Serilog;
-using Serilog.Core;
 using Serilog.Templates.Themes;
 using SerilogTracing;
 using SerilogTracing.Expressions;
 using SuperDinner.Domain.Interfaces;
+using SuperDinner.Domain.Interfaces.Dinners;
+using SuperDinner.Domain.Interfaces.Dinners.Handlers;
 using SuperDinner.Domain.Interfaces.Restaurants;
 using SuperDinner.Domain.Interfaces.Restaurants.Handlers;
 using SuperDinner.Infrastructure.Data.Context;
@@ -23,8 +24,10 @@ namespace SuperDinner.Application.Common.Api
         public static void AddServices(this WebApplicationBuilder builder)
         {
             builder.Services.AddTransient<IRestaurantRepository, RestaurantRepository>();
+            builder.Services.AddTransient<IDinnerRepository, DinnerRepository>();
             builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
             builder.Services.AddTransient<IRestaurantHandler, RestaurantHandler>();
+            builder.Services.AddTransient<IDinnerHandler, DinnerHandler>();
         }
 
         public static void AddLogging(this WebApplicationBuilder builder)
