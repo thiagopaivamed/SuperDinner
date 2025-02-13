@@ -18,10 +18,10 @@ namespace SuperDinner.UnitTests.Restaurants
             Restaurant restaurant = _fakeRestaurant.Generate();
 
             Response<Restaurant> restaurantResponse = new Response<Restaurant>(restaurant, StatusCodes.Status200OK);
-            restaurantResponse.ShouldNotBe(null);
+            restaurantResponse.ShouldNotBeNull();
             restaurantResponse.IsSuccess.ShouldBeTrue();
-            restaurantResponse.Data.ShouldNotBe(null);
-            restaurantResponse.Messages.ShouldBe(null);
+            restaurantResponse.Data.ShouldNotBeNull();
+            restaurantResponse.Messages.ShouldBeNull();
             #endregion
 
             #region Act
@@ -31,10 +31,10 @@ namespace SuperDinner.UnitTests.Restaurants
             #endregion
 
             #region Assert
-            responseAfterGetById.ShouldNotBe(null);
+            responseAfterGetById.ShouldNotBeNull();
             responseAfterGetById.IsSuccess.ShouldBeTrue();
-            responseAfterGetById.Data.ShouldNotBe(null);
-            responseAfterGetById.Messages.ShouldBe(null);
+            responseAfterGetById.Data.ShouldNotBeNull();
+            responseAfterGetById.Messages.ShouldBeNull();
             #endregion
         }
 
@@ -45,10 +45,10 @@ namespace SuperDinner.UnitTests.Restaurants
             GetRestaurantByIdRequest getRestaurantByIdRequest = new GetRestaurantByIdRequest(Guid.NewGuid());
 
             Response<Restaurant> restaurantResponse = new Response<Restaurant>(null, StatusCodes.Status404NotFound, ["Restaurant not found"]);
-            restaurantResponse.ShouldNotBe(null);
+            restaurantResponse.ShouldNotBeNull();
             restaurantResponse.IsSuccess.ShouldBeFalse();
-            restaurantResponse.Data.ShouldBe(null);
-            restaurantResponse.Messages.ShouldNotBe(null);
+            restaurantResponse.Data.ShouldBeNull();
+            restaurantResponse.Messages.ShouldNotBeNull();
             #endregion
 
             #region Act
@@ -58,10 +58,10 @@ namespace SuperDinner.UnitTests.Restaurants
             #endregion
 
             #region Assert
-            responseAfterGetById.ShouldNotBe(null);
+            responseAfterGetById.ShouldNotBeNull();
             responseAfterGetById.IsSuccess.ShouldBeFalse();
-            responseAfterGetById.Data.ShouldBe(null);
-            responseAfterGetById.Messages.ShouldNotBe(null);
+            responseAfterGetById.Data.ShouldBeNull();
+            responseAfterGetById.Messages.ShouldNotBeNull();
             #endregion
         }
     }

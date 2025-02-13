@@ -11,6 +11,7 @@ namespace SuperDinner.UnitTests.Restaurants
         [Fact]
         public async Task Get_All_Restaurants_Should_Return_Success()
         {
+            #region Arrange
             GetAllRestaurantsRequest getAllRestaurantsRequest = new GetAllRestaurantsRequest();
             getAllRestaurantsRequest.PageNumber = 1;
             getAllRestaurantsRequest.PageSize = 10;
@@ -23,14 +24,19 @@ namespace SuperDinner.UnitTests.Restaurants
                 pageSize: 10);
 
             _mockRestaurantHandler.Setup(r => r.GetAllRestaurantsAsync(getAllRestaurantsRequest)).ReturnsAsync(pagedRestaurants);
+            #endregion
 
+            #region Act
             PagedResponse<IReadOnlyList<Restaurant>> responseAfterGetAll = await _mockRestaurantHandler.Object.GetAllRestaurantsAsync(getAllRestaurantsRequest);
+            #endregion
 
+            #region Assert
             responseAfterGetAll.ShouldNotBeNull();
             responseAfterGetAll.IsSuccess.ShouldBeTrue();
             responseAfterGetAll.Data.ShouldNotBeNull();
             responseAfterGetAll.Data.Count.ShouldBe(10);
             responseAfterGetAll.Messages.ShouldBeNull();
+            #endregion
         }
     }
 }
