@@ -29,7 +29,7 @@ namespace SuperDinner.Service.Validators.Dinner
                 .NotEmpty().WithMessage("{PropertyName} is required");
 
             RuleFor(d => d.DinnerStatus)
-                .NotEmpty().WithMessage("{PropertyName} is required");
+                .NotNull().WithMessage("{PropertyName} is required");
 
             RuleFor(d => d.LastModifiedDate)
                 .GreaterThanOrEqualTo(DateTime.Now.Date).WithMessage("{PropertyName} cannot be in the past");
