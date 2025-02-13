@@ -17,7 +17,7 @@ namespace SuperDinner.Service.Validators.Dinner
 
             RuleFor(d => d.DinnerDate)
                 .NotEmpty().WithMessage("{PropertyName} is required")
-                .GreaterThanOrEqualTo(DateTime.Now).WithMessage("{PropertyName} cannot be in the past");
+                .GreaterThanOrEqualTo(DateTime.Now.Date).WithMessage("{PropertyName} cannot be in the past");
 
             RuleFor(d => d.UserId)
                 .NotEmpty().WithMessage("{PropertyName} is required");
@@ -32,7 +32,7 @@ namespace SuperDinner.Service.Validators.Dinner
                 .NotEmpty().WithMessage("{PropertyName} is required");
 
             RuleFor(d => d.LastModifiedDate)
-                .GreaterThanOrEqualTo(DateTime.Now).WithMessage("{PropertyName} cannot be in the past");
+                .GreaterThanOrEqualTo(DateTime.Now.Date).WithMessage("{PropertyName} cannot be in the past");
         }
     }
 }

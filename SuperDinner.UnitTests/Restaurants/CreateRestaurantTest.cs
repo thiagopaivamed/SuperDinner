@@ -65,20 +65,20 @@ namespace SuperDinner.UnitTests.Restaurants
         }
 
         [Fact]
-        public async Task Add_Valid_Dinner_Should_Return_Success()
+        public async Task Add_Valid_Restaurant_Should_Return_Success()
         {
             #region Arrange
             CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
-            createRestaurantRequest.ShouldNotBe(null);
+            createRestaurantRequest.ShouldNotBeNull();
 
             Restaurant restaurant = _fakeRestaurant.Generate();
-            restaurant.ShouldNotBe(null);
+            restaurant.ShouldNotBeNull();
 
             Response<Restaurant> restaurantResponse = new Response<Restaurant>(restaurant, StatusCodes.Status201Created);
-            restaurantResponse.ShouldNotBe(null);
+            restaurantResponse.ShouldNotBeNull();
             restaurantResponse.IsSuccess.ShouldBeTrue();
-            restaurantResponse.Data.ShouldNotBe(null);
-            restaurantResponse.Messages.ShouldBe(null);
+            restaurantResponse.Data.ShouldNotBeNull();
+            restaurantResponse.Messages.ShouldBeNull();
 
             _mockRestaurantHandler.Setup(r => r.AddRestaurantAsync(createRestaurantRequest)).ReturnsAsync(restaurantResponse);
             #endregion
@@ -88,25 +88,25 @@ namespace SuperDinner.UnitTests.Restaurants
             #endregion
 
             #region Assert
-            responseAfterRestaurantAdded.ShouldNotBe(null);
+            responseAfterRestaurantAdded.ShouldNotBeNull();
             responseAfterRestaurantAdded.IsSuccess.ShouldBeTrue();
-            responseAfterRestaurantAdded.Data.ShouldNotBe(null);
-            responseAfterRestaurantAdded.Messages.ShouldBe(null);
+            responseAfterRestaurantAdded.Data.ShouldNotBeNull();
+            responseAfterRestaurantAdded.Messages.ShouldBeNull();
             #endregion
         }
 
         [Fact]
-        public async Task Add_Invalid_Dinner_Should_Return_Failure()
+        public async Task Add_Invalid_Restaurant_Should_Return_Failure()
         {
             #region Arrange
             CreateRestaurantRequest createRestaurantRequest = new CreateRestaurantRequest();
-            createRestaurantRequest.ShouldNotBe(null);
+            createRestaurantRequest.ShouldNotBeNull();
 
             Response<Restaurant> restaurantResponse = new Response<Restaurant>(null, StatusCodes.Status400BadRequest, ["Invalid restaurant data"]);
-            restaurantResponse.ShouldNotBe(null);
+            restaurantResponse.ShouldNotBeNull();
             restaurantResponse.IsSuccess.ShouldBeFalse();
-            restaurantResponse.Data.ShouldBe(null);
-            restaurantResponse.Messages.ShouldNotBe(null);
+            restaurantResponse.Data.ShouldBeNull();
+            restaurantResponse.Messages.ShouldNotBeNull();
 
             _mockRestaurantHandler.Setup(r => r.AddRestaurantAsync(createRestaurantRequest)).ReturnsAsync(restaurantResponse);
             #endregion
@@ -116,10 +116,10 @@ namespace SuperDinner.UnitTests.Restaurants
             #endregion
 
             #region Assert
-            responseAfterRestaurantAdded.ShouldNotBe(null);
+            responseAfterRestaurantAdded.ShouldNotBeNull();
             responseAfterRestaurantAdded.IsSuccess.ShouldBeFalse();
-            responseAfterRestaurantAdded.Data.ShouldBe(null);
-            responseAfterRestaurantAdded.Messages.ShouldNotBe(null);
+            responseAfterRestaurantAdded.Data.ShouldBeNull();
+            responseAfterRestaurantAdded.Messages.ShouldNotBeNull();
             #endregion
         }
 

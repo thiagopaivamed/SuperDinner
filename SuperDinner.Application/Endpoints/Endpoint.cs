@@ -1,5 +1,6 @@
 ﻿using SuperDinner.Application.Endpoints.Restaurants;
 using SuperDinner.Application.Common.Api;
+using SuperDinner.Application.Endpoints.Dinners;
 
 namespace SuperDinner.Application.Endpoints
 {
@@ -20,6 +21,14 @@ namespace SuperDinner.Application.Endpoints
                 .MapEndpoint<CreateRestaurantEndpoint>()
                 .MapEndpoint<UpdateRestaurantEndpoint>()
                 .MapEndpoint<DeleteRestaurantEndpoint>();
+
+            endpoints.MapGroup("v1/dinners")
+                .WithTags("Dinners")
+                .MapEndpoint<GetAllDinnersEndpoint>()
+                .MapEndpoint<GetDinnerByIdEndpoint>()
+                .MapEndpoint<CreateDinnerEndpoint>()
+                .MapEndpoint<UpdateDinnerEndpoint>()
+                .MapEndpoint<DeleteDinnerEndpoint>();
         }
 
         private static IEndpointRouteBuilder MapEndpoint<TEndpoint>(this IEndpointRouteBuilder endpointRouteBuilder) where TEndpoint : IEndpoint
