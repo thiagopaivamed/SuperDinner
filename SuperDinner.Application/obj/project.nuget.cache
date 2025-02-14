@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CqYmA/vwr4g=",
+  "dgSpecHash": "lrpeXuPiM2A=",
   "success": true,
   "projectFilePath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Application\\SuperDinner.Application.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "C:\\Users\\Thiago\\.nuget\\packages\\npgsql\\9.0.2\\npgsql.9.0.2.nupkg.sha512",
     "C:\\Users\\Thiago\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\9.0.2\\npgsql.entityframeworkcore.postgresql.9.0.2.nupkg.sha512",
     "C:\\Users\\Thiago\\.nuget\\packages\\scalar.aspnetcore\\2.0.12\\scalar.aspnetcore.2.0.12.nupkg.sha512",
+    "C:\\Users\\Thiago\\.nuget\\packages\\scrutor\\6.0.1\\scrutor.6.0.1.nupkg.sha512",
     "C:\\Users\\Thiago\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512",
     "C:\\Users\\Thiago\\.nuget\\packages\\serilog.aspnetcore\\9.0.0\\serilog.aspnetcore.9.0.0.nupkg.sha512",
     "C:\\Users\\Thiago\\.nuget\\packages\\serilog.enrichers.environment\\3.0.1\\serilog.enrichers.environment.3.0.1.nupkg.sha512",

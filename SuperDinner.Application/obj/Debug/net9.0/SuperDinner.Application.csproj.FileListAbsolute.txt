@@ -145,3 +145,4 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\ref
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.genruntimeconfig.cache
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\ref\SuperDinner.Application.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Scrutor.dll

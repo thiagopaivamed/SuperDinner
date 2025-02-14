@@ -498,3 +498,4 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\obj\Debug\net9.
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\obj\Debug\net9.0\SuperDinner.IntegrationTests.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\obj\Debug\net9.0\SuperDinner.IntegrationTests.genruntimeconfig.cache
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\obj\Debug\net9.0\ref\SuperDinner.IntegrationTests.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Scrutor.dll
