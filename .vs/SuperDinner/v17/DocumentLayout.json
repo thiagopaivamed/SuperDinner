@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\dinners\\deletedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\dinners\\deletedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\dinners\\updatedinnerrequestfluentvalidationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\dinners\\updatedinnerrequestfluentvalidationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.service\\validators\\dinner\\updatedinnerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|solutionrelative:superdinner.service\\validators\\dinner\\updatedinnerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.service\\validators\\restaurant\\updaterestaurantrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|solutionrelative:superdinner.service\\validators\\restaurant\\updaterestaurantrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\restaurants\\updaterestaurantrequestfluentvalidationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\restaurants\\updaterestaurantrequestfluentvalidationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.service\\validators\\dinner\\createdinnerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|solutionrelative:superdinner.service\\validators\\dinner\\createdinnerrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\dinners\\createdinnerrequestfluentvalidationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\dinners\\createdinnerrequestfluentvalidationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,15 +50,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DeleteDinnerTest.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\DeleteDinnerTest.cs",
-              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Dinners\\DeleteDinnerTest.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\DeleteDinnerTest.cs",
-              "RelativeToolTip": "SuperDinner.UnitTests\\Dinners\\DeleteDinnerTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABEAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "UpdateRestaurantRequestFluentValidationTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\UpdateRestaurantRequestFluentValidationTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Restaurants\\UpdateRestaurantRequestFluentValidationTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\UpdateRestaurantRequestFluentValidationTest.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\Restaurants\\UpdateRestaurantRequestFluentValidationTest.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-13T22:17:22.321Z",
+              "WhenOpened": "2025-02-14T21:20:30.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateRestaurantRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Validators\\Restaurant\\UpdateRestaurantRequestValidator.cs",
+              "RelativeDocumentMoniker": "SuperDinner.Service\\Validators\\Restaurant\\UpdateRestaurantRequestValidator.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Validators\\Restaurant\\UpdateRestaurantRequestValidator.cs",
+              "RelativeToolTip": "SuperDinner.Service\\Validators\\Restaurant\\UpdateRestaurantRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T21:20:20.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateDinnerRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Validators\\Dinner\\CreateDinnerRequestValidator.cs",
+              "RelativeDocumentMoniker": "SuperDinner.Service\\Validators\\Dinner\\CreateDinnerRequestValidator.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Validators\\Dinner\\CreateDinnerRequestValidator.cs",
+              "RelativeToolTip": "SuperDinner.Service\\Validators\\Dinner\\CreateDinnerRequestValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T21:15:33.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateDinnerRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Validators\\Dinner\\UpdateDinnerRequestValidator.cs",
+              "RelativeDocumentMoniker": "SuperDinner.Service\\Validators\\Dinner\\UpdateDinnerRequestValidator.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Validators\\Dinner\\UpdateDinnerRequestValidator.cs",
+              "RelativeToolTip": "SuperDinner.Service\\Validators\\Dinner\\UpdateDinnerRequestValidator.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T21:15:24.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateDinnerRequestFluentValidationTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\UpdateDinnerRequestFluentValidationTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Dinners\\UpdateDinnerRequestFluentValidationTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\UpdateDinnerRequestFluentValidationTest.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\Dinners\\UpdateDinnerRequestFluentValidationTest.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAlwEIAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T21:12:12.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateDinnerRequestFluentValidationTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\CreateDinnerRequestFluentValidationTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Dinners\\CreateDinnerRequestFluentValidationTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\CreateDinnerRequestFluentValidationTest.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\Dinners\\CreateDinnerRequestFluentValidationTest.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwEUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T19:44:54.539Z",
               "EditorCaption": ""
             }
           ]
