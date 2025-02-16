@@ -26,9 +26,9 @@ namespace SuperDinner.Service.Handlers
             Dinner dinner = new Dinner();
             dinner.DinnerId = Guid.NewGuid();
             dinner.DinnerDate = request.DinnerDate;
-            dinner.UserId = Guid.NewGuid();
+            dinner.UserId = request.UserId;
             dinner.RestaurantId = request.RestaurantId;
-            dinner.TransactionId = Guid.NewGuid();
+            dinner.TransactionId = request.TransactionId;
             dinner.DinnerStatus = request.DinnerStatus;
             dinner.CreatedDate = request.CreatedDate;
 
