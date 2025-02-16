@@ -3,20 +3,96 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\dinners\\updatedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\dinners\\updatedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\restaurants\\getallrestaurantstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\restaurants\\getallrestaurantstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\restaurants\\updaterestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\restaurants\\updaterestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\restaurants\\restaurantapitest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\restaurants\\restaurantapitest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.service\\handlers\\dinnerhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|solutionrelative:superdinner.service\\handlers\\dinnerhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\restaurants\\restaurantfluentapiconfigurationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\restaurants\\restaurantfluentapiconfigurationtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\dinners\\createdinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\dinners\\createdinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\apifixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\apifixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\dependencyinjectionfixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\dependencyinjectionfixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\fluentvalidationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\fluentvalidationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\serviceregistrationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\serviceregistrationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\validationfixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\validationfixture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.service\\handlers\\restauranthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|solutionrelative:superdinner.service\\handlers\\restauranthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.service\\validators\\restaurant\\updaterestaurantrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E41F1DEF-FDD5-4DC7-ADEF-85E439C953C4}|SuperDinner.Service\\SuperDinner.Service.csproj|solutionrelative:superdinner.service\\validators\\restaurant\\updaterestaurantrequestvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\dinners\\basedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\dinners\\basedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\dinners\\createdinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\dinners\\createdinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\dinners\\deletedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\dinners\\deletedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\dinners\\getalldinnerstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\dinners\\getalldinnerstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\dinners\\getdinnerbyidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\dinners\\getdinnerbyidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\dinners\\updatedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\dinners\\updatedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\restaurants\\createrestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\restaurants\\createrestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\restaurants\\baserestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\restaurants\\baserestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\restaurants\\deleterestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\restaurants\\deleterestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\restaurants\\getallrestaurantstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\restaurants\\getallrestaurantstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\restaurants\\getrestaurantbyidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\restaurants\\getrestaurantbyidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.unittests\\restaurants\\updaterestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50059032-0236-4974-930E-81D4B558BEF5}|SuperDinner.UnitTests\\SuperDinner.UnitTests.csproj|solutionrelative:superdinner.unittests\\restaurants\\updaterestauranttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\dinners\\getalldinnerstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\dinners\\getalldinnerstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,53 +119,300 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DinnerHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Handlers\\DinnerHandler.cs",
-              "RelativeDocumentMoniker": "SuperDinner.Service\\Handlers\\DinnerHandler.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Handlers\\DinnerHandler.cs",
-              "RelativeToolTip": "SuperDinner.Service\\Handlers\\DinnerHandler.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAlwE8AAAAMAAAAAAAAAA==",
+              "Title": "RestaurantFluentApiConfigurationTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\RestaurantFluentApiConfigurationTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Restaurants\\RestaurantFluentApiConfigurationTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\RestaurantFluentApiConfigurationTest.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\Restaurants\\RestaurantFluentApiConfigurationTest.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T19:14:18.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdateDinnerTest.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\UpdateDinnerTest.cs",
-              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Dinners\\UpdateDinnerTest.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\UpdateDinnerTest.cs*",
-              "RelativeToolTip": "SuperDinner.IntegrationTests\\Dinners\\UpdateDinnerTest.cs*",
-              "ViewState": "AgIAABcAAAAAAAAAAAAlwC0AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:38:07.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateRestaurantTest.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\UpdateRestaurantTest.cs",
-              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Restaurants\\UpdateRestaurantTest.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\UpdateRestaurantTest.cs",
-              "RelativeToolTip": "SuperDinner.IntegrationTests\\Restaurants\\UpdateRestaurantTest.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwEYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T18:37:13.347Z",
+              "WhenOpened": "2025-02-16T19:48:06.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CreateDinnerTest.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\CreateDinnerTest.cs",
-              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Dinners\\CreateDinnerTest.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\CreateDinnerTest.cs",
-              "RelativeToolTip": "SuperDinner.IntegrationTests\\Dinners\\CreateDinnerTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAMAAAAAAAAAA==",
+              "Title": "ApiFixture.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\ApiFixture.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\ApiFixture.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\ApiFixture.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\ApiFixture.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T22:34:53.027Z",
+              "WhenOpened": "2025-02-16T19:47:49.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DependencyInjectionFixture.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\DependencyInjectionFixture.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\DependencyInjectionFixture.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\DependencyInjectionFixture.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\DependencyInjectionFixture.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:47:45.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FluentValidationExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\FluentValidationExtensions.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\FluentValidationExtensions.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\FluentValidationExtensions.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\FluentValidationExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:47:41.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceRegistrationExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\ServiceRegistrationExtensions.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\ServiceRegistrationExtensions.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\ServiceRegistrationExtensions.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\ServiceRegistrationExtensions.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:47:36.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RestaurantApiTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\RestaurantApiTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Restaurants\\RestaurantApiTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\RestaurantApiTest.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\Restaurants\\RestaurantApiTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:39:06.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetAllRestaurantsTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\GetAllRestaurantsTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Restaurants\\GetAllRestaurantsTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Restaurants\\GetAllRestaurantsTest.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\Restaurants\\GetAllRestaurantsTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:29:36.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ValidationFixture.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\ValidationFixture.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\ValidationFixture.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\ValidationFixture.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\ValidationFixture.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:47:17.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RestaurantHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Handlers\\RestaurantHandler.cs",
+              "RelativeDocumentMoniker": "SuperDinner.Service\\Handlers\\RestaurantHandler.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Handlers\\RestaurantHandler.cs",
+              "RelativeToolTip": "SuperDinner.Service\\Handlers\\RestaurantHandler.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:47:03.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UpdateRestaurantRequestValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Validators\\Restaurant\\UpdateRestaurantRequestValidator.cs",
+              "RelativeDocumentMoniker": "SuperDinner.Service\\Validators\\Restaurant\\UpdateRestaurantRequestValidator.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.Service\\Validators\\Restaurant\\UpdateRestaurantRequestValidator.cs",
+              "RelativeToolTip": "SuperDinner.Service\\Validators\\Restaurant\\UpdateRestaurantRequestValidator.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:46:54.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BaseDinnerTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\BaseDinnerTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Dinners\\BaseDinnerTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\BaseDinnerTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Dinners\\BaseDinnerTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:46:50.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CreateRestaurantTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\CreateRestaurantTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Restaurants\\CreateRestaurantTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\CreateRestaurantTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Restaurants\\CreateRestaurantTest.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAowH0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:39:05.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BaseRestaurantTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\BaseRestaurantTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Restaurants\\BaseRestaurantTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\BaseRestaurantTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Restaurants\\BaseRestaurantTest.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:43:44.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DeleteRestaurantTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\DeleteRestaurantTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Restaurants\\DeleteRestaurantTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\DeleteRestaurantTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Restaurants\\DeleteRestaurantTest.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:43:32.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GetRestaurantByIdTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\GetRestaurantByIdTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Restaurants\\GetRestaurantByIdTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\GetRestaurantByIdTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Restaurants\\GetRestaurantByIdTest.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:39:05.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GetAllRestaurantsTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\GetAllRestaurantsTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Restaurants\\GetAllRestaurantsTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\GetAllRestaurantsTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Restaurants\\GetAllRestaurantsTest.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:39:06.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateDinnerTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\CreateDinnerTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Dinners\\CreateDinnerTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\CreateDinnerTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Dinners\\CreateDinnerTest.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:39:06.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UpdateDinnerTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\UpdateDinnerTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Dinners\\UpdateDinnerTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\UpdateDinnerTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Dinners\\UpdateDinnerTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:39:06.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetAllDinnersTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\GetAllDinnersTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Dinners\\GetAllDinnersTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\GetAllDinnersTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Dinners\\GetAllDinnersTest.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:39:06.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DeleteDinnerTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\DeleteDinnerTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Dinners\\DeleteDinnerTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\DeleteDinnerTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Dinners\\DeleteDinnerTest.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:39:06.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UpdateRestaurantTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\UpdateRestaurantTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Restaurants\\UpdateRestaurantTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Restaurants\\UpdateRestaurantTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Restaurants\\UpdateRestaurantTest.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAkwHcAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:39:05.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GetDinnerByIdTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\GetDinnerByIdTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.UnitTests\\Dinners\\GetDinnerByIdTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.UnitTests\\Dinners\\GetDinnerByIdTest.cs",
+              "RelativeToolTip": "SuperDinner.UnitTests\\Dinners\\GetDinnerByIdTest.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwEMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:39:06.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GetAllDinnersTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\GetAllDinnersTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Dinners\\GetAllDinnersTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\GetAllDinnersTest.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\Dinners\\GetAllDinnersTest.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T19:30:12.969Z",
               "EditorCaption": ""
             }
           ]

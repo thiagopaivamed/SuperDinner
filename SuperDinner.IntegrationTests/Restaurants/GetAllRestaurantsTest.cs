@@ -14,12 +14,13 @@ namespace SuperDinner.IntegrationTests.Restaurants
         public GetAllRestaurantsTest(DependencyInjectionFixture dependencyInjectionFixture)
             => _restaurantHandler = dependencyInjectionFixture.serviceProvider.GetRequiredService<IRestaurantHandler>();
 
-        [Fact]        
+        [Fact]
         public async Task Get_All_Restaurants_Should_Return_Success()
         {
-            List<CreateRestaurantRequest> createRestaurantRequests = _fakeCreateRestaurantRequest.Generate(20).ToList();
+            IReadOnlyList<CreateRestaurantRequest> createRestaurantRequests = [.. _fakeCreateRestaurantRequest.Generate(20)];
 
-            createRestaurantRequests.ForEach(async restaurant => await _restaurantHandler.AddRestaurantAsync(restaurant));
+            foreach (CreateRestaurantRequest createRestaurantRequest in createRestaurantRequests)
+                await _restaurantHandler.AddRestaurantAsync(createRestaurantRequest);
 
             GetAllRestaurantsRequest getAllRestaurantsRequest = new GetAllRestaurantsRequest();
             getAllRestaurantsRequest.PageNumber = 1;

@@ -18,17 +18,17 @@ namespace SuperDinner.IntegrationTests.Restaurants
         public async Task Get_All_Restaurants_Should_Return_Paged_Restaurants()
         {
             #region Arrange
-            List<CreateRestaurantRequest> createRestaurantRequests = _fakeCreateRestaurantRequest.Generate(5).ToList();
+            IReadOnlyList<CreateRestaurantRequest> createRestaurantRequests = [.. _fakeCreateRestaurantRequest.Generate(5)];
             createRestaurantRequests.ShouldNotBeNull();
             createRestaurantRequests.Count.ShouldBeGreaterThanOrEqualTo(5);
 
-            createRestaurantRequests.ForEach(async restaurant =>
+            foreach (CreateRestaurantRequest createRestaurantRequest in createRestaurantRequests)
             {
-                HttpResponseMessage response = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, restaurant);
-                response.IsSuccessStatusCode.ShouldBeTrue();
-                response.StatusCode.ShouldBe(HttpStatusCode.Created);
-            });
-
+                HttpResponseMessage createdRestaurant = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
+                createdRestaurant.IsSuccessStatusCode.ShouldBeTrue();
+                createdRestaurant.StatusCode.ShouldBe(HttpStatusCode.Created);
+            }
+            
             const int pageNumber = 1;
             const int pageSize = 10;
             string getAllRestaurantsUrl = $"{baseUrlRestaurants}?pageNumber={pageNumber}&pageSize={pageSize}";
