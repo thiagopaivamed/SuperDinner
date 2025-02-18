@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\dinners\\getdinnerbyidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\dinners\\getdinnerbyidtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|c:\\users\\thiago\\desktop\\superdinner\\superdinner.integrationtests\\dinners\\deletedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1D5E924-EB2C-4866-8953-308D17678462}|SuperDinner.IntegrationTests\\SuperDinner.IntegrationTests.csproj|solutionrelative:superdinner.integrationtests\\dinners\\deletedinnertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,14 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GetDinnerByIdTest.cs",
-              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\GetDinnerByIdTest.cs",
-              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Dinners\\GetDinnerByIdTest.cs",
-              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\GetDinnerByIdTest.cs",
-              "RelativeToolTip": "SuperDinner.IntegrationTests\\Dinners\\GetDinnerByIdTest.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwDAAAAAyAAAAAAAAAA==",
+              "Title": "DeleteDinnerTest.cs",
+              "DocumentMoniker": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\DeleteDinnerTest.cs",
+              "RelativeDocumentMoniker": "SuperDinner.IntegrationTests\\Dinners\\DeleteDinnerTest.cs",
+              "ToolTip": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.IntegrationTests\\Dinners\\DeleteDinnerTest.cs",
+              "RelativeToolTip": "SuperDinner.IntegrationTests\\Dinners\\DeleteDinnerTest.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwD0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T15:27:16.931Z",
+              "WhenOpened": "2025-02-18T18:57:34.572Z",
               "EditorCaption": ""
             }
           ]
