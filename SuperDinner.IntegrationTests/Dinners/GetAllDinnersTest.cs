@@ -7,12 +7,12 @@ using SuperDinner.Domain.Responses;
 
 namespace SuperDinner.IntegrationTests.Dinners
 {
-    public sealed class GetAllDinnersTest : BaseDinnerTest, IClassFixture<DependencyInjectionFixture>
+    public sealed class GetAllDinnersTest : BaseDinnerTest, IClassFixture<DependencyInjectionFixture>, IDisposable
     {
         private readonly IDinnerHandler _dinnerHandler;
 
         public GetAllDinnersTest(DependencyInjectionFixture dependencyInjectionFixture)
-            => _dinnerHandler = dependencyInjectionFixture.serviceProvider.GetRequiredService<IDinnerHandler>();
+            => _dinnerHandler = dependencyInjectionFixture.serviceProvider.GetRequiredService<IDinnerHandler>();       
 
         [Fact]
         public async Task Get_All_Dinners_Should_Return_Success()
@@ -53,6 +53,12 @@ namespace SuperDinner.IntegrationTests.Dinners
             dinnersPagedResponsePageTwo.Data.Count.ShouldBe(10);
             dinnersPagedResponsePageTwo.Messages.ShouldBeNull();
             #endregion
+        }
+
+        public void Dispose()
+        {
+            ServiceCollection serviceCollection = new ServiceCollection();
+            serviceCollection.CleanDatabaseForTests();
         }
     }
 }

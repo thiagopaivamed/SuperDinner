@@ -1,4 +1,5 @@
-﻿using Shouldly;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Shouldly;
 using SuperDinner.Domain.Entities;
 using SuperDinner.Domain.Requests.Restaurant;
 using SuperDinner.Domain.Responses;
@@ -7,7 +8,7 @@ using System.Net.Http.Json;
 
 namespace SuperDinner.IntegrationTests.Restaurants
 {
-    public sealed class RestaurantApiTest : BaseRestaurantTest, IClassFixture<ApiFixture>
+    public sealed class RestaurantApiTest : BaseRestaurantTest, IClassFixture<ApiFixture>, IDisposable
     {
         private const string baseUrlRestaurants = "https://localhost:7064/v1/restaurants/";
         private readonly HttpClient _httpClient;
@@ -249,6 +250,12 @@ namespace SuperDinner.IntegrationTests.Restaurants
             responseAfterDelete.IsSuccessStatusCode.ShouldBeFalse();
             responseAfterDelete.StatusCode.ShouldBe(HttpStatusCode.NotFound);
             #endregion
+        }
+
+        public void Dispose()
+        {
+            ServiceCollection serviceCollection = new ServiceCollection();
+            serviceCollection.CleanDatabaseForTests();
         }
     }
 }

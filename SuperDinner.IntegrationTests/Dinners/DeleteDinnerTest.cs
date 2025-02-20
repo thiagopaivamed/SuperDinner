@@ -7,12 +7,12 @@ using SuperDinner.Domain.Responses;
 
 namespace SuperDinner.IntegrationTests.Dinners
 {
-    public sealed class DeleteDinnerTest : BaseDinnerTest, IClassFixture<DependencyInjectionFixture>
+    public sealed class DeleteDinnerTest : BaseDinnerTest, IClassFixture<DependencyInjectionFixture>, IDisposable
     {
         private readonly IDinnerHandler _dinnerHandler;
 
         public DeleteDinnerTest(DependencyInjectionFixture dependencyInjectionFixture)
-            => _dinnerHandler = dependencyInjectionFixture.serviceProvider.GetRequiredService<IDinnerHandler>();
+            => _dinnerHandler = dependencyInjectionFixture.serviceProvider.GetRequiredService<IDinnerHandler>();        
 
         [Fact]
         public async Task Given_Existing_Guid_Should_Return_Success()
@@ -59,6 +59,12 @@ namespace SuperDinner.IntegrationTests.Dinners
             dinnerDeletedResponse.Data.ShouldBeNull();
             dinnerDeletedResponse.Messages.ShouldNotBeNull();
             #endregion
+        }
+
+        public void Dispose()
+        {
+            ServiceCollection serviceCollection = new ServiceCollection();
+            serviceCollection.CleanDatabaseForTests();
         }
     }
 }

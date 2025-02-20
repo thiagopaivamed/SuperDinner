@@ -25,8 +25,6 @@ namespace SuperDinner.IntegrationTests
                 serviceCollection.RegisterServices();
                 serviceCollection.RegisterValidation();
             });
-        }
-
-        public void Dispose() => base.Dispose();     
+        }            
     }
 }
