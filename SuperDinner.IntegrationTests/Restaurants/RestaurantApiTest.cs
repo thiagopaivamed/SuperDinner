@@ -14,6 +14,14 @@ namespace SuperDinner.IntegrationTests.Restaurants
         public RestaurantApiTest(ApiFixture apiFixture)
             => _httpClient = apiFixture.CreateClient();
 
+        private async Task<Restaurant?> CreateRestaurantAsync(CreateRestaurantRequest createRestaurantRequest)
+        {
+            HttpResponseMessage restaurantCreated = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
+            restaurantCreated.IsSuccessStatusCode.ShouldBeTrue();
+            restaurantCreated.StatusCode.ShouldBe(HttpStatusCode.Created);
+            return await restaurantCreated.Content.ReadFromJsonAsync<Restaurant?>();
+        }
+
         [Fact]
         public async Task Get_All_Restaurants_Should_Return_Paged_Restaurants()
         {
@@ -23,12 +31,8 @@ namespace SuperDinner.IntegrationTests.Restaurants
             createRestaurantRequests.Count.ShouldBeGreaterThanOrEqualTo(5);
 
             foreach (CreateRestaurantRequest createRestaurantRequest in createRestaurantRequests)
-            {
-                HttpResponseMessage createdRestaurant = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
-                createdRestaurant.IsSuccessStatusCode.ShouldBeTrue();
-                createdRestaurant.StatusCode.ShouldBe(HttpStatusCode.Created);
-            }
-            
+                await CreateRestaurantAsync(createRestaurantRequest);
+
             const int pageNumber = 1;
             const int pageSize = 10;
             string getAllRestaurantsUrl = $"{baseUrlRestaurants}?pageNumber={pageNumber}&pageSize={pageSize}";
@@ -59,13 +63,10 @@ namespace SuperDinner.IntegrationTests.Restaurants
             #endregion
 
             #region Act
-            HttpResponseMessage response = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
-            response.IsSuccessStatusCode.ShouldBeTrue();
-            response.StatusCode.ShouldBe(HttpStatusCode.Created);
+            Restaurant restaurantCreated = await CreateRestaurantAsync(createRestaurantRequest);
             #endregion
 
             #region Assert
-            Restaurant restaurantCreated = await response.Content.ReadFromJsonAsync<Restaurant>();
             restaurantCreated.ShouldNotBeNull();
             restaurantCreated.RestaurantId.ShouldNotBe(Guid.Empty);
             restaurantCreated.Name.ShouldNotBeNull();
@@ -105,11 +106,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
             #region Arrange
             CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
 
-            HttpResponseMessage response = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
-            response.IsSuccessStatusCode.ShouldBeTrue();
-            response.StatusCode.ShouldBe(HttpStatusCode.Created);
-
-            Restaurant restaurantCreated = await response.Content.ReadFromJsonAsync<Restaurant>();
+            Restaurant restaurantCreated = await CreateRestaurantAsync(createRestaurantRequest);
             restaurantCreated.ShouldNotBeNull();
 
             string getRestaurantByIdUrl = $"{baseUrlRestaurants}{restaurantCreated.RestaurantId}";
@@ -166,11 +163,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
             #region Arrange
             CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
 
-            HttpResponseMessage response = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
-            response.IsSuccessStatusCode.ShouldBeTrue();
-            response.StatusCode.ShouldBe(HttpStatusCode.Created);
-
-            Restaurant restaurantCreated = await response.Content.ReadFromJsonAsync<Restaurant>();
+            Restaurant restaurantCreated = await CreateRestaurantAsync(createRestaurantRequest);
 
             UpdateRestaurantRequest updateRestaurantRequest = new UpdateRestaurantRequest();
             updateRestaurantRequest.RestaurantId = restaurantCreated.RestaurantId;
@@ -223,11 +216,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
             #region Arrange
             CreateRestaurantRequest createRestaurantRequest = _fakeCreateRestaurantRequest.Generate();
 
-            HttpResponseMessage response = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
-            response.IsSuccessStatusCode.ShouldBeTrue();
-            response.StatusCode.ShouldBe(HttpStatusCode.Created);
-
-            Restaurant restaurantCreated = await response.Content.ReadFromJsonAsync<Restaurant>();
+            Restaurant restaurantCreated = await CreateRestaurantAsync(createRestaurantRequest);
             restaurantCreated.ShouldNotBeNull();
 
             string deleteRestaurantByIdUrl = $"{baseUrlRestaurants}{restaurantCreated.RestaurantId}";

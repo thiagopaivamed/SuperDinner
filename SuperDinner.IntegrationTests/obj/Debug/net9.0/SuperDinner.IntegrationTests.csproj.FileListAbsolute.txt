@@ -386,6 +386,7 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Npgsql.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Scalar.AspNetCore.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Scrutor.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Serilog.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Serilog.AspNetCore.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Serilog.Enrichers.Environment.dll
@@ -498,4 +499,3 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\obj\Debug\net9.
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\obj\Debug\net9.0\SuperDinner.IntegrationTests.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\obj\Debug\net9.0\SuperDinner.IntegrationTests.genruntimeconfig.cache
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\obj\Debug\net9.0\ref\SuperDinner.IntegrationTests.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.IntegrationTests\bin\Debug\net9.0\Scrutor.dll

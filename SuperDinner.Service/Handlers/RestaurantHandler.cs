@@ -21,7 +21,7 @@ namespace SuperDinner.Service.Handlers
 
             if (!createRestaurantRequestValidationResult.IsValid)
                 return new Response<Restaurant>(null, StatusCodes.Status400BadRequest,
-                    createRestaurantRequestValidationResult.Errors.Select(x => x.ErrorMessage).ToList());
+                    [.. createRestaurantRequestValidationResult.Errors.Select(x => x.ErrorMessage)]);
 
             Restaurant restaurant = new Restaurant();
             restaurant.RestaurantId = Guid.NewGuid();
@@ -73,7 +73,7 @@ namespace SuperDinner.Service.Handlers
             ValidationResult updateRestaurantRequestValidationResult = await updateRestaurantRequestValidator.ValidateAsync(request);
             if (!updateRestaurantRequestValidationResult.IsValid)
                 return new Response<Restaurant>(null, StatusCodes.Status400BadRequest,
-                    updateRestaurantRequestValidationResult.Errors.Select(x => x.ErrorMessage).ToList());
+                    [.. updateRestaurantRequestValidationResult.Errors.Select(x => x.ErrorMessage)]);
 
             Restaurant restaurant = await repository.GetByIdAsync(request.RestaurantId);
 

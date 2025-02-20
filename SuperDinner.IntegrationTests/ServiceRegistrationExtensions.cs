@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using SuperDinner.Infrastructure.Data.Context;
 using SuperDinner.Domain.Interfaces.Dinners.Handlers;
 using SuperDinner.Domain.Interfaces.Dinners;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace SuperDinner.IntegrationTests
 {

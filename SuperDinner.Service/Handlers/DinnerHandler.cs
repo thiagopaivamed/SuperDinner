@@ -21,7 +21,7 @@ namespace SuperDinner.Service.Handlers
             
             if (!createDinnerRequestValidationResult.IsValid)            
                 return new Response<Dinner>(null, StatusCodes.Status400BadRequest,
-                    createDinnerRequestValidationResult.Errors.Select(x => x.ErrorMessage).ToList());
+                    [.. createDinnerRequestValidationResult.Errors.Select(x => x.ErrorMessage)]);
 
             Dinner dinner = new Dinner();
             dinner.DinnerId = Guid.NewGuid();
@@ -70,7 +70,7 @@ namespace SuperDinner.Service.Handlers
 
             if(!updateDinnerRequestValidationResult.IsValid)
                 return new Response<Dinner>(null, StatusCodes.Status400BadRequest,
-                    updateDinnerRequestValidationResult.Errors.Select(x => x.ErrorMessage).ToList());
+                    [.. updateDinnerRequestValidationResult.Errors.Select(x => x.ErrorMessage)]);
 
             Dinner dinner = await repository.GetByIdAsync(request.DinnerId);
 

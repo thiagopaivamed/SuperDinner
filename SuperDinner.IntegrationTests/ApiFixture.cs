@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using SuperDinner.Infrastructure.Data.Context;
 
@@ -12,9 +13,9 @@ namespace SuperDinner.IntegrationTests
         {
             builder.ConfigureServices(serviceCollection =>
             {
-                List<ServiceDescriptor> descriptors = serviceCollection
+                List<ServiceDescriptor> descriptors = [.. serviceCollection
                     .Where(d => d.ServiceType == typeof(DbContextOptions<SuperDinnerContext>))
-                    .ToList();
+                    ];
 
                 descriptors.ForEach(descriptor => serviceCollection.Remove(descriptor));
                 
@@ -25,5 +26,7 @@ namespace SuperDinner.IntegrationTests
                 serviceCollection.RegisterValidation();
             });
         }
+
+        public void Dispose() => base.Dispose();     
     }
 }

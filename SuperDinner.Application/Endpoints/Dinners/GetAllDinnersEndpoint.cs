@@ -42,8 +42,8 @@ namespace SuperDinner.Application.Endpoints.Dinners
             }
 
             return pagedDinnersResponse!.IsSuccess
-                ? Results.Ok(pagedDinnersResponse.Data)
-                : Results.BadRequest(pagedDinnersResponse.Data);
+                ? Results.Ok(pagedDinnersResponse)
+                : Results.BadRequest(pagedDinnersResponse);
         }
     }
 }

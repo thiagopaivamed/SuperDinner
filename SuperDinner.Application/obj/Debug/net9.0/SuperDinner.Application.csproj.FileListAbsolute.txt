@@ -27,6 +27,7 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Mon
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Npgsql.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Scalar.AspNetCore.dll
+C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Scrutor.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Serilog.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Serilog.AspNetCore.dll
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Serilog.Enrichers.Environment.dll
@@ -145,4 +146,3 @@ C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\ref
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.pdb
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\SuperDinner.Application.genruntimeconfig.cache
 C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\obj\Debug\net9.0\ref\SuperDinner.Application.dll
-C:\Users\Thiago\Desktop\SuperDinner\SuperDinner.Application\bin\Debug\net9.0\Scrutor.dll

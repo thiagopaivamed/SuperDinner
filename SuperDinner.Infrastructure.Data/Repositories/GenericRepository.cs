@@ -21,7 +21,7 @@ namespace SuperDinner.Infrastructure.Data.Repositories
             if (conditions is not null)
                 query = query.Where(conditions);
 
-            List<TEntity> entities = await query.Skip((pageNumber - 1) * pageSize)
+            IReadOnlyList<TEntity> entities = await query.Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
 
