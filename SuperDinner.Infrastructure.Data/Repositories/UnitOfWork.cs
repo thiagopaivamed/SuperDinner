@@ -3,23 +3,17 @@ using SuperDinner.Infrastructure.Data.Context;
 
 namespace SuperDinner.Infrastructure.Data.Repositories
 {
-    public class UnitOfWork : IUnitOfWork, IDisposable
+    public sealed class UnitOfWork(SuperDinnerContext superDinnerContext) : IUnitOfWork, IDisposable
     {
-        private readonly SuperDinnerContext _superDinnerContext;
-        private bool _disposed = false;
-
-        public UnitOfWork(SuperDinnerContext superDinnerContext)
-        {
-            _superDinnerContext = superDinnerContext;
-        }
+        private bool _disposed = false;        
 
         public async Task CommitAsync() 
-            => await _superDinnerContext.SaveChangesAsync();
+            => await superDinnerContext.SaveChangesAsync();
 
-        protected virtual void Dispose(bool disposing)
+        private void Dispose(bool disposing)
         {
             if (!_disposed && disposing)
-                _superDinnerContext.Dispose();
+                superDinnerContext.Dispose();
 
             _disposed = true;
         }

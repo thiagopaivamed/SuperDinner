@@ -40,16 +40,7 @@ namespace SuperDinner.IntegrationTests
 
         public static void RegisterDbContextForTesting(this IServiceCollection serviceCollection)
             => serviceCollection.AddDbContext<SuperDinnerContext>(options =>
-                    options.UseInMemoryDatabase("SuperDinnerTestDatabase"));
-
-        public static void CleanDatabaseForTests(this IServiceCollection serviceCollection)
-        {
-            RegisterDbContextForTesting(serviceCollection);
-
-            ServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
-            using IServiceScope serviceScope = serviceProvider.CreateScope();
-            SuperDinnerContext superDinnerContext = serviceScope.ServiceProvider.GetRequiredService<SuperDinnerContext>();
-            superDinnerContext.Database.EnsureDeleted();
-        }
+                    options.UseInMemoryDatabase("SuperDinnerTestDatabase"),
+                ServiceLifetime.Scoped);
     }
 }

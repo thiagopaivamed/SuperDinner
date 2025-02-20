@@ -7,7 +7,7 @@ using SuperDinner.Domain.Responses;
 
 namespace SuperDinner.IntegrationTests.Dinners
 {
-    public sealed class CreateDinnerTest : BaseDinnerTest, IClassFixture<DependencyInjectionFixture>, IDisposable
+    public sealed class CreateDinnerTest : BaseDinnerTest, IClassFixture<DependencyInjectionFixture>
     {
         private readonly IDinnerHandler _dinnerHandler;
 
@@ -52,12 +52,6 @@ namespace SuperDinner.IntegrationTests.Dinners
             dinnerCreatedResponse.Data.ShouldBeNull();
             dinnerCreatedResponse.Messages.ShouldNotBeNull();
             #endregion
-        }
-
-        public void Dispose()
-        {
-            ServiceCollection serviceCollection = new ServiceCollection();
-            serviceCollection.CleanDatabaseForTests();
-        }
+        }        
     }
 }

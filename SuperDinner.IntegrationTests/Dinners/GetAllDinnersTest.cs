@@ -57,8 +57,8 @@ namespace SuperDinner.IntegrationTests.Dinners
 
         public void Dispose()
         {
-            ServiceCollection serviceCollection = new ServiceCollection();
-            serviceCollection.CleanDatabaseForTests();
+            //ServiceCollection serviceCollection = new ServiceCollection();
+            //serviceCollection.CleanDatabaseForTests();
         }
     }
 }

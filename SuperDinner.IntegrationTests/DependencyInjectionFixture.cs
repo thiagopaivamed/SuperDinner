@@ -4,7 +4,7 @@ namespace SuperDinner.IntegrationTests
 {
     public sealed class DependencyInjectionFixture : IDisposable
     {
-        public readonly ServiceProvider serviceProvider;
+        public ServiceProvider serviceProvider;
 
         public DependencyInjectionFixture()
         {

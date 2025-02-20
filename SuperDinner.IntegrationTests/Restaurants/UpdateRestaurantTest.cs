@@ -7,7 +7,7 @@ using SuperDinner.Domain.Responses;
 
 namespace SuperDinner.IntegrationTests.Restaurants
 {
-    public sealed class UpdateRestaurantTest : BaseRestaurantTest, IClassFixture<DependencyInjectionFixture>, IDisposable
+    public sealed class UpdateRestaurantTest : BaseRestaurantTest, IClassFixture<DependencyInjectionFixture>
     {
         private readonly IRestaurantHandler _restaurantHandler;
 
@@ -74,12 +74,6 @@ namespace SuperDinner.IntegrationTests.Restaurants
             responseRestaurantUpdated.Messages.ShouldNotBeNull();
             responseRestaurantUpdated.Messages.Count.ShouldBeGreaterThan(0);
             #endregion
-        }
-
-        public void Dispose()
-        {
-            ServiceCollection serviceCollection = new ServiceCollection();
-            serviceCollection.CleanDatabaseForTests();
-        }
+        }      
     }
 }

@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Shouldly;
+﻿using Shouldly;
 using SuperDinner.Domain.Entities;
 using SuperDinner.Domain.Requests.Dinner;
 using SuperDinner.Domain.Responses;
@@ -8,7 +7,7 @@ using System.Net.Http.Json;
 
 namespace SuperDinner.IntegrationTests.Dinners
 {
-    public sealed class DinnerApiTest : BaseDinnerTest, IClassFixture<ApiFixture>, IDisposable
+    public sealed class DinnerApiTest : BaseDinnerTest, IClassFixture<ApiFixture>
     {
         private const string baseUrlDinners = "https://localhost:7064/v1/dinners/";
         private readonly HttpClient _httpClient;
@@ -233,10 +232,6 @@ namespace SuperDinner.IntegrationTests.Dinners
             #endregion
         }
 
-        public void Dispose()
-        {
-            ServiceCollection serviceCollection = new ServiceCollection();
-            serviceCollection.CleanDatabaseForTests();
-        }
+        
     }
 }
