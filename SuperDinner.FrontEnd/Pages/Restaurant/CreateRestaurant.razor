@@ -1,0 +1,50 @@
+﻿@page "/restaurant/createrestaurant/"
+
+@inject IJSRuntime jsRuntime
+@inject NavigationManager navigationManager
+@inject ISnackbar snackbar
+
+<MudText Typo="Typo.h3">Novo Restaurante</MudText>
+<MudPaper Class="pa-8 mt-4">
+    <EditForm Model="@createRestaurantRequest" OnValidSubmit="OnValidSubmitAsync">
+
+        <MudTextField Label="Name"
+                      HelperText="Required field"
+                      @bind-Value="createRestaurantRequest.Name"
+                      For="@(() => createRestaurantRequest.Name)" />
+
+        <MudTextField Label="Description"
+                      Lines="5"
+                      HelperText="Required field"
+                      @bind-Value="createRestaurantRequest.Description"
+                      For="@(() => createRestaurantRequest.Description)" />
+
+        <MudTextField Label="Adress"
+                      Lines="5"
+                      HelperText="Required field"
+                      @bind-Value="createRestaurantRequest.Address"
+                      For="@(() => createRestaurantRequest.Address)" />
+
+        <MudTextField Label="Country"
+                      Lines="5"
+                      HelperText="Required field"
+                      @bind-Value="createRestaurantRequest.Country"
+                      For="@(() => createRestaurantRequest.Country)" />
+
+        <MudTextField Label="Price"                      
+                      HelperText="Required field"
+                      @bind-Value="createRestaurantRequest.Price"
+                      For="@(() => createRestaurantRequest.Price)" />
+
+        <MudTextField Label="Clients limit"
+                      HelperText="Required field"
+                      @bind-Value="createRestaurantRequest.ClientsLimit"
+                      For="@(() => createRestaurantRequest.ClientsLimit)" />
+
+        <MudButton ButtonType="ButtonType.Submit"
+                   Variant="Variant.Filled"
+                   Color="Color.Primary">
+            Create
+        </MudButton>
+    </EditForm>
+</MudPaper>
