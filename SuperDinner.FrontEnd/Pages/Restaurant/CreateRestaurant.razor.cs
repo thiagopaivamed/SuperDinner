@@ -1,15 +1,20 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.JSInterop;
 using MudBlazor;
 using SuperDinner.Domain.Interfaces.Restaurants.Handlers;
 using SuperDinner.Domain.Requests.Restaurant;
+using SuperDinner.Domain.Responses;
 
 namespace SuperDinner.FrontEnd.Pages.Restaurant
 {
     public partial class CreateRestaurant : ComponentBase
     {
-        public bool isLoading { get; set; } = false;
+        public bool IsLoading { get; set; } = false;
 
-        public CreateRestaurantRequest createRestaurantRequest { get; set; } = new CreateRestaurantRequest();
+        public CreateRestaurantRequest CreateRestaurantRequest { get; set; } = new CreateRestaurantRequest();  
+
+        public EditForm CreateRestaurantForm { get; set; } = new EditForm();
 
         [Inject]
         public NavigationManager NavigationManager { get; set; } = null!;
@@ -20,36 +25,50 @@ namespace SuperDinner.FrontEnd.Pages.Restaurant
         [Inject]
         public ISnackbar Snackbar { get; set; } = null!;
 
+        [Inject]
+        public IJSRuntime jsRuntime { get; set; } = null!;
+
         public async Task OnValidSubmitAsync()
         {
-            isLoading = true;
+            IsLoading = true;
+            CreateRestaurantRequest.Latitude = 50;
+            CreateRestaurantRequest.Longitude = 50;
+            CreateRestaurantRequest.UserId = Guid.NewGuid().ToString();
+            
 
             try
             {
-                var restaurantCreated = await RestaurantHandler.AddRestaurantAsync(createRestaurantRequest);
+                bool createRestaurantFormIsValid = CreateRestaurantForm.EditContext.Validate();
+                if (createRestaurantFormIsValid)
+                {
 
-                if(restaurantCreated.IsSuccess)
-                {
-                    Snackbar.Add("Restaurant created successfully.", Severity.Success);
-                    NavigationManager.NavigateTo("/restaurants");
-                }
-                else
-                {
-                    Snackbar.Add("Unable to create restaurant.", Severity.Error);
+                    Response<Domain.Entities.Restaurant> restaurantCreated = await RestaurantHandler.AddRestaurantAsync(CreateRestaurantRequest);
+
+                    if (restaurantCreated.IsSuccess)
+                    {
+                        Snackbar.Add("Restaurant created successfully.", Severity.Success);
+                        NavigationManager.NavigateTo("/restaurants");
+                    }
+                    else
+                    {
+                        Snackbar.Add("Unable to create restaurant.", Severity.Error);
+                    }
                 }
             }
             catch (Exception ex)
             {
-
                Snackbar.Add(ex.Message, Severity.Error);
             }
 
             finally
             {
-                isLoading = false;
+                IsLoading = false;
             }
         }
 
-
+        public void OnCancel()
+        {
+            NavigationManager.NavigateTo("/restaurants");
+        }
     }
 }

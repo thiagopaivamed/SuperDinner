@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "gI21QhV6Ifs=",
+  "dgSpecHash": "B1HCMpDu/uo=",
   "success": true,
   "projectFilePath": "C:\\Users\\Thiago\\Desktop\\SuperDinner\\SuperDinner.FrontEnd\\SuperDinner.FrontEnd.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Thiago\\.nuget\\packages\\blazored.fluentvalidation\\2.2.0\\blazored.fluentvalidation.2.2.0.nupkg.sha512",
     "C:\\Users\\Thiago\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
     "C:\\Users\\Thiago\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.1\\microsoft.aspnetcore.authorization.9.0.1.nupkg.sha512",
     "C:\\Users\\Thiago\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.1\\microsoft.aspnetcore.components.9.0.1.nupkg.sha512",

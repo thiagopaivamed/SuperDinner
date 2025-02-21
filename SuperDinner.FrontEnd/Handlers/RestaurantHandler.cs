@@ -9,11 +9,11 @@ namespace SuperDinner.FrontEnd.Handlers
 {
     public sealed class RestaurantHandler(IHttpClientFactory httpClientFactory) : IRestaurantHandler
     {
-        private readonly HttpClient _httpClient = httpClientFactory.CreateClient("dinner");
+        private readonly HttpClient _httpClient = httpClientFactory.CreateClient(Configuration.HttpClientName);
 
         public async Task<Response<Restaurant>> AddRestaurantAsync(CreateRestaurantRequest request)
         {
-            HttpResponseMessage restaurantCreated = await _httpClient.PostAsJsonAsync("api/v1/Restaurants", request);
+            HttpResponseMessage restaurantCreated = await _httpClient.PostAsJsonAsync("api/v1/restaurants", request);
 
             return await restaurantCreated.Content.ReadFromJsonAsync<Response<Restaurant>>() ??
                 new Response<Restaurant>(null, StatusCodes.Status400BadRequest, ["Unable to create restaurant."]);

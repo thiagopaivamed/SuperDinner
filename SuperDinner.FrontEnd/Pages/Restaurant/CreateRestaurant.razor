@@ -1,50 +1,74 @@
 ﻿@page "/restaurant/createrestaurant/"
 
-@inject IJSRuntime jsRuntime
-@inject NavigationManager navigationManager
-@inject ISnackbar snackbar
+<MudSnackbarProvider />
 
-<MudText Typo="Typo.h3">Novo Restaurante</MudText>
-<MudPaper Class="pa-8 mt-4">
-    <EditForm Model="@createRestaurantRequest" OnValidSubmit="OnValidSubmitAsync">
+<PageTitle>Create a new restaurant</PageTitle>
 
-        <MudTextField Label="Name"
-                      HelperText="Required field"
-                      @bind-Value="createRestaurantRequest.Name"
-                      For="@(() => createRestaurantRequest.Name)" />
+<MudContainer MaxWidth="MaxWidth.Large" FullWidth="true" Class="pa-4">
+    <MudPaper Class="pa-4 mt-2" Elevation="4" Style="box-sizing: border-box;">
 
-        <MudTextField Label="Description"
-                      Lines="5"
-                      HelperText="Required field"
-                      @bind-Value="createRestaurantRequest.Description"
-                      For="@(() => createRestaurantRequest.Description)" />
+        <MudText Typo="Typo.h6" Align="Align.Left">Register a new restaurant</MudText>
+        <MudText Typo="Typo.body1" Align="Align.Left">Fill the fields below to register your restaurant</MudText>
 
-        <MudTextField Label="Adress"
-                      Lines="5"
-                      HelperText="Required field"
-                      @bind-Value="createRestaurantRequest.Address"
-                      For="@(() => createRestaurantRequest.Address)" />
 
-        <MudTextField Label="Country"
-                      Lines="5"
-                      HelperText="Required field"
-                      @bind-Value="createRestaurantRequest.Country"
-                      For="@(() => createRestaurantRequest.Country)" />
+        <MudGrid Class="pa-4" Gutter="Gutter.Small" Style="display: flex; height: 100%;">
+            <MudItem xs="12" md="6" Style="display: flex; flex-direction: column;">
+                <MudPaper Class="pa-4" Elevation="4" Style="flex-grow: 1; box-sizing: border-box;">
+                    <EditForm Model="@CreateRestaurantRequest" @ref="CreateRestaurantForm" OnSubmit="OnValidSubmitAsync">
+                        <FluentValidationValidator />
+                        <MudTextField T="string" Label="Title"
+                                      @bind-Value="CreateRestaurantRequest.Name"
+                                      For="@(() => CreateRestaurantRequest.Name)"
+                                      Immediate="true" Margin="Margin.Normal" />
 
-        <MudTextField Label="Price"                      
-                      HelperText="Required field"
-                      @bind-Value="createRestaurantRequest.Price"
-                      For="@(() => createRestaurantRequest.Price)" />
+                        <MudTextField T="string" Label="Description"
+                                      @bind-Value="CreateRestaurantRequest.Description"
+                                      For="@(() => CreateRestaurantRequest.Description)"
+                                      Lines="5"
+                                      Margin="Margin.Normal" />
 
-        <MudTextField Label="Clients limit"
-                      HelperText="Required field"
-                      @bind-Value="createRestaurantRequest.ClientsLimit"
-                      For="@(() => createRestaurantRequest.ClientsLimit)" />
+                        <MudTextField T="string" Label="Contact phone"
+                                      @bind-Value="CreateRestaurantRequest.ContactPhone"
+                                      For="@(() => CreateRestaurantRequest.ContactPhone)"
+                                      Margin="Margin.Normal" />
 
-        <MudButton ButtonType="ButtonType.Submit"
-                   Variant="Variant.Filled"
-                   Color="Color.Primary">
-            Create
-        </MudButton>
-    </EditForm>
-</MudPaper>
+
+                        <MudTextField T="string" Label="Address"
+                                      @bind-Value="CreateRestaurantRequest.Address"
+                                      For="@(() => CreateRestaurantRequest.Address)"
+                                      Margin="Margin.Normal" />
+
+                        <MudTextField T="string" Label="Country"
+                                      @bind-Value="CreateRestaurantRequest.Country"
+                                      For="@(() => CreateRestaurantRequest.Country)"
+                                      Margin="Margin.Normal" />
+
+                        <MudTextField T="double" Label="Price"
+                                      @bind-Value="CreateRestaurantRequest.Price"
+                                      For="@(() => CreateRestaurantRequest.Price)"
+                                      Margin="Margin.Normal" />
+
+                        <MudTextField T="int" Label="Clients limit"
+                                      @bind-Value="CreateRestaurantRequest.ClientsLimit"
+                                      For="@(() => CreateRestaurantRequest.ClientsLimit)"
+                                      Margin="Margin.Normal" />
+
+                        <div style="margin-top: 32px; display: flex; justify-content: flex-end; gap: 10px;">
+                            <MudButton Variant="Variant.Filled" Color="Color.Success" ButtonType="ButtonType.Submit">Save</MudButton>
+
+                            <MudButton Variant="Variant.Filled" OnClick="OnCancel">Cancel</MudButton>
+                        </div>
+                    </EditForm>
+                </MudPaper>
+            </MudItem>
+
+            @* <MudItem xs="12" md="6" Style="display: flex; flex-direction: column;">
+                <MudPaper Class="pa-4" Elevation="4" Style="flex-grow: 1; box-sizing: border-box;">
+                    <div id="mapDetails" style="height: 100%; width: 100%;"></div>
+                </MudPaper>
+            </MudItem> *@
+        </MudGrid>
+
+       
+    </MudPaper>
+</MudContainer>
