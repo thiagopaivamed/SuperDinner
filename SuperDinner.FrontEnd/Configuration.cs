@@ -4,6 +4,6 @@
     {
         public const string HttpClientName = $"DinnerApi";
 
-        public const string BackendUrl = $"https://localhost:5148";
+        public const string BackendUrl = $"https://localhost:7064";
     }
 }

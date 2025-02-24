@@ -12,7 +12,7 @@ namespace SuperDinner.FrontEnd.Pages.Restaurant
     {
         public bool IsLoading { get; set; } = false;
 
-        public CreateRestaurantRequest CreateRestaurantRequest { get; set; } = new CreateRestaurantRequest();  
+        public CreateRestaurantRequest CreateRestaurantRequest { get; set; } = new CreateRestaurantRequest();
 
         public EditForm CreateRestaurantForm { get; set; } = new EditForm();
 
@@ -34,30 +34,27 @@ namespace SuperDinner.FrontEnd.Pages.Restaurant
             CreateRestaurantRequest.Latitude = 50;
             CreateRestaurantRequest.Longitude = 50;
             CreateRestaurantRequest.UserId = Guid.NewGuid().ToString();
-            
 
             try
             {
-                bool createRestaurantFormIsValid = CreateRestaurantForm.EditContext.Validate();
+                bool createRestaurantFormIsValid = CreateRestaurantForm.EditContext!.Validate();
                 if (createRestaurantFormIsValid)
                 {
-
                     Response<Domain.Entities.Restaurant> restaurantCreated = await RestaurantHandler.AddRestaurantAsync(CreateRestaurantRequest);
 
                     if (restaurantCreated.IsSuccess)
                     {
-                        Snackbar.Add("Restaurant created successfully.", Severity.Success);
+                        Snackbar.Add($"The restaurant {restaurantCreated.Data!.Name} created successfully.", Severity.Success);
                         NavigationManager.NavigateTo("/restaurants");
                     }
                     else
-                    {
-                        Snackbar.Add("Unable to create restaurant.", Severity.Error);
-                    }
+                        Snackbar.Add($"{string.Join("\n", restaurantCreated.Messages)}", Severity.Error);
+
                 }
             }
             catch (Exception ex)
             {
-               Snackbar.Add(ex.Message, Severity.Error);
+                Snackbar.Add(ex.Message, Severity.Error);
             }
 
             finally
@@ -67,8 +64,6 @@ namespace SuperDinner.FrontEnd.Pages.Restaurant
         }
 
         public void OnCancel()
-        {
-            NavigationManager.NavigateTo("/restaurants");
-        }
+            => NavigationManager.NavigateTo("/restaurants");
     }
 }

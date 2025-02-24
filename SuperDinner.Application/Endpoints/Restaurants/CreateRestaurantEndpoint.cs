@@ -21,8 +21,8 @@ namespace SuperDinner.Application.Endpoints.Restaurants
         {
             Response<Restaurant> restaurantCreatedResponse = await restaurantHandler.AddRestaurantAsync(request);
             return restaurantCreatedResponse.IsSuccess
-                ? Results.Created($"/{restaurantCreatedResponse.Data?.RestaurantId}", restaurantCreatedResponse.Data)
-                : Results.BadRequest(restaurantCreatedResponse.Data);
+                ? Results.Created($"/{restaurantCreatedResponse.Data?.RestaurantId}", restaurantCreatedResponse)
+                : Results.BadRequest(restaurantCreatedResponse);
         }
     }
 }

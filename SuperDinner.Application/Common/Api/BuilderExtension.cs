@@ -50,5 +50,16 @@ namespace SuperDinner.Application.Common.Api
         public static void AddMemoryCache(this WebApplicationBuilder builder)
             => builder.Services.AddMemoryCache();
 
+        public static void AddCors(this WebApplicationBuilder builder)
+            => builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", cors =>
+                {
+                    cors.AllowAnyHeader();
+                    cors.AllowAnyMethod();
+                    cors.AllowAnyOrigin();
+                    cors.WithExposedHeaders("*");
+                });
+            });
     }
 }

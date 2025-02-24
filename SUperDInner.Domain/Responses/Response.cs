@@ -4,23 +4,22 @@ namespace SuperDinner.Domain.Responses
 {
     public record Response<TData>
     {
-        [JsonIgnore]
-        public readonly int ResponseStatusCode;
-
-        public TData? Data { get; protected set; }
-        public List<string> Messages { get; protected set; }
+        public int ResponseStatusCode { get; init; }
+        public TData? Data { get; init; }
+        public List<string> Messages { get; init; }
 
         [JsonIgnore]
         public bool IsSuccess => ResponseStatusCode is >= 200 and <= 299;
 
         [JsonConstructor]
-        public Response(int statusCode, TData data) => ResponseStatusCode = Configuration.DefaultStatusCode;
-
-        public Response(TData data, int responseStatusCode = Configuration.DefaultStatusCode, List<string> messages = null)
+        public Response(int responseStatusCode, TData? data, List<string>? messages = null)
         {
-            Data = data;
             ResponseStatusCode = responseStatusCode;
-            Messages = messages;
+            Data = data;
+            Messages = messages ?? new List<string>();
         }
+
+        public Response(TData data, int responseStatusCode = Configuration.DefaultStatusCode, List<string>? messages = null)
+            : this(responseStatusCode, data, messages) { }
     }
 }

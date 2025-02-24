@@ -19,6 +19,8 @@ public partial class Program
 
         builder.AddMemoryCache();
 
+        builder.AddCors();
+
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())
@@ -34,6 +36,8 @@ public partial class Program
                 .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient);
             });
         }
+
+        app.UseCors("CorsPolicy");
 
         app.UseSerilogRequestLogging();
 
