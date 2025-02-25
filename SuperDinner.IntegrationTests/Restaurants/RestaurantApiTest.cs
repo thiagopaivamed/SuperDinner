@@ -19,7 +19,7 @@ namespace SuperDinner.IntegrationTests.Restaurants
             HttpResponseMessage restaurantCreated = await _httpClient.PostAsJsonAsync(baseUrlRestaurants, createRestaurantRequest);
             restaurantCreated.IsSuccessStatusCode.ShouldBeTrue();
             restaurantCreated.StatusCode.ShouldBe(HttpStatusCode.Created);
-            return await restaurantCreated.Content.ReadFromJsonAsync<Restaurant?>();
+            return (await restaurantCreated.Content.ReadFromJsonAsync<Response<Restaurant?>>()).Data;
         }
 
         [Fact]
@@ -249,6 +249,6 @@ namespace SuperDinner.IntegrationTests.Restaurants
             responseAfterDelete.IsSuccessStatusCode.ShouldBeFalse();
             responseAfterDelete.StatusCode.ShouldBe(HttpStatusCode.NotFound);
             #endregion
-        }       
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace SuperDinner.Domain.Responses
         {
             ResponseStatusCode = responseStatusCode;
             Data = data;
-            Messages = messages ?? new List<string>();
+            Messages = messages!;
         }
 
         public Response(TData data, int responseStatusCode = Configuration.DefaultStatusCode, List<string>? messages = null)

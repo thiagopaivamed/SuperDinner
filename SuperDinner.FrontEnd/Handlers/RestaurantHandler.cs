@@ -16,7 +16,7 @@ namespace SuperDinner.FrontEnd.Handlers
             HttpResponseMessage restaurantCreated = await _httpClient.PostAsJsonAsync("/v1/restaurants", request);
 
             return await restaurantCreated.Content.ReadFromJsonAsync<Response<Restaurant>>() ??
-                new Response<Restaurant>(null, StatusCodes.Status400BadRequest, ["Unable to create restaurant."]);
+                new Response<Restaurant>(null!, StatusCodes.Status400BadRequest, ["Unable to create restaurant."]);
         }
 
         public async Task<Response<Restaurant>> DeleteRestaurantAsync(DeleteRestaurantRequest request)
@@ -24,24 +24,24 @@ namespace SuperDinner.FrontEnd.Handlers
             HttpResponseMessage restaurantDeleted = await _httpClient.DeleteAsync($"/v1/Restaurants/{request.RestaurantId}");
 
             return await restaurantDeleted.Content.ReadFromJsonAsync<Response<Restaurant>>() ??
-                new Response<Restaurant>(null, StatusCodes.Status400BadRequest, ["Unable to delete restaurant."]);
+                new Response<Restaurant>(null!, StatusCodes.Status400BadRequest, ["Unable to delete restaurant."]);
         }
 
         public async Task<PagedResponse<IReadOnlyList<Restaurant>>> GetAllRestaurantsAsync(GetAllRestaurantsRequest request)
             => await _httpClient.GetFromJsonAsync<PagedResponse<IReadOnlyList<Restaurant>>>("/v1/Restaurants") ??
-            new PagedResponse<IReadOnlyList<Restaurant>>(null, StatusCodes.Status400BadRequest, ["Unable to get all restaurants."]);
+            new PagedResponse<IReadOnlyList<Restaurant>>(null!, StatusCodes.Status400BadRequest, ["Unable to get all restaurants."]);
 
 
         public async Task<Response<Restaurant>> GetRestaurantByIdAsync(GetRestaurantByIdRequest request)
             => await _httpClient.GetFromJsonAsync<Response<Restaurant>>($"/v1/Restaurants/{request.RestaurantId}") ??
-            new Response<Restaurant>(null, StatusCodes.Status400BadRequest, ["Unable to get restaurant."]);
+            new Response<Restaurant>(null!, StatusCodes.Status400BadRequest, ["Unable to get restaurant."]);
 
         public async Task<Response<Restaurant>> UpdateRestaurantAsync(UpdateRestaurantRequest request)
         {
             HttpResponseMessage restaurantUpdated = await _httpClient.PutAsJsonAsync($"/v1/Restaurants/{request.RestaurantId}", request);
 
             return await restaurantUpdated.Content.ReadFromJsonAsync<Response<Restaurant>>() ??
-                new Response<Restaurant>(null, StatusCodes.Status400BadRequest, ["Unable to update restaurant."]);
+                new Response<Restaurant>(null!, StatusCodes.Status400BadRequest, ["Unable to update restaurant."]);
         }
     }
 }
