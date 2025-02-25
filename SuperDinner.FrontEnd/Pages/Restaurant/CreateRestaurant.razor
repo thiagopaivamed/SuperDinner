@@ -42,6 +42,7 @@
                             <MudTextField T="string" Label="Contact phone"
                                           @bind-Value="CreateRestaurantRequest.ContactPhone"
                                           For="@(() => CreateRestaurantRequest.ContactPhone)"
+                                          Mask="@(new PatternMask("(00) 00000-0000"))"
                                           Margin="Margin.Normal" />
 
 
@@ -74,11 +75,11 @@
                     </MudPaper>
                 </MudItem>
 
-                @* <MudItem xs="12" md="6" Style="display: flex; flex-direction: column;">
-                <MudPaper Class="pa-4" Elevation="4" Style="flex-grow: 1; box-sizing: border-box;">
-                    <div id="mapDetails" style="height: 100%; width: 100%;"></div>
-                </MudPaper>
-            </MudItem> *@
+                <MudItem xs="12" md="6" Style="display: flex; flex-direction: column;">
+                    <MudPaper Class="pa-4" Elevation="4" Style="flex-grow: 1; box-sizing: border-box;">
+                        <div id="map" style="height: 100%; width: 100%;"></div>
+                    </MudPaper>
+                </MudItem>
             </MudGrid>
         }
 

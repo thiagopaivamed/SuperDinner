@@ -28,11 +28,27 @@ namespace SuperDinner.FrontEnd.Pages.Restaurant
         [Inject]
         public IJSRuntime jsRuntime { get; set; } = null!;
 
+        private IJSObjectReference? LeafletMap { get; set; } = null!;
+
+        public DotNetObjectReference<CreateRestaurant> createRestaurantDotNetRef { get; set; } = null!;
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            if (firstRender)
+            {
+                LeafletMap = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./leafletmap.js");
+
+                if (LeafletMap is not null)
+                {
+                    createRestaurantDotNetRef = DotNetObjectReference.Create(this);
+                    await LeafletMap.InvokeVoidAsync("LoadMap", createRestaurantDotNetRef);
+                }
+            }
+        }
+
         public async Task OnValidSubmitAsync()
         {
             IsLoading = true;
-            CreateRestaurantRequest.Latitude = 50;
-            CreateRestaurantRequest.Longitude = 50;
             CreateRestaurantRequest.UserId = Guid.NewGuid().ToString();
 
             try
@@ -61,6 +77,13 @@ namespace SuperDinner.FrontEnd.Pages.Restaurant
             {
                 IsLoading = false;
             }
+        }
+
+        [JSInvokable]
+        public void UpdateCoordinates(double latitude, double longitude)
+        {
+            CreateRestaurantRequest.Latitude = latitude;
+            CreateRestaurantRequest.Longitude = longitude;
         }
 
         public void OnCancel()

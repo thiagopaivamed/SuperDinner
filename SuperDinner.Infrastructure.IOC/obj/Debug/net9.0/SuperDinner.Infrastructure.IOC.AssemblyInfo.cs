@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SuperDinner.Infrastructure.IOC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0479a3a1a0ec85820b2ccca648d5f62e1a759cab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa4ff2d9c36b1122b366a6432600dc252a0c6983")]
 [assembly: System.Reflection.AssemblyProductAttribute("SuperDinner.Infrastructure.IOC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SuperDinner.Infrastructure.IOC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
