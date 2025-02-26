@@ -1,0 +1,45 @@
+﻿@page "/restaurants"
+
+<PageTitle>My restaurants</PageTitle>
+
+<MudPaper Class="pa-16 ma-2" Outlined="true" Square="true">
+    <MudTable ServerData="GetTableData" Dense="true" Hover="true"
+              MultiSelection="true" @ref="restaurantsTable"
+              Loading="@IsLoading">
+
+        <ToolBarContent>
+            <MudText Typo="Typo.h6">My restaurants</MudText>
+            <MudSpacer />
+            <MudTextField T="string" ValueChanged="@(searchString => OnSearch(searchString))" Placeholder="Search" Adornment="Adornment.Start"
+                          AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+        </ToolBarContent>
+
+        <HeaderContent>
+            <MudTh><MudTableSortLabel T="string">RestaurantId</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortLabel="nameField" T="string">Name</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel SortLabel="addressField" T="string">Address</MudTableSortLabel></MudTh>
+            <MudTh><MudTableSortLabel T="double">Price</MudTableSortLabel></MudTh>
+        </HeaderContent>
+
+        <RowTemplate>
+            <MudTd DataLabel="RestaurantId">@context.RestaurantId</MudTd>
+            <MudTd DataLabel="Name">@context.Name</MudTd>
+            <MudTd DataLabel="Address">@context.Address</MudTd>
+            <MudTd DataLabel="Price">@context.Price</MudTd>
+
+            <MudTd DataLabel="Actions">
+                <MudButton Variant="Variant.Filled" Size="Size.Small" Color="Color.Error">Delete</MudButton>
+            </MudTd>
+        </RowTemplate>
+
+        <NoRecordsContent>
+            <MudText>No matching records found</MudText>
+        </NoRecordsContent>
+        <LoadingContent>
+            <MudText>Loading...</MudText>
+        </LoadingContent>
+        <PagerContent>
+            <MudTablePager />
+        </PagerContent>
+    </MudTable>
+</MudPaper>

@@ -28,7 +28,7 @@ namespace SuperDinner.FrontEnd.Handlers
         }
 
         public async Task<PagedResponse<IReadOnlyList<Restaurant>>> GetAllRestaurantsAsync(GetAllRestaurantsRequest request)
-            => await _httpClient.GetFromJsonAsync<PagedResponse<IReadOnlyList<Restaurant>>>("/v1/Restaurants") ??
+            => await _httpClient.GetFromJsonAsync<PagedResponse<IReadOnlyList<Restaurant>>>($"/v1/Restaurants/?pageNumber={request.PageNumber}&pageSize={request.PageSize}") ??
             new PagedResponse<IReadOnlyList<Restaurant>>(null!, StatusCodes.Status400BadRequest, ["Unable to get all restaurants."]);
 
 

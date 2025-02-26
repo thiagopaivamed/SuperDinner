@@ -35,6 +35,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdGF1cmFudFxDcmVhdGVSZXN0YXVyYW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Thiago/Desktop/SuperDinner/SuperDinner.FrontEnd/Pages/Restaurant/Restaurants.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdGF1cmFudFxSZXN0YXVyYW50cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Thiago/Desktop/SuperDinner/SuperDinner.FrontEnd/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
